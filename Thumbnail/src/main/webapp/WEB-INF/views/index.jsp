@@ -12,22 +12,22 @@
     <title>pillloMart</title>
     <link rel="icon" href="resources/img/favicon.png" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/resources/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="resources/css/bootstrap.min.css" />
     <!-- animate CSS -->
-    <link rel="stylesheet" href="/resources/css/animate.css" />
+    <link rel="stylesheet" href="resources/css/animate.css" />
     <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="/resources/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="resources/css/owl.carousel.min.css" />
     <!-- font awesome CSS -->
-    <link rel="stylesheet" href="/resources/css/all.css" />
+    <link rel="stylesheet" href="resources/css/all.css" />
     <!-- flaticon CSS -->
-    <link rel="stylesheet" href="/resources/css/flaticon.css" />
-    <link rel="stylesheet" href="/resources/css/themify-icons.css" />
+    <link rel="stylesheet" href="resources/css/flaticon.css" />
+    <link rel="stylesheet" href="resources/css/themify-icons.css" />
     <!-- font awesome CSS -->
-    <link rel="stylesheet" href="/resources/css/magnific-popup.css" />
+    <link rel="stylesheet" href="resources/css/magnific-popup.css" />
     <!-- swiper CSS -->
-    <link rel="stylesheet" href="/resources/css/slick.css" />
+    <link rel="stylesheet" href="resources/css/style.css" />
     <!-- style CSS -->
-    <link rel="stylesheet" href="/resources/css/slick.css" />
+    <link rel="stylesheet" href="resources/css/slick.css" />
   </head>
 
   <body>
@@ -38,7 +38,7 @@
           <div class="col-lg-12">
             <nav class="navbar navbar-expand-lg navbar-light">
               <a class="navbar-brand" href="index.html">
-                <img src="img/logo.png" alt="logo" />
+                <img src="resources/img/logo.png" alt="logo" />
               </a>
               <button
                 class="navbar-toggler"
@@ -198,13 +198,13 @@
       </div>
       <div class="banner_img">
         <img
-          src="img/네일1.png"
+          src="resources/img/네일1.png"
           alt="#"
           class="img-fluid"
           style="width: 100em"
         />
         <img
-          src="img/banner_pattern.png "
+          src="resources/img/banner_pattern.png "
           alt="#"
           class="pattern_img img-fluid"
         />
@@ -222,12 +222,12 @@
                 <div class="col-lg-6 col-sm-6">
                   <div class="single_product_img">
                     <img
-                      src="img/single_product_1.png"
+                      src="resources/img/single_product_1.png"
                       class="img-fluid"
                       alt="#"
                     />
                     <img
-                      src="img/product_overlay.png"
+                      src="resources/img/product_overlay.png"
                       alt="#"
                       class="product_overlay img-fluid"
                     />
@@ -251,12 +251,12 @@
                 <div class="col-lg-6 col-sm-6">
                   <div class="single_product_img">
                     <img
-                      src="img/single_product_2.png"
+                      src="resources/img/single_product_2.png"
                       class="img-fluid"
                       alt="#"
                     />
                     <img
-                      src="img/product_overlay.png"
+                      src="resources/img/product_overlay.png"
                       alt="#"
                       class="product_overlay img-fluid"
                     />
@@ -280,12 +280,12 @@
                 <div class="col-lg-6 col-sm-6">
                   <div class="single_product_img">
                     <img
-                      src="img/single_product_3.png"
+                      src="resources/img/single_product_3.png"
                       class="img-fluid"
                       alt="#"
                     />
                     <img
-                      src="img/product_overlay.png"
+                      src="resources/img/product_overlay.png"
                       alt="#"
                       class="product_overlay img-fluid"
                     />
@@ -325,7 +325,7 @@
             <div class="single_product_item">
               <div class="single_product_item_thumb">
                 <img
-                  src="img/tranding_item/tranding_item_1.png"
+                  src="resources/img/tranding_item/tranding_item_1.png"
                   alt="#"
                   class="img-fluid"
                 />
@@ -341,7 +341,7 @@
           <div class="col-lg-4 col-sm-6">
             <div class="single_product_item">
               <img
-                src="img/tranding_item/tranding_item_2.png"
+                src="resources/img/tranding_item/tranding_item_2.png"
                 alt="#"
                 class="img-fluid"
               />
@@ -356,7 +356,7 @@
           <div class="col-lg-4 col-sm-6">
             <div class="single_product_item">
               <img
-                src="img/tranding_item/tranding_item_3.png"
+                src="resources/img/tranding_item/tranding_item_3.png"
                 alt="#"
                 class="img-fluid"
               />
@@ -371,7 +371,7 @@
           <div class="col-lg-4 col-sm-6">
             <div class="single_product_item">
               <img
-                src="img/tranding_item/tranding_item_4.png"
+                src="resources/img/tranding_item/tranding_item_4.png"
                 alt="#"
                 class="img-fluid"
               />
@@ -386,7 +386,7 @@
           <div class="col-lg-4 col-sm-6">
             <div class="single_product_item">
               <img
-                src="img/tranding_item/tranding_item_5.png"
+                src="resources/img/tranding_item/tranding_item_5.png"
                 alt="#"
                 class="img-fluid"
               />
@@ -401,7 +401,7 @@
           <div class="col-lg-4 col-sm-6">
             <div class="single_product_item">
               <img
-                src="img/tranding_item/tranding_item_6.png"
+                src="resources/img/tranding_item/tranding_item_6.png"
                 alt="#"
                 class="img-fluid"
               />
@@ -426,7 +426,7 @@
             <div class="client_review_slider owl-carousel">
               <div class="single_client_review">
                 <div class="client_img">
-                  <img src="img/client.png" alt="#" />
+                  <img src="resources/img/client.png" alt="#" />
                 </div>
                 <p>
                   "Working in conjunction with humanitarian aid agencies, we
@@ -436,7 +436,7 @@
               </div>
               <div class="single_client_review">
                 <div class="client_img">
-                  <img src="img/client_1.png" alt="#" />
+                  <img src="resources/img/client_1.png" alt="#" />
                 </div>
                 <p>
                   "Working in conjunction with humanitarian aid agencies, we
@@ -446,7 +446,7 @@
               </div>
               <div class="single_client_review">
                 <div class="client_img">
-                  <img src="img/client_2.png" alt="#" />
+                  <img src="resources/img/client_2.png" alt="#" />
                 </div>
                 <p>
                   "Working in conjunction with humanitarian aid agencies, we
@@ -487,25 +487,25 @@
         <div class="row justify-content-center">
           <div class="col-lg-3 col-sm-6">
             <div class="single_feature_part">
-              <img src="img/icon/feature_icon_1.svg" alt="#" />
+              <img src="resources/img/icon/feature_icon_1.svg" alt="#" />
               <h4>Credit Card Support</h4>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6">
             <div class="single_feature_part">
-              <img src="img/icon/feature_icon_2.svg" alt="#" />
+              <img src="resources/img/icon/feature_icon_2.svg" alt="#" />
               <h4>Online Order</h4>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6">
             <div class="single_feature_part">
-              <img src="img/icon/feature_icon_3.svg" alt="#" />
+              <img src="resources/img/icon/feature_icon_3.svg" alt="#" />
               <h4>Free Delivery</h4>
             </div>
           </div>
           <div class="col-lg-3 col-sm-6">
             <div class="single_feature_part">
-              <img src="img/icon/feature_icon_4.svg" alt="#" />
+              <img src="resources/img/icon/feature_icon_4.svg" alt="#" />
               <h4>Product with Gift</h4>
             </div>
           </div>
@@ -545,7 +545,7 @@
             <div class="col-lg-8">
               <div class="footer_menu">
                 <div class="footer_logo">
-                  <a href="index.html"><img src="img/logo.png" alt="#" /></a>
+                  <a href="index.html"><img src="resources/img/logo.png" alt="#" /></a>
                 </div>
                 <div class="footer_menu_item">
                   <a href="index.html">Home</a>
@@ -598,26 +598,26 @@
     <!--::footer_part end::-->
 
     <!-- jquery plugins here-->
-    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="resources/js/jquery-1.12.1.min.js"></script>
     <!-- popper js -->
-    <script src="js/popper.min.js"></script>
+    <script src="resources/js/popper.min.js"></script>
     <!-- bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
     <!-- magnific popup js -->
-    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="resources/js/jquery.magnific-popup.js"></script>
     <!-- carousel js -->
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="resources/js/owl.carousel.min.js"></script>
+    <script src="resources/js/jquery.nice-select.min.js"></script>
     <!-- slick js -->
-    <script src="js/slick.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
+    <script src="resources/js/slick.min.js"></script>
+    <script src="resources/js/jquery.counterup.min.js"></script>
+    <script src="resources/js/waypoints.min.js"></script>
+    <script src="resources/js/contact.js"></script>
+    <script src="resources/js/jquery.ajaxchimp.min.js"></script>
+    <script src="resources/js/jquery.form.js"></script>
+    <script src="resources/js/jquery.validate.min.js"></script>
+    <script src="resources/js/mail-script.js"></script>
     <!-- custom js -->
-    <script src="js/custom.js"></script>
+    <script src="resources/js/custom.js"></script>
   </body>
 </html>
