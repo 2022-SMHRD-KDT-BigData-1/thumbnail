@@ -98,8 +98,8 @@ public class MemberController {
 		System.out.println(" ");
 	}
 	
-	@RequestMapping("/네일가상체험.do")
-	public void 네일가상체험() {
+	@RequestMapping("/experience.do")
+	public void experience() {
 		System.out.println(" ");
 	}
 }

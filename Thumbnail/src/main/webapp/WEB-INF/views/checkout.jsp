@@ -36,7 +36,7 @@
 				<div class="col-lg-12">
 					<nav class="navbar navbar-expand-lg navbar-light">
 						<a class="navbar-brand" href="index.do"> <img
-							src="resources/img/로고.png" alt="logo" style="width: 12rem" />
+							src="resources/img/로고.png" alt="logo" style="width: 12rem;" />
 						</a>
 						<button class="navbar-toggler" type="button"
 							data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -117,7 +117,7 @@
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-6">
-				<img src="resources/img/로고.png" alt="#" style="width:11rem; padding-bottom: 30px"/>
+				<img src="resources/img/로고.png" alt="#" style="width:11rem; padding-bottom: 30px; display: block; margin: 0px auto;"/>
 					<!-- <h3 class="mb-30">회원정보</h3> -->
 					<form action="joinInsert.do">
 
@@ -126,8 +126,9 @@
 								<div class="col-md-9">
 									<input type="email" name="mb_email" placeholder="이메일(아이디)"
 										onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Email'" required
+										onblur="this.placeholder = '이메일(아이디)'" required
 										class="single-input">
+										
 								</div>
 								<div class="col-md-3">
 									<a href="#" class="genric-btn primary radius"
@@ -135,27 +136,28 @@
 								</div>
 							</div>
 						</div>
-
-
+						
+						<!-- 일반 사용자 타입 : u, 관리자 타입 : a -->
+						<input type="hidden" name="mb_type" value="u">
 
 
 						<div class="mt-10">
 							<input type="password" name="mb_pw" placeholder="비밀번호"
 								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Password'" required
+								onblur="this.placeholder = '비밀번호'" required
 								class="single-input">
 						</div>
 
 						<div class="mt-10">
 							<input type="text" name="mb_name" placeholder="이름"
 								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Name'" required class="single-input">
+								onblur="this.placeholder = '이름'" required class="single-input">
 						</div>
 
 						<div class="mt-10">
 							<input type="date" name="mb_birthdate" value="생년월일"
 								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Phone'" required
+								onblur="this.placeholder = '생년월일'" required
 								class="single-input">
 						</div>
 
@@ -164,7 +166,7 @@
 								<div class="col-md-9">
 									<input type="text" name="mb_nick" placeholder="닉네임"
 										onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Nick'" required
+										onblur="this.placeholder = '닉네임'" required
 										class="single-input">
 								</div>
 								<div class="col-md-3">
@@ -177,7 +179,7 @@
 						<div class="mt-10">
 							<input type="text" name="mb_phone" placeholder="휴대폰 번호"
 								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Phone'" required
+								onblur="this.placeholder = '휴대폰'" required
 								class="single-input">
 						</div>
 						<div class="input-group-icon mt-10">
@@ -186,7 +188,7 @@
 							</div>
 							<input type="text" name="mbaddr" placeholder="주소"
 								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Address'" required
+								onblur="this.placeholder = '주소'" required
 								class="single-input">
 						</div>
 						<div class="mt-10">
