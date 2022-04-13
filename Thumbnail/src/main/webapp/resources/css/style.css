@@ -3,16 +3,14 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Rubik:300,400,500,700&display=swap");
 /* line 2, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_extends.scss */
 
-@font-face {
+/* @font-face {
     font-family: 'twayfly';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayfly.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
+} */
 
-*{
-	font-family: font-family: 'twayfly';
-}
+
 
 
 .form-contact .form-group .btn_1 i {
@@ -37,7 +35,7 @@
 /**************** common css start ****************/
 /* line 4, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_common.scss */
 body {
-  font-family: 'twayfly';
+  font-family: 'Rubik", sans-serif';
   padding: 0;
   margin: 0;
   font-size: 14px;
