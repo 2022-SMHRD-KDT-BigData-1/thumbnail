@@ -148,7 +148,7 @@
                       id="email"
                       name="mb_email"
                       value=""
-                      placeholder="Email"
+                      placeholder="이메일(아이디)"
                     />
                   </div>
                   <div class="col-md-12 form-group p_star">
@@ -158,7 +158,7 @@
                       id="pw"
                       name="mb_pw"
                       value=""
-                      placeholder="Password"
+                      placeholder="비밀번호"
                     />
                   </div>
                   <div class="col-md-12 form-group">

@@ -186,15 +186,16 @@
 							<div class="icon">
 								<i class="fa fa-plane" aria-hidden="true"></i>
 							</div>
-							<input type="text" name="mbaddr" placeholder="주소"
+							<input type="text" name="mb_addr" placeholder="주소"
 								onfocus="this.placeholder = ''"
 								onblur="this.placeholder = '주소'" required
 								class="single-input">
 						</div>
 						<div class="mt-10">
 							<div class="row justify-content-center">
-								<a href="index.do" class="genric-btn primary radius"
-									style="font-size: 13px; background: #c1a5a5">가입하기</a>
+								
+								<button class="genric-btn primary radius"
+									style="font-size: 13px; background: #c1a5a5">가입하기</button>
 							</div>
 						</div>
 					</form>
