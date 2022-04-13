@@ -31,7 +31,7 @@
 
 <body>
 	<!--::header part start::-->
-	<header class="main_menu home_menu">
+<header class="main_menu home_menu">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-lg-12">
@@ -54,29 +54,33 @@
 								<li class="nav-item"><a class="nav-link"
 									href="product_list.do"> 가상네일체험</a></li>
 
-
-								<li class="nav-item"><a class="nav-link" href="contact.do">주변
-										네일샵</a></li>
-
 								<li class="nav-item"><a class="nav-link"
 									href="product_list2.do">갤러리</a></li>
 
-								
+
+
 								<li class="nav-item"><a class="nav-link" href="contact.do">손톱영양제</a>
 								</li>
 
-								<li class="nav-item dropdown"><a
+								<li class="nav-item"><a class="nav-link" href="contact.do">주변
+										네일샵</a></li>
+										
+										<li class="nav-item"><a class="nav-link" href="login.do">
+										로그인</a></li>
+
+							<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
 									id="navbarDropdown_2" role="button" data-toggle="dropdown"
 									aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
 									<div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
 										<a class="dropdown-item" href="cart.do"> 찜목록</a> <a
 											class="dropdown-item" href="single_blog.do">블로그 </a>
-									</div></li>
+									</div></li> -->
 							</ul>
+							
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
-							<a href="login.do"><i class="fas fa-solid fa-user"></i></a><a
+							<a
 								id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
 							<a href="cart.do"> <i class="fas fa-solid fa-heart"></i>
 							</a>
@@ -104,7 +108,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb_iner">
-						<h2>product list</h2>
+						<h2>Gallery</h2>
 					</div>
 				</div>
 			</div>
@@ -219,34 +223,7 @@
 
 	<!--::footer_part start::-->
 	<footer class="footer_part">
-		<div class="footer_iner">
-			<div class="container">
-				<div class="row justify-content-between align-items-center">
-					<div class="col-lg-8">
-						<div class="footer_menu">
-							<div class="footer_logo">
-								<a href="index.do"><img src="resources/img/로고.png" alt="#"
-									style="width: 11rem"></a>
-							</div>
-							<div class="footer_menu_item">
-								<a href="index.do">Home</a> <a href="about.do">About</a> <a
-									href="product_list.do">Products</a> <a href="#">Pages</a> <a
-									href="blog.do">Blog</a> <a href="contact.do">Contact</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="social_icon">
-							<a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i
-								class="fab fa-instagram"></i></a> <a href="#"><i
-								class="fab fa-google-plus-g"></i></a> <a href="#"><i
-								class="fab fa-linkedin-in"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
+		
 		<div class="copyright_part">
 			<div class="container">
 				<div class="row ">
