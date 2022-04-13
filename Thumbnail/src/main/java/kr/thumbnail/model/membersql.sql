@@ -1,0 +1,1 @@
+select * from t_member where mb_email = 1;

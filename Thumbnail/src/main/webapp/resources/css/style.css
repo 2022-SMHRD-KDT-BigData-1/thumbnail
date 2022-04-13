@@ -2,6 +2,15 @@
 /**************** extend css start ****************/
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Rubik:300,400,500,700&display=swap");
 /* line 2, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_extends.scss */
+
+@font-face {
+    font-family: 'twayfly';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayfly.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 .form-contact .form-group .btn_1 i {
   background-image: linear-gradient(
     16deg,
@@ -24,7 +33,7 @@
 /**************** common css start ****************/
 /* line 4, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_common.scss */
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'twayfly';
   padding: 0;
   margin: 0;
   font-size: 14px;
@@ -514,7 +523,7 @@ ul {
 
 /* line 343, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_common.scss */
 .section_bg {
-  background-color: #f4edf278;
+  background-color: white;
 }
 
 /**************** common css end ****************/
@@ -550,8 +559,8 @@ ul {
   display: inline-block;
   padding: 17px 50px;
   border-radius: 5px;
-  background-color: rgb(205, 195, 225);
-  border: 2px solid rgb(205, 195, 225);
+  background-color: #f9bebe;
+  border: 2px solid #f9bebe;
   font-size: 15px;
   font-weight: 500;
   -webkit-transition: 0.5s;
@@ -563,7 +572,7 @@ ul {
 /* line 36, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_button.scss */
 .btn_1:hover {
   background-color: #fff;
-  color: rgb(205, 195, 225);
+  color: #f9bebe;
 }
 
 @media (max-width: 991px) {
@@ -579,10 +588,10 @@ ul {
   padding: 18px 36px;
   border-radius: 5px;
   background-color: transparent;
-  border: 1px solid #b08ead;
+  border: 1px solid #f9bebe;
   font-size: 15px;
   font-weight: 700;
-  color: #b08ead;
+  color: #f9bebe;
   text-transform: uppercase;
   font-weight: 400;
   -webkit-transition: 0.5s;
@@ -591,7 +600,7 @@ ul {
 
 /* line 56, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_button.scss */
 .btn_3:hover {
-  background-color: #b08ead;
+  background-color: #f9bebe;
   color: #fff;
 }
 
@@ -2234,7 +2243,7 @@ ul {
   max-width: 1140px;
   z-index: 999;
   text-align: center;
-  background: #b08ead;
+  background: #ffb4b4;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -2339,7 +2348,7 @@ ul {
   transform: scale(1, 0);
   display: block;
   border: 0px solid transparent;
-  background-color: #b08ead;
+  background-color: #f9bebe;
 }
 
 /* line 135, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_menu.scss */
@@ -2347,7 +2356,7 @@ ul {
   font-size: 14px;
   padding: 8px 20px !important;
   color: #fff !important;
-  background-color: #b08ead;
+  background-color: #f9bebe;
   text-transform: capitalize;
 }
 
@@ -2507,7 +2516,7 @@ ul {
   content: "";
   left: 0;
   bottom: 0;
-  background-color: rgb(205, 195, 225);
+  background-color: #f9bebe;
   width: 196px;
   height: 618px;
 }
@@ -3054,7 +3063,7 @@ input:focus {
 
 /* line 1, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_trending_items.scss */
 .trending_items {
-  background-color: #f4edf2;
+  background-color: #fff4f4;
   padding: 200px 0 130px;
 }
 
@@ -3154,7 +3163,7 @@ input:focus {
 .client_review {
   padding: 100px 0;
   text-align: center;
-  background-color: #b08ead;
+  background-color: #e79595f5;
   position: relative;
 }
 
@@ -3419,7 +3428,7 @@ input:focus {
 
 /* line 6, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product_list.scss */
 .product_sidebar .single_sedebar input {
-  background-color: #f4edf2;
+  background-color: #fff9f9;
   border-radius: 50px;
   border: 1px solid #f4edf2;
   padding: 13px 25px;
@@ -5957,23 +5966,18 @@ input:focus {
 .login_part .login_part_text {
   background-image: -moz-linear-gradient(
     90deg,
-    #b08ead 0%,
-    #4b3049 64%,
-    #b08ead 100%
+    #f9bebe 0%, #f1debe 64%, #f9bebe 100% );
   );
   background-image: -webkit-linear-gradient(
     90deg,
-    #b08ead 0%,
-    #4b3049 64%,
-    #b08ead 100%
+   #f9bebe 0%, #f1debe 64%, #f9bebe 100% );
   );
   background-image: linear-gradient(
     90deg,
-    #b08ead 0%,
-    #4b3049 64%,
-    #b08ead 100%
+    #f9bebe 0%, #f1debe 64%, #f9bebe 100% );
   );
   background-size: 200% auto;
+  border-radius:20px;
 }
 
 /* line 1965, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product.scss */
@@ -6003,7 +6007,7 @@ input:focus {
 /* line 1982, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product.scss */
 .login_part .login_part_text .btn_3:hover {
   background-color: #fff;
-  color: #b08ead !important;
+  color: #f9bebe !important;
 }
 
 @media (max-width: 991px) {
@@ -6224,7 +6228,7 @@ input:focus {
 
 /* line 2168, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_product.scss */
 .cart_area .btn_1:hover {
-  border: 1px solid rgb(205, 195, 225) !important;
+  border: 1px solid #f9bebe !important;
 }
 
 /************ new arrival css here ****************/
@@ -6836,7 +6840,7 @@ h6 {
   outline: none;
   line-height: 40px;
   padding: 0 30px;
-  font-size: 0.8em;
+  /* font-size: 0.8em; */
   text-align: center;
   text-decoration: none;
   font-weight: 500;
@@ -6875,7 +6879,7 @@ h6 {
 
 /* line 183, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_elements.scss */
 .genric-btn.radius {
-  border-radius: 3px;
+  border-radius: 12px;
 }
 
 /* line 186, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_elements.scss */
@@ -6927,28 +6931,29 @@ h6 {
 /* line 218, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_elements.scss */
 .genric-btn.primary {
   color: #fff;
-  background: #b08ead;
+  background: #f9bebe;
   border: 1px solid transparent;
 }
 
 /* line 222, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_elements.scss */
 .genric-btn.primary:hover {
-  color: #b08ead;
-  border: 1px solid #b08ead;
+  color: #f9bebe;
+  border: 1px solid #f9bebe;
   background: #fff;
 }
 
 /* line 228, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_elements.scss */
 .genric-btn.primary-border {
-  color: #b08ead;
-  border: 1px solid #b08ead;
+  color: #f9bebe;
+  border: 1px solid #f9bebe;
   background: #fff;
+  margin-left: 8px
 }
 
 /* line 232, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_elements.scss */
 .genric-btn.primary-border:hover {
   color: #fff;
-  background: #b08ead;
+  background: #f9bebe;
   border: 1px solid transparent;
 }
 
@@ -7324,7 +7329,7 @@ h6 {
   line-height: 40px;
   border: none;
   outline: none;
-  background: #f9f9ff;
+  background: #fff9f9;
   padding: 0 20px;
 }
 
@@ -8426,7 +8431,7 @@ h6 {
 /* line 81, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_contact.scss */
 .form-contact .form-group .btn_1:hover {
   border: 1px solid #b08ead;
-  color: rgb(205, 195, 225) !important;
+  color: #f9bebe !important;
 }
 
 /* line 84, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_contact.scss */
@@ -8630,7 +8635,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #b08ead;
+  background-color: rgb(205, 195, 225);
+  background-image: radial-gradient(circle, #f9bebe,#f1debe, #ffce9bee 110%);
 }
 
 /* line 8, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_breadcrumb.scss */
@@ -8657,7 +8663,7 @@ h6 {
 /**********************footer part css*******************/
 /* line 3, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_footer.scss */
 .footer_part .footer_iner {
-  padding: 120px 0;
+  padding: 80px 0;
 }
 
 @media (max-width: 991px) {
