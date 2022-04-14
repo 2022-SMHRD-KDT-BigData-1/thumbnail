@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.thumbnail.model.MemberMapper">
+	<select id="loginSelect"
+		parameterType="kr.thumbnail.model.MemberVO"
+		resultType="kr.thumbnail.model.MemberVO">
+		select * from t_member where mb_email=#{mb_email} and
+		mb_pw=#{mb_pw}
+	</select>
+	
+	<insert id="joinInsert" parameterType="kr.thumbnail.model.MemberVO">
+		insert into t_member(mb_email, mb_pw, mb_name, mb_nick, mb_phone, mb_addr, mb_birthdate, mb_type)
+		values(#{mb_email}, #{mb_pw}, #{mb_name}, #{mb_nick},#{mb_phone},#{mb_addr},#{mb_birthdate}, #{mb_type})
+	</insert>
+
+</mapper>
