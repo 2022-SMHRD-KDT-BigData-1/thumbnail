@@ -9,4 +9,8 @@ public interface MemberMapper {
 
 	void joinInsert(MemberVO vo);
 
+	MemberVO idCheck(String mb_email);
+
+	MemberVO nickCheck(String mb_nick);
+
 }

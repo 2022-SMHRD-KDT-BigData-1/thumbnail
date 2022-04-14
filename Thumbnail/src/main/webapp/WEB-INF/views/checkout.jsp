@@ -162,7 +162,7 @@
 									<input type="email" name="mb_email" placeholder="이메일(아이디)"
 										onfocus="this.placeholder = ''"
 										onblur="this.placeholder = '이메일(아이디)'" required
-										class="single-input">
+										class="single-input" id="mb_email" value="">
 
 								</div>
 								<div class="col-md-3">
@@ -200,11 +200,11 @@
 									<input type="text" name="mb_nick" placeholder="닉네임"
 										onfocus="this.placeholder = ''"
 										onblur="this.placeholder = '닉네임'" required
-										class="single-input">
+										class="single-input" id="mb_nick" value="">
 								</div>
 								<div class="col-md-3">
 									<button type="button" href="#" class="genric-btn primary radius"
-										style="font-size: 13px">중복체크</button>
+										style="font-size: 13px" id="nickCheck">중복체크</button>
 								</div>
 							</div>
 						</div>
@@ -272,7 +272,12 @@
 	
 	<!--================ 모달창 =================-->
 	<div class="modal">
-		<div class="modal_body">Modal</div>
+		<div class="modal_body" style="width: 25%;">중복확인
+			
+			<p id="msg"></p>
+			<input class="btn amado-btn close1" type="button" value="확인" 
+		        	   style="width: 50%; margin: auto;" id="close">
+		</div>
 	</div>
 	
 	<script>
@@ -280,14 +285,91 @@
 	    const body = document.querySelector('body');
 	    const modal = document.querySelector('.modal');
 	    const btnOpenPopup = document.querySelector('#id_check');
+	    const btnOpenPopup1 = document.querySelector('#nickCheck');
+	    const btnClosePopup = document.querySelector('#close');
 	
 	    btnOpenPopup.addEventListener('click', () => {
 	      modal.classList.toggle('show');
-	
+	      
+	      console.log("회원정보 중복 체크");
+	      var mb_email = $('#mb_email').val();
+	      console.log(mb_email);
+	      
+	      if(mb_email == ""){
+	    	  console.log("아이디를 입력해주세요");
+	    	  $("#msg").text("아이디를 입력해주세요")
+	      }else{
+	    	  $.ajax({
+		          url : "idCheck.do",
+		          type : "post",
+		          dataType : "json",
+		          data : {"mb_email" : mb_email},
+		          success : function (data) {
+					console.log(data.mb_email);
+					if(data.mb_email == null){
+						$("#msg").text("사용 가능한 아이디 입니다")
+					}else{
+						$("#msg").text("사용 불가능한 아이디 입니다")
+					}
+				}, 
+		          error : function(e){
+		             console.log(e);
+		          }
+		          
+		       }); 
+	      }
+	      
 	      if (modal.classList.contains('show')) {
 	        body.style.overflow = 'hidden';
 	      }
+	      
 	    });
+	    
+	    btnOpenPopup1.addEventListener('click', () => {
+		      modal.classList.toggle('show');
+		      
+		      console.log("닉네임 중복 체크");
+		      var mb_nick = $('#mb_nick').val();
+		      console.log(mb_nick);
+		      
+		      if(mb_nick == ""){
+		    	  console.log("닉네임을 입력해주세요");
+		    	  $("#msg").text("닉네임을 입력해주세요")
+		      }else{
+		    	  $.ajax({
+			          url : "nickCheck.do",
+			          type : "post",
+			          dataType : "json",
+			          data : {"mb_nick" : mb_nick},
+			          success : function (data) {
+						console.log(data.mb_email);
+						if(data.mb_nick == null){
+							$("#msg").text("사용 가능한 닉네임 입니다")
+						}else{
+							$("#msg").text("사용 불가능한 닉네임 입니다")
+						}
+					}, 
+			          error : function(e){
+			             console.log(e);
+			          }
+			          
+			       }); 
+		      }
+		      
+		      if (modal.classList.contains('show')) {
+		        body.style.overflow = 'hidden';
+		      }
+		      
+		    });
+		    
+		    
+	    
+	    btnClosePopup.addEventListener('click', (event) => {
+	    	modal.classList.remove('show');
+	    	modal.classList.add('hidden');
+	    	$("#msg").text("");
+	    })
+	   
 	
 	    modal.addEventListener('click', (event) => {
 	      if (event.target === modal) {
@@ -295,6 +377,7 @@
 	
 	        if (!modal.classList.contains('show')) {
 	          body.style.overflow = 'auto';
+	          $("#msg").text("");
 	        }
 	      }
 	    });
