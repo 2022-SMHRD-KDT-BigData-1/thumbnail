@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -26,6 +27,37 @@
 <link rel="stylesheet" href="resources/css/nice-select.css">
 <!-- style CSS -->
 <link rel="stylesheet" href="resources/css/style.css">
+
+<style>
+	.modal {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: none;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	
+	.modal.show { 
+		display: block; 
+	}
+	
+	.modal_body { 
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 400px;
+		height: 600px;
+		padding: 40px;
+		text-align: center;
+		background-color: rgb(255, 255, 255);
+		border-radius: 10px;
+		box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+		transform: translateX(-50%) translateY(-50%); 
+	}
+	
+</style>
 </head>
 
 <body>
@@ -134,8 +166,8 @@
 
 								</div>
 								<div class="col-md-3">
-									<a href="#" class="genric-btn primary radius"
-										style="font-size: 13px">중복체크</a>
+									<button type="button" href="#" class="genric-btn primary radius" id="id_check"
+										style="font-size: 13px">중복체크</button>
 								</div>
 							</div>
 						</div>
@@ -171,8 +203,8 @@
 										class="single-input">
 								</div>
 								<div class="col-md-3">
-									<a href="#" class="genric-btn primary radius"
-										style="font-size: 13px">중복체크</a>
+									<button type="button" href="#" class="genric-btn primary radius"
+										style="font-size: 13px">중복체크</button>
 								</div>
 							</div>
 						</div>
@@ -237,6 +269,37 @@
 		</div>
 	</footer>
 	<!--::footer_part end::-->
+	
+	<!--================ 모달창 =================-->
+	<div class="modal">
+		<div class="modal_body">Modal</div>
+	</div>
+	
+	<script>
+
+	    const body = document.querySelector('body');
+	    const modal = document.querySelector('.modal');
+	    const btnOpenPopup = document.querySelector('#id_check');
+	
+	    btnOpenPopup.addEventListener('click', () => {
+	      modal.classList.toggle('show');
+	
+	      if (modal.classList.contains('show')) {
+	        body.style.overflow = 'hidden';
+	      }
+	    });
+	
+	    modal.addEventListener('click', (event) => {
+	      if (event.target === modal) {
+	        modal.classList.toggle('show');
+	
+	        if (!modal.classList.contains('show')) {
+	          body.style.overflow = 'auto';
+	        }
+	      }
+	    });
+  
+	</script>
 
 	<!-- jquery plugins here-->
 	<script src="resources/js/jquery-1.12.1.min.js"></script>
