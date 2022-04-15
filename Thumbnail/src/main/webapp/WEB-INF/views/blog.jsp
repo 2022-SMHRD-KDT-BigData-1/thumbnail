@@ -153,9 +153,7 @@
                       >
                     </li>
                     <li>
-                      <a href="#"
-                        ><i class="far fa-comments"></i> 03 Comments</a
-                      >
+                      <button type="button"><i class="far fa-comments"></i> 03 Comments</button>
                     </li>
                   </ul>
                 </div>
