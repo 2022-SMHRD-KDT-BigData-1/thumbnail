@@ -47,8 +47,8 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 400px;
-		height: 600px;
+		width: 10px;
+		height: 200px;
 		padding: 40px;
 		text-align: center;
 		background-color: rgb(255, 255, 255);
@@ -165,7 +165,7 @@
 										class="single-input" id="mb_email" value="">
 
 								</div>
-								<div class="col-md-3">
+								<div>
 									<button type="button" href="#" class="genric-btn primary radius" id="id_check"
 										style="font-size: 13px">중복체크</button>
 								</div>
@@ -202,7 +202,7 @@
 										onblur="this.placeholder = '닉네임'" required
 										class="single-input" id="mb_nick" value="">
 								</div>
-								<div class="col-md-3">
+								<div>
 									<button type="button" href="#" class="genric-btn primary radius"
 										style="font-size: 13px" id="nickCheck">중복체크</button>
 								</div>
@@ -272,11 +272,13 @@
 	
 	<!--================ 모달창 =================-->
 	<div class="modal">
-		<div class="modal_body" style="width: 25%;">중복확인
+		<div class="modal_body" style="max-width: 100%; max-height: 30%; width: auto; display: table;">
+		<h3>중복확인</h3>
 			
 			<p id="msg"></p>
-			<input class="btn amado-btn close1" type="button" value="확인" 
-		        	   style="width: 50%; margin: auto;" id="close">
+			
+			<button class="genric-btn primary radius" value="확인" 
+		        	   style="width: 37%;  height: 30%; padding:unset; font-size: auto;" id="close">확인</button>
 		</div>
 	</div>
 	
