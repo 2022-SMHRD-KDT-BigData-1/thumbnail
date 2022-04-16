@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html lang="zxx">
 
@@ -111,8 +112,7 @@
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
 							<a id="search_1" href="javascript:void(0)"><i
-								class="ti-search"></i></a> <a href="cart.do"> <i
-								class="fas fa-solid fa-heart"></i>
+								class="ti-search"></i></a> <a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -187,205 +187,52 @@
 				</div>
 				</br>
 
-				<div class="container" style="margin-bottom: 20px">
-					<div class="row">
-						<!--  <h2>Card Image</h2> -->
-						<!-- <p>Image at the top (card-img-top):</p> -->
+				<c:forEach var="j" begin="0" end="2">
+					<div class="container" style="margin-bottom: 20px">
+						<div class="row">
+							<!--  <h2>Card Image</h2> -->
+							<!-- <p>Image at the top (card-img-top):</p> -->
 
-						<div class="col-md-4">
-							<div class="card" style="width: 350px; border-radius: 10px">
-								<img class="card-img-top"
-									src="resources/img/tranding_item/nail1.png"
-									style="width: 100%; border-top-right-radius: 8px; border-top-left-radius: 8px;">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Some example text some example text.
-										John Doe is an architect and engineer</p>
-									<div style="padding-top: 20px">
-										<button type="button" style="background: none; border: none;">
-											<p class="like-info">
-												<span class="align-middle"><i class="far fa-heart"></i></span>
-												Like
-											</p>
-										</button>
-										<button type="button" style="background: none; border: none;">
-											<p>
-												<i class="far fa-comments"></i> 03 Comments
-											</p>
-										</button>
+							<c:forEach begin="0" end="2" var="i">
+								<div class="col-md-4" id="">
+									<div class="card" style="width: 350px; border-radius: 10px">
+										<img class="card-img-top"
+											src="resources/img/tranding_item/nail1.png"
+											style="width: 100%; border-top-right-radius: 8px; border-top-left-radius: 8px;">
+										<div class="card-body">
+											<h4 class="card-title">John Doe</h4>
+											<p class="card-text">Some example text some example text.
+												John Doe is an architect and engineer</p>
+											<div style="padding-top: 20px">
+												<button type="button"
+													style="background: none; border: none;">
+													<p class="like-info">
+														<span class="align-middle"><i class="far fa-heart"></i></span>
+														Like
+													</p>
+												</button>
+												<button type="button"
+													style="background: none; border: none;">
+													<p>
+														<i class="far fa-comments"></i> 03 Comments
+													</p>
+												</button>
+											</div>
+										</div>
 									</div>
 								</div>
-							</div>
+								<br>
+
+							</c:forEach>
 						</div>
-						<br>
-
-
-
-
-
-						<!--  <h2>Card Image</h2> -->
-						<!-- <p>Image at the top (card-img-top):</p> -->
-						<div class="col-md-4">
-							<div class="card" style="width: 350px">
-								<img class="card-img-top"
-									src="resources/img/tranding_item/nail1.png" style="width: 100%">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Some example text some example text.
-										John Doe is an architect and engineer</p>
-									<a href="#" class="btn btn-primary">See Profile</a>
-								</div>
-							</div>
-						</div>
-						<br>
-
-
-
-
-						<!--  <h2>Card Image</h2> -->
-						<!-- <p>Image at the top (card-img-top):</p> -->
-						<div class="col-md-4">
-							<div class="card" style="width: 350px">
-								<img class="card-img-top"
-									src="resources/img/tranding_item/nail1.png" style="width: 100%">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Some example text some example text.
-										John Doe is an architect and engineer</p>
-									<a href="#" class="btn btn-primary">See Profile</a>
-								</div>
-							</div>
-						</div>
-						<br>
 					</div>
-				</div>
-
-
-				<div class="container">
-					<div class="row">
-						<!--  <h2>Card Image</h2> -->
-						<!-- <p>Image at the top (card-img-top):</p> -->
-						<div class="col-md-4">
-							<div class="card" style="width: 350px">
-								<img class="card-img-top"
-									src="resources/img/tranding_item/nail1.png" style="width: 100%">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Some example text some example text.
-										John Doe is an architect and engineer</p>
-									<a href="#" class="btn btn-primary">See Profile</a>
-								</div>
-							</div>
-						</div>
-						<br>
-
-
-
-
-
-						<!--  <h2>Card Image</h2> -->
-						<!-- <p>Image at the top (card-img-top):</p> -->
-						<div class="col-md-4">
-							<div class="card" style="width: 350px">
-								<img class="card-img-top"
-									src="resources/img/tranding_item/nail1.png" style="width: 100%">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Some example text some example text.
-										John Doe is an architect and engineer</p>
-									<a href="#" class="btn btn-primary">See Profile</a>
-								</div>
-							</div>
-						</div>
-						<br>
-
-
-
-
-						<!--  <h2>Card Image</h2> -->
-						<!-- <p>Image at the top (card-img-top):</p> -->
-						<div class="col-md-4">
-							<div class="card" style="width: 350px">
-								<img class="card-img-top"
-									src="resources/img/tranding_item/nail1.png" style="width: 100%">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Some example text some example text.
-										John Doe is an architect and engineer</p>
-									<a href="#" class="btn btn-primary">See Profile</a>
-								</div>
-							</div>
-						</div>
-						<br>
-					</div>
-				</div>
-
-
-
-				<div class="container">
-					<div class="row">
-						<!--  <h2>Card Image</h2> -->
-						<!-- <p>Image at the top (card-img-top):</p> -->
-						<div class="col-md-4">
-							<div class="card" style="width: 350px">
-								<img class="card-img-top"
-									src="resources/img/tranding_item/nail1.png" style="width: 100%">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Some example text some example text.
-										John Doe is an architect and engineer</p>
-									<a href="#" class="btn btn-primary">See Profile</a>
-								</div>
-							</div>
-						</div>
-						<br>
-
-
-
-
-
-						<!--  <h2>Card Image</h2> -->
-						<!-- <p>Image at the top (card-img-top):</p> -->
-						<div class="col-md-4">
-							<div class="card" style="width: 350px">
-								<img class="card-img-top"
-									src="resources/img/tranding_item/nail1.png" style="width: 100%">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Some example text some example text.
-										John Doe is an architect and engineer</p>
-									<a href="#" class="btn btn-primary">See Profile</a>
-								</div>
-							</div>
-						</div>
-						<br>
-
-
-
-
-						<!--  <h2>Card Image</h2> -->
-						<!-- <p>Image at the top (card-img-top):</p> -->
-						<div class="col-md-4">
-							<div class="card" style="width: 350px">
-								<img class="card-img-top"
-									src="resources/img/tranding_item/nail1.png" style="width: 100%">
-								<div class="card-body">
-									<h4 class="card-title">John Doe</h4>
-									<p class="card-text">Some example text some example text.
-										John Doe is an architect and engineer</p>
-
-									<a href="#" class="btn btn-primary">See Profile</a>
-								</div>
-							</div>
-						</div>
-						<br>
-					</div>
-				</div>
-
-
-
+				</c:forEach>
+			</div>
+			<div class="load_more_btn text-center">
+				<a href="#" class="btn_3" style="padding: 10px 25px">더보기</a>
 			</div>
 		</div>
+
 	</div>
 
 
@@ -444,12 +291,15 @@
 			style="transform: translateX(24px) translateY(9%); background-color: white">
 			<div class="row">
 				<div class="col-lg-8 mb-5 mb-lg-0">
-					<div class="blog_item_img">
-						<img class="card-img rounded-0" src="resources/img/blog/1.jpg"
-							alt="" style="width: 45em" /> <a href="#" class="blog_item_date">
-							<h3>15</h3>
-							<p>Jan</p>
-						</a>
+					<div style="padding-left: 50px">
+						<div class="blog_item_img">
+							<img class="card-img rounded-0" src="resources/img/blog/1.jpg"
+								alt="" style="width: 45em" /> <a href="#"
+								class="blog_item_date">
+								<h3>15</h3>
+								<p>Jan</p>
+							</a>
+						</div>
 					</div>
 
 					<div class="blog_details">
@@ -587,6 +437,7 @@
 	    const header = document.querySelector('.main_menu.home_menu');
 	    
 	    card_img.addEventListener("click", () =>{
+	    	
 	    	modal.classList.toggle('show');
 	    	
 	    	if (modal.classList.contains('show')) {

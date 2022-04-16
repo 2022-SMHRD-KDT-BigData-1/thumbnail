@@ -83,7 +83,7 @@
 						<div class="hearer_icon d-flex align-items-center">
 							<a
 								id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-							<a href="cart.do"> <i class="fas fa-solid fa-heart"></i>
+							<a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>

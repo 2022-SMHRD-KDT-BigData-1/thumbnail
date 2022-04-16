@@ -17,8 +17,10 @@ public class MemberController {
 	MemberMapper mapper;
 	
 	@RequestMapping("/index.do")
-	public void index() {	
+	public void index(HttpSession session) {	
 		System.out.println("메인 페이지 이동");
+		
+		
 	}
 	
 	@RequestMapping("/about.do")

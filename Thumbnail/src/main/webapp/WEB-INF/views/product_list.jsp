@@ -81,7 +81,7 @@
 						<div class="hearer_icon d-flex align-items-center">
 							<a
 								id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-							<a href="cart.do"> <i class="fas fa-solid fa-heart"></i>
+							<a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -156,10 +156,23 @@
                         <div class="row">
                             <div class="col-lg-6 col-sm-6">
                                 <div class="single_product_item">
-                                    <img src="resources/img/product/product_list_1.png" alt="#" class="img-fluid">
-                                    <h3> <a href="single_product.do">Cervical pillow for airplane
-                                    car office nap pillow</a> </h3>
-                                    <p>From $5</p>
+                                    <img src="resources/img/tranding_item/nail2.png" alt="#" class="img-fluid">
+                                    <h3> <a href="single_product.do">#네일아트 #노란색 #체크네일</a> </h3>
+                                  	<div style="padding-top: ">
+												<button type="button"
+													style="background: none; border: none;">
+													<p class="like-info">
+														<span class="align-middle"><i class="fas fa-solid fa-check"></i></span>
+														Select
+													</p>
+												</button>
+												<button type="button"
+													style="background: none; border: none;">
+													<p>
+														<i class="far fa-regular fa-bookmark"></i> Wish list
+													</p>
+												</button>
+											</div>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-sm-6">

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -29,37 +29,36 @@
 <link rel="stylesheet" href="resources/css/style.css">
 
 <style>
-	.modal {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		display: none;
-		background-color: rgba(0, 0, 0, 0.4);
-	}
-	
-	.modal.show { 
-		display: block; 
-	}
-	
-	.modal_body { 
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 10px;
-		height: 185;
-		padding-left: 80px;
-		padding-right: 80px;
-		padding-bottom: 20px;
-		padding-top: 20px;
-		text-align: center;
-		background-color: rgb(255, 255, 255);
-		border-radius: 10px;
-		box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
-		transform: translateX(-50%) translateY(-50%); 
-	}
-	
+.modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.show {
+	display: block;
+}
+
+.modal_body {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 185;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	text-align: center;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+	transform: translateX(-50%) translateY(-50%);
+}
 </style>
 </head>
 
@@ -116,7 +115,7 @@
 						<div class="hearer_icon d-flex align-items-center">
 							<a id="search_1" href="javascript:void(0)"><i
 								class="ti-search"></i></a> <a href="cart.do"> <i
-								class="fas fa-solid fa-heart"></i>
+								class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -151,7 +150,7 @@
 	<!-- breadcrumb part end-->
 
 	<!--================Checkout Area =================-->
-	<section class="checkout_area section_padding" style="margin:17px">
+	<section class="checkout_area section_padding" style="margin: 17px">
 
 		<div class="container">
 			<div class="row justify-content-center">
@@ -169,7 +168,8 @@
 
 								</div>
 								<div>
-									<button type="button" href="#" class="genric-btn primary radius" id="id_check"
+									<button type="button" href="#"
+										class="genric-btn primary radius" id="id_check"
 										style="font-size: 13px">중복체크</button>
 								</div>
 							</div>
@@ -206,8 +206,9 @@
 										class="single-input" id="mb_nick" value="">
 								</div>
 								<div>
-									<button type="button" href="#" class="genric-btn primary radius"
-										style="font-size: 13px" id="nickCheck">중복체크</button>
+									<button type="button" href="#"
+										class="genric-btn primary radius" style="font-size: 13px"
+										id="nickCheck">중복체크</button>
 								</div>
 							</div>
 						</div>
@@ -272,19 +273,21 @@
 		</div>
 	</footer>
 	<!--::footer_part end::-->
-	
+
 	<!--================ 모달창 =================-->
 	<div class="modal">
-		<div class="modal_body" style="max-width: 100%; max-height: 30%; width: auto; display: table;">
-		<h3>중복확인</h3>
-			
+		<div class="modal_body"
+			style="max-width: 100%; max-height: 30%; width: auto; display: table;">
+			<h3>중복확인</h3>
+
 			<p id="msg"></p>
-			
-			<button class="genric-btn primary radius" value="확인" 
-		        	   style="width: 85px;  height: 30px; font-size: 12px; margin-top: 20px; line-height: 30px" id="close">확인</button>
+
+			<button class="genric-btn primary radius" value="확인"
+				style="width: 85px; height: 30px; font-size: 12px; margin-top: 20px; line-height: 30px"
+				id="close">확인</button>
 		</div>
 	</div>
-	
+
 	<script>
 
 	    const body = document.querySelector('body');
