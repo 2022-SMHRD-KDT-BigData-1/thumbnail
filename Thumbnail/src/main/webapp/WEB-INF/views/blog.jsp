@@ -29,7 +29,7 @@
     <!-- style CSS -->
     <link rel="stylesheet" href="resources/css/style.css" />
   </head>
-
+  <!--  -->
   <body>
     <!--::header part start::-->
 <header class="main_menu home_menu">
