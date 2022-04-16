@@ -48,8 +48,11 @@
 		top: 50%;
 		left: 50%;
 		width: 10px;
-		height: 200px;
-		padding: 40px;
+		height: 185;
+		padding-left: 80px;
+		padding-right: 80px;
+		padding-bottom: 20px;
+		padding-top: 20px;
 		text-align: center;
 		background-color: rgb(255, 255, 255);
 		border-radius: 10px;
@@ -278,7 +281,7 @@
 			<p id="msg"></p>
 			
 			<button class="genric-btn primary radius" value="확인" 
-		        	   style="width: 37%;  height: 30%; padding:unset; font-size: auto;" id="close">확인</button>
+		        	   style="width: 85px;  height: 30px; font-size: 12px; margin-top: 20px; line-height: 30px" id="close">확인</button>
 		</div>
 	</div>
 	
