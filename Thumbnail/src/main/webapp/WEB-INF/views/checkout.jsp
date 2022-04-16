@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -26,11 +27,44 @@
 <link rel="stylesheet" href="resources/css/nice-select.css">
 <!-- style CSS -->
 <link rel="stylesheet" href="resources/css/style.css">
+
+<style>
+.modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.show {
+	display: block;
+}
+
+.modal_body {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 10px;
+	height: 185;
+	padding-left: 80px;
+	padding-right: 80px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	text-align: center;
+	background-color: rgb(255, 255, 255);
+	border-radius: 10px;
+	box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+	transform: translateX(-50%) translateY(-50%);
+}
+</style>
 </head>
 
 <body>
 	<!--::header part start::-->
-<header class="main_menu home_menu">
+	<header class="main_menu home_menu">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-lg-12">
@@ -53,31 +87,35 @@
 								<li class="nav-item"><a class="nav-link"
 									href="product_list.do"> 가상네일체험</a></li>
 
+								<li class="nav-item"><a class="nav-link"
+									href="product_list2.do">갤러리</a></li>
+
+
+
+								<li class="nav-item"><a class="nav-link" href="contact.do">손톱영양제</a>
+								</li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
 
-								<li class="nav-item"><a class="nav-link"
-									href="product_list2.do">갤러리</a></li>
+								<li class="nav-item"><a class="nav-link" href="login.do">
+										로그인</a></li>
 
-								
-								<li class="nav-item"><a class="nav-link" href="contact.do">손톱영양제</a>
-								</li>
-
-								<li class="nav-item dropdown"><a
+								<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
 									id="navbarDropdown_2" role="button" data-toggle="dropdown"
 									aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
 									<div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
 										<a class="dropdown-item" href="cart.do"> 찜목록</a> <a
 											class="dropdown-item" href="single_blog.do">블로그 </a>
-									</div></li>
+									</div></li> -->
 							</ul>
+
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
-							<a href="login.do"><i class="fas fa-solid fa-user"></i></a><a
-								id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-							<a href="cart.do"> <i class="fas fa-solid fa-heart"></i>
+							<a id="search_1" href="javascript:void(0)"><i
+								class="ti-search"></i></a> <a href="cart.do"> <i
+								class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -103,7 +141,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb_iner">
-						<h2>회원가입</h2>
+						<h2>Join</h2>
 					</div>
 				</div>
 			</div>
@@ -112,13 +150,12 @@
 	<!-- breadcrumb part end-->
 
 	<!--================Checkout Area =================-->
-	<section class="checkout_area section_padding">
-	
+	<section class="checkout_area section_padding" style="margin: 17px">
+
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-6">
-				<img src="resources/img/로고.png" alt="#" style="width:11rem; padding-bottom: 30px"/>
-					<!-- <h3 class="mb-30">회원정보</h3> -->
+
 					<form action="joinInsert.do">
 
 						<div class="mt-10">
@@ -126,37 +163,38 @@
 								<div class="col-md-9">
 									<input type="email" name="mb_email" placeholder="이메일(아이디)"
 										onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Email'" required
-										class="single-input">
+										onblur="this.placeholder = '이메일(아이디)'" required
+										class="single-input" id="mb_email" value="">
+
 								</div>
-								<div class="col-md-3">
-									<a href="#" class="genric-btn primary radius"
-										style="font-size: 13px">중복체크</a>
+								<div>
+									<button type="button" href="#"
+										class="genric-btn primary radius" id="id_check"
+										style="font-size: 13px">중복체크</button>
 								</div>
 							</div>
 						</div>
 
-
+						<!-- 일반 사용자 타입 : u, 관리자 타입 : a -->
+						<input type="hidden" name="mb_type" value="u">
 
 
 						<div class="mt-10">
 							<input type="password" name="mb_pw" placeholder="비밀번호"
 								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Password'" required
-								class="single-input">
+								onblur="this.placeholder = '비밀번호'" required class="single-input">
 						</div>
 
 						<div class="mt-10">
 							<input type="text" name="mb_name" placeholder="이름"
-								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Name'" required class="single-input">
+								onfocus="this.placeholder = ''" onblur="this.placeholder = '이름'"
+								required class="single-input">
 						</div>
 
 						<div class="mt-10">
-							<input type="date" name="mb_birthdate" value="생년월일"
-								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Phone'" required
-								class="single-input">
+							<input type="date" name="mb_birthdate" value=""
+								placeholder="생년월일" onfocus="this.placeholder = ''"
+								onblur="this.placeholder = '생년월일'" required class="single-input">
 						</div>
 
 						<div class="mt-10">
@@ -164,12 +202,13 @@
 								<div class="col-md-9">
 									<input type="text" name="mb_nick" placeholder="닉네임"
 										onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Nick'" required
-										class="single-input">
+										onblur="this.placeholder = '닉네임'" required
+										class="single-input" id="mb_nick" value="">
 								</div>
-								<div class="col-md-3">
-									<a href="#" class="genric-btn primary radius"
-										style="font-size: 13px" >중복체크</a>
+								<div>
+									<button type="button" href="#"
+										class="genric-btn primary radius" style="font-size: 13px"
+										id="nickCheck">중복체크</button>
 								</div>
 							</div>
 						</div>
@@ -177,22 +216,21 @@
 						<div class="mt-10">
 							<input type="text" name="mb_phone" placeholder="휴대폰 번호"
 								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Phone'" required
-								class="single-input">
+								onblur="this.placeholder = '휴대폰'" required class="single-input">
 						</div>
 						<div class="input-group-icon mt-10">
 							<div class="icon">
 								<i class="fa fa-plane" aria-hidden="true"></i>
 							</div>
-							<input type="text" name="mbaddr" placeholder="주소"
-								onfocus="this.placeholder = ''"
-								onblur="this.placeholder = 'Address'" required
-								class="single-input">
+							<input type="text" name="mb_addr" placeholder="주소"
+								onfocus="this.placeholder = ''" onblur="this.placeholder = '주소'"
+								required class="single-input">
 						</div>
 						<div class="mt-10">
 							<div class="row justify-content-center">
-								<a href="index.do" class="genric-btn primary radius"
-									style="font-size: 13px; background: #c1a5a5">가입하기</a>
+
+								<button class="genric-btn primary radius"
+									style="font-size: 13px; background: #c1a5a5">가입하기</button>
 							</div>
 						</div>
 					</form>
@@ -201,38 +239,13 @@
 		</div>
 
 	</section>
-	<hr>
+
+
+
 	<!--================End Checkout Area =================-->
 
 	<!--::footer_part start::-->
 	<footer class="footer_part">
-		<div class="footer_iner section_bg">
-			<div class="container">
-				<div class="row justify-content-between align-items-center">
-					<div class="col-lg-8">
-						<div class="footer_menu">
-							<div class="footer_logo">
-								<a href="index.do"><img src="resources/img/로고.png" alt="#"
-									style="width: 11rem" /></a>
-							</div>
-							<div class="footer_menu_item">
-								<a href="index.do">Home</a> <a href="about.do">About</a> <a
-									href="product_list.do">Products</a> <a href="#">Pages</a> <a
-									href="blog.do">Blog</a> <a href="contact.do">Contact</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4">
-						<div class="social_icon">
-							<a href="#"><i class="fab fa-facebook-f"></i></a> <a href="#"><i
-								class="fab fa-instagram"></i></a> <a href="#"><i
-								class="fab fa-google-plus-g"></i></a> <a href="#"><i
-								class="fab fa-linkedin-in"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<div class="copyright_part">
 			<div class="container">
@@ -260,6 +273,124 @@
 		</div>
 	</footer>
 	<!--::footer_part end::-->
+
+	<!--================ 모달창 =================-->
+	<div class="modal">
+		<div class="modal_body"
+			style="max-width: 100%; max-height: 30%; width: auto; display: table;">
+			<h3>중복확인</h3>
+
+			<p id="msg"></p>
+
+			<button class="genric-btn primary radius" value="확인"
+				style="width: 85px; height: 30px; font-size: 12px; margin-top: 20px; line-height: 30px"
+				id="close">확인</button>
+		</div>
+	</div>
+
+	<script>
+
+	    const body = document.querySelector('body');
+	    const modal = document.querySelector('.modal');
+	    const btnOpenPopup = document.querySelector('#id_check');
+	    const btnOpenPopup1 = document.querySelector('#nickCheck');
+	    const btnClosePopup = document.querySelector('#close');
+	
+	    btnOpenPopup.addEventListener('click', () => {
+	      modal.classList.toggle('show');
+	      
+	      console.log("회원정보 중복 체크");
+	      var mb_email = $('#mb_email').val();
+	      console.log(mb_email);
+	      
+	      if(mb_email == ""){
+	    	  console.log("아이디를 입력해주세요");
+	    	  $("#msg").text("아이디를 입력해주세요")
+	      }else{
+	    	  $.ajax({
+		          url : "idCheck.do",
+		          type : "post",
+		          dataType : "json",
+		          data : {"mb_email" : mb_email},
+		          success : function (data) {
+					console.log(data.mb_email);
+					if(data.mb_email == null){
+						$("#msg").text("사용 가능한 아이디 입니다")
+					}else{
+						$("#msg").text("사용 불가능한 아이디 입니다")
+					}
+				}, 
+		          error : function(e){
+		             console.log(e);
+		          }
+		          
+		       }); 
+	      }
+	      
+	      if (modal.classList.contains('show')) {
+	        body.style.overflow = 'hidden';
+	      }
+	      
+	    });
+	    
+	    btnOpenPopup1.addEventListener('click', () => {
+		      modal.classList.toggle('show');
+		      
+		      console.log("닉네임 중복 체크");
+		      var mb_nick = $('#mb_nick').val();
+		      console.log(mb_nick);
+		      
+		      if(mb_nick == ""){
+		    	  console.log("닉네임을 입력해주세요");
+		    	  $("#msg").text("닉네임을 입력해주세요")
+		      }else{
+		    	  $.ajax({
+			          url : "nickCheck.do",
+			          type : "post",
+			          dataType : "json",
+			          data : {"mb_nick" : mb_nick},
+			          success : function (data) {
+						console.log(data.mb_email);
+						if(data.mb_nick == null){
+							$("#msg").text("사용 가능한 닉네임 입니다")
+						}else{
+							$("#msg").text("사용 불가능한 닉네임 입니다")
+						}
+					}, 
+			          error : function(e){
+			             console.log(e);
+			          }
+			          
+			       }); 
+		      }
+		      
+		      if (modal.classList.contains('show')) {
+		        body.style.overflow = 'hidden';
+		      }
+		      
+		    });
+		    
+		    
+	    
+	    btnClosePopup.addEventListener('click', (event) => {
+	    	modal.classList.remove('show');
+	    	modal.classList.add('hidden');
+	    	$("#msg").text("");
+	    })
+	   
+	
+	    modal.addEventListener('click', (event) => {
+	      if (event.target === modal) {
+	        modal.classList.toggle('show');
+	
+	        if (!modal.classList.contains('show')) {
+	          body.style.overflow = 'auto';
+	          $("#msg").text("");
+	        }
+	      }
+	    });
+  
+	</script>
 
 	<!-- jquery plugins here-->
 	<script src="resources/js/jquery-1.12.1.min.js"></script>

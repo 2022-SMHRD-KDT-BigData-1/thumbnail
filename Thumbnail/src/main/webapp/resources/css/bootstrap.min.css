@@ -239,7 +239,7 @@ button, input, optgroup, select, textarea {
 }
 
 button, input {
-	overflow: visible
+	overflow: visible;
 }
 
 button, select {
