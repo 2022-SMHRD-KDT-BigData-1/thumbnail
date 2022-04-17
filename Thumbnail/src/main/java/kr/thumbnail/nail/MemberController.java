@@ -101,6 +101,11 @@ public class MemberController {
 		System.out.println(" ");
 	}
 	
+	@RequestMapping("/single_product2.do")
+	public void single_product2() {
+		System.out.println(" ");
+	}
+	
 	@RequestMapping("/experience.do")
 	public void experience() {
 		System.out.println(" ");

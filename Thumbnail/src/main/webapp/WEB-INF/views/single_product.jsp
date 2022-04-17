@@ -33,6 +33,11 @@
 	display: block;
 	margin: auto;
 }
+
+.nail {
+	height: 180px;
+	border: 1px solid #e4d3df;
+}
 </style>
 </head>
 
@@ -71,11 +76,11 @@
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
-
-								<li class="nav-item"><a class="nav-link" href="login.do">
+										
+										<li class="nav-item"><a class="nav-link" href="login.do">
 										로그인</a></li>
 
-								<!-- 	<li class="nav-item dropdown"><a
+							<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
 									id="navbarDropdown_2" role="button" data-toggle="dropdown"
 									aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
@@ -84,12 +89,12 @@
 											class="dropdown-item" href="single_blog.do">블로그 </a>
 									</div></li> -->
 							</ul>
-
+							
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
-							<a id="search_1" href="javascript:void(0)"><i
-								class="ti-search"></i></a> <a href="cart.do"> <i
-								class="fas fa-solid fa-heart"></i>
+							<a
+								id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
+							<a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -111,7 +116,7 @@
 
 	<!-- breadcrumb part start-->
 	<section class="breadcrumb_part single_product_breadcrumb"
-		style="height: 400px !important">
+		style="height: 300px !important">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -122,114 +127,90 @@
 	</section>
 	<!-- breadcrumb part end-->
 
-	<!--================Single Product Area =================-->
 	<div class="product_image_area">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-12">
-					<div class="product_img_slide owl-carousel" data-interval="false">
-						<div class="single_product_img">
-							<img src="resources/img/tranding_item/nail1.png" alt="#"
-								class="img-fluid pic">
-						</div>
-						<div class="single_product_img">
-							<img src="resources/img/hand.png" alt="#" class="img-fluid pic">
-						</div>
-						<div class="single_product_img">
-							<img src="resources/img/tranding_item/nail2.png" alt="#"
-								class="img-fluid pic">
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-8">
-					<div class="single_product_text text-center">
-					
-						<section class="feature_part section_padding" style="padding: 0px">
-							<div class="container">
+					<div class="about_us_content">
+						<img src="resources/img/icon/camera.png" alt="#"
+							class="img-fluid pic" style="width: 42%; padding-top: 10%">
 
-								<div class="row justify-content-center">
-									<!-- <div class="col-lg-3 col-sm-6">
-										<div class="single_feature_part">
-											<i class="fas fa-regular fa-question"></i>
-											<h4>사용방법</h4>
-										</div>
-									</div>  -->
-									<!-- <h3 class="mb-30">사용방법</h3> -->
-									<div class="col-lg-12">
-										<blockquote class="generic-blockquote">
-											<div class="row justify-content-center">
-												<div class="col-lg-3 col-sm-6">
-													<div class="">
-														<img src="resources/img/tranding_item/nail1.png"
-															style="height: 159px; border-radius: 50%" />
-														<h4>01. 네일 디자인 선택</h4>
-													</div>
-												</div>
-												<i class="fas fa-regular fa-angle-right"
-													style="margin: 10px; padding-top: 65px;"></i>
-												<div class="col-lg-3 col-sm-6">
-													<div class="">
-														<img src="resources/img/hand.png"
-															style="border-radius: 50%" />
-														<h4>02. 손 사진 업로드</h4>
-													</div>
-												</div>
-												<i class="fas fa-regular fa-angle-right"
-													style="margin: 10px; padding-top: 65px;"></i>
-												<div class="col-lg-3 col-sm-6">
-													<div class="">
-														<img src="resources/img/tranding_item/nail2.png"
-															style="height: 159px; border-radius: 50%" />
-														<h4>03. 결과</h4>
-													</div>
-												</div>
-											</div>
-										</blockquote>
-									</div>
-								</div>
-							</div>
-
-						</section>
-						<br> <br>
-						<div class="section-top-border">
-							<h3 class="mb-30">Definition</h3>
-							<div class="row">
-								<div class="col-md-4">
-									<div class="single-defination">
-										<h4 class="mb-20">01. 네일 디자인 선택</h4>
-										<div class="container">
-											<div class="row justify-content-center">
-												<a href="#" class="genric-btn primary radius exp_button">디자인
-													선택</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="single-defination">
-										<h4 class="mb-20">02. 손 사진 업로드</h4>
-										<div class="container">
-											<div class="row justify-content-center">
-												<a href="product_list.do"
-													class="genric-btn primary radius exp_button">사진업로드</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="single-defination">
-										<h4 class="mb-20">03 결과</h4>
-
-									</div>
-								</div>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!--================End Single Product Area =================-->
+
+	<!-- product list part end-->
+
+	<!-- feature part here -->
+	<section class="feature_part section_padding"
+		style="padding: 0; padding-bottom: 70px">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-6" style="margin: 15px">
+					<div class="feature_part_tittle" style="text-align: center">
+						<h3 class="explain">사용방법</h3>
+					</div>
+				</div>
+
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-3 col-sm-6">
+					<div class="single_feature_part">
+						<div style="padding-top: 35px">
+							<img src="resources/img/icon/camera.png" alt="#" />
+
+						</div>
+
+					</div>
+					<div style="border: 1px solid #e4d3df; border-top: none">
+						<h4 style="padding-top: 6px; text-align: center">사용방법</h4>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6" id="first">
+					<div class="nail">
+						<img src="resources/img/tranding_item/nail1.png" alt="#" />
+
+					</div>
+					<div style="border: 1px solid #e4d3df; border-top: none">
+						<h4 style="padding-top: 6px; text-align: center">01. 네일 디자인
+							선택</h4>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-sm-6" id="second">
+					<div class="nail">
+						<img src="resources/img/hand.png" style="height: 180px" alt="#" />
+					</div>
+					<div style="border: 1px solid #e4d3df; border-top: none">
+						<h4 style="padding-top: 6px; text-align: center">02. 손 사진 업로드</h4>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6" id="third">
+					<div class="nail">
+						<img src="resources/img/tranding_item/nail2.png" alt="#" />
+					</div>
+					<div style="border: 1px solid #e4d3df; border-top: none">
+						<h4 style="padding-top: 6px; text-align: center">03. 결과</h4>
+					</div>
+				</div>
+
+			</div>
+			<div style="text-align: center">
+				<button type="button" class="genric-btn primary radius exp_button">사진
+					업로드</button>
+				<button type="button" class="genric-btn primary radius exp_button">적용</button>
+			</div>
+		</div>
+
+
+	</section>
+	<!-- feature part end -->
+
+
+
+
 
 
 	<!--::footer_part start::-->
@@ -289,6 +270,33 @@
 	<script src="resources/js/mail-script.js"></script>
 	<!-- custom js -->
 	<script src="resources/js/custom.js"></script>
+
+	<script>
+		let pic = $('.pic');
+		let explain = $('.explain');
+
+		$("#first").on("click", function() {
+			console.log("첫번째 클릭");
+			pic.attr('src', 'resources/img/tranding_item/nail1.png');
+			explain.text("01. 원하는 네일 디자인을 선택하세요.");
+		});
+
+		$("#second").on("click", function() {
+			console.log("두번째 클릭");
+			pic.attr('src', 'resources/img/hand.png');
+			explain.text("02. 손 경계가 잘 보이도록 어두운 배경에서 손을 펼쳐서 사진을 찍어주세요.");
+		});
+
+		$("#third").on("click", function() {
+			console.log("세번째 클릭");
+			pic.attr('src', 'resources/img/tranding_item/nail2.png');
+			explain.text("03. 적용된 결과를 확인하세요.");
+		});
+
+		// 02, 03번에 각각 second, third 아이디 매기고
+		// 클릭했을때 이미지랑 설명이 변하게
+	</script>
+
 </body>
 
 </html>
