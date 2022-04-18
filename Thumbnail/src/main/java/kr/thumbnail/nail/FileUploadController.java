@@ -4,7 +4,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.UUID;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,7 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class FileUploadController {
 
 	@RequestMapping(value="/upload.do", method=RequestMethod.POST)                           //IOException - 파일이 없을 때 발생할 에러. 호출함수인 xml의 DispatcherServlet class로 예외처리 전가
-    public String submitReport1(@RequestParam("file") MultipartFile image_file) throws IOException {    //command객체가 아닌 request로 submit한 값 받아오기     //studentNumber - submissionForm의 속성 name 
+    public String submitReport1(@RequestParam("file") MultipartFile image_file, HttpSession session) throws IOException {    //command객체가 아닌 request로 submit한 값 받아오기     //studentNumber - submissionForm의 속성 name 
         //파일명
         String originalFile = image_file.getOriginalFilename();
         
@@ -41,7 +44,13 @@ public class FileUploadController {
         System.out.println(originalFile + "은 업로드한 파일이다.");
         System.out.println(storedFileName + "라는 이름으로 업로드 됐다.");
         System.out.println("파일사이즈는 " + image_file.getSize());
-        return "redirect:/single_product.do";
+        
+        String stored_file = "resources/image/" + storedFileName;
+        System.out.println(stored_file);
+        session.setAttribute("stored_file", stored_file);
+        
+        
+        return "redirect:/single_product2.do";
     }
 	
 }

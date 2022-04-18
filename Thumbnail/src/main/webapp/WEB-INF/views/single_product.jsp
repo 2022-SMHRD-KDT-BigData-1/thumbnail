@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html lang="zxx">
 
@@ -76,11 +77,11 @@
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
-										
-										<li class="nav-item"><a class="nav-link" href="login.do">
+
+								<li class="nav-item"><a class="nav-link" href="login.do">
 										로그인</a></li>
 
-							<!-- 	<li class="nav-item dropdown"><a
+								<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
 									id="navbarDropdown_2" role="button" data-toggle="dropdown"
 									aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
@@ -89,12 +90,12 @@
 											class="dropdown-item" href="single_blog.do">블로그 </a>
 									</div></li> -->
 							</ul>
-							
+
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
-							<a
-								id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-							<a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
+							<a id="search_1" href="javascript:void(0)"><i
+								class="ti-search"></i></a> <a href="cart.do"> <i
+								class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -198,12 +199,16 @@
 
 			</div>
 			<div style="text-align: center">
-				<form action="upload.do" method="post"  enctype="multipart/form-data">
-             		<input type="file" name="file"/>
-					<button type="submit" class="genric-btn primary radius exp_button">사진
-						업로드</button>
+				<form action="upload.do" method="post" enctype="multipart/form-data">
+				 
+					
+						<button type="button" id="file_upload"
+							class="genric-btn primary radius exp_button" onclick="onclick=document.all.file.click()">사진 업로드</button>
+					
+					<input id="file" type="file" name="file" style="display:none" />
+
+					<button type="submit" class="genric-btn primary radius exp_button">적용</button>
 				</form>
-				<button type="button" class="genric-btn primary radius exp_button">적용</button>
 			</div>
 		</div>
 
@@ -296,8 +301,6 @@
 			explain.text("03. 적용된 결과를 확인하세요.");
 		});
 
-		// 02, 03번에 각각 second, third 아이디 매기고
-		// 클릭했을때 이미지랑 설명이 변하게
 	</script>
 
 </body>
