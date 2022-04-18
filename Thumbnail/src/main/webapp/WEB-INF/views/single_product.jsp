@@ -198,8 +198,11 @@
 
 			</div>
 			<div style="text-align: center">
-				<button type="button" class="genric-btn primary radius exp_button">사진
-					업로드</button>
+				<form action="upload.do" method="post"  enctype="multipart/form-data">
+             		<input type="file" name="file"/>
+					<button type="submit" class="genric-btn primary radius exp_button">사진
+						업로드</button>
+				</form>
 				<button type="button" class="genric-btn primary radius exp_button">적용</button>
 			</div>
 		</div>

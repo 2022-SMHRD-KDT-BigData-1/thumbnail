@@ -162,8 +162,9 @@
 												<button type="button"
 													style="background: none; border: none;">
 													<p class="like-info">
-														<span class="align-middle"><i class="fas fa-solid fa-check"></i></span>
+														<a class="align-middle" href="single_product.do"><i class="fas fa-solid fa-check"></i>
 														Select
+														</a>
 													</p>
 												</button>
 												<button type="button"

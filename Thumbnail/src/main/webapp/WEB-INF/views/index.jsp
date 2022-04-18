@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE do>
 <html lang="zxx">
 <head>
@@ -63,9 +64,17 @@
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
-										
+								<c:choose>
+									<c:when test = "${empty info }">
 										<li class="nav-item"><a class="nav-link" href="login.do">
-										로그인</a></li>
+											로그인</a></li>
+									</c:when>
+									<c:otherwise>
+										<li class="nav-item"><a class="nav-link" href="#">
+											${info.mb_nick }님</a></li>
+									</c:otherwise>
+								</c:choose>		
+								
 
 							<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
