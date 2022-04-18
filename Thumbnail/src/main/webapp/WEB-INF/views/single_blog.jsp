@@ -1,36 +1,40 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!doctype html>
 <html lang="zxx">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>pillloMart</title>
-    <link rel="icon" href="resources/img/favicon.png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="resources/css/bootstrap.min.css">
-    <!-- animate CSS -->
-    <link rel="stylesheet" href="resources/css/animate.css">
-    <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="resources/css/owl.carousel.min.css">
-    <!-- font awesome CSS -->
-    <link rel="stylesheet" href="resources/css/all.css">
-    <!-- flaticon CSS -->
-    <link rel="stylesheet" href="resources/css/flaticon.css">
-    <link rel="stylesheet" href="resources/css/themify-icons.css">
-    <!-- font awesome CSS -->
-    <link rel="stylesheet" href="resources/css/magnific-popup.css">
-    <!-- swiper CSS -->
-    <link rel="stylesheet" href="resources/css/slick.css">
-    <!-- style CSS -->
-    <link rel="stylesheet" href="resources/css/style.css">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>pillloMart</title>
+<link rel="icon" href="resources/img/favicon.png">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="resources/css/bootstrap.min.css">
+<!-- animate CSS -->
+<link rel="stylesheet" href="resources/css/animate.css">
+<!-- owl carousel CSS -->
+<link rel="stylesheet" href="resources/css/owl.carousel.min.css">
+<!-- font awesome CSS -->
+<link rel="stylesheet" href="resources/css/all.css">
+<!-- flaticon CSS -->
+<link rel="stylesheet" href="resources/css/flaticon.css">
+<link rel="stylesheet" href="resources/css/themify-icons.css">
+<!-- font awesome CSS -->
+<link rel="stylesheet" href="resources/css/magnific-popup.css">
+<!-- swiper CSS -->
+<link rel="stylesheet" href="resources/css/slick.css">
+<!-- style CSS -->
+<link rel="stylesheet" href="resources/css/style.css">
+
+
 </head>
 
 <body>
-    <!--::header part start::-->
-  <header class="main_menu home_menu">
+	<!--::header part start::-->
+	<header class="main_menu home_menu">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-lg-12">
@@ -63,11 +67,11 @@
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
-										
-										<li class="nav-item"><a class="nav-link" href="login.do">
+
+								<li class="nav-item"><a class="nav-link" href="login.do">
 										로그인</a></li>
 
-							<!-- 	<li class="nav-item dropdown"><a
+								<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
 									id="navbarDropdown_2" role="button" data-toggle="dropdown"
 									aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
@@ -76,12 +80,11 @@
 											class="dropdown-item" href="single_blog.do">블로그 </a>
 									</div></li> -->
 							</ul>
-							
+
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
-							<a
-								id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-							<a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
+							<a id="search_1" href="javascript:void(0)"><i
+								class="ti-search"></i></a> <a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -99,479 +102,331 @@
 			</div>
 		</div>
 	</header>
-    <!-- Header part end-->
+	<!-- Header part end-->
 
-    <!-- breadcrumb part start-->
-    <section class="breadcrumb_part">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb_iner">
-                        <h2>single blog</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- breadcrumb part end-->
-   <!--================Blog Area =================-->
-   <section class="blog_area single-post-area section_padding">
-      <div class="container">
-         <div class="row">
-            <div class="col-lg-8 posts-list">
-               <div class="single-post">
-                  <div class="feature-img">
-                     <img class="img-fluid" src="resources/img/blog/single_blog_1.png" alt="">
-                  </div>
-                  <div class="blog_details">
-                     <h2>Second divided from form fish beast made every of seas
-                        all gathered us saying he our
-                     </h2>
-                     <ul class="blog-info-link mt-3 mb-4">
-                        <li><a href="#"><i class="far fa-user"></i> Travel, Lifestyle</a></li>
-                        <li><a href="#"><i class="far fa-comments"></i> 03 Comments</a></li>
-                     </ul>
-                     <p class="excert">
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                        should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                        fraction of the camp price. However, who has the willpower
-                     </p>
-                     <p>
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                        should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                        fraction of the camp price. However, who has the willpower to actually sit through a
-                        self-imposed MCSE training. who has the willpower to actually
-                     </p>
-                     <div class="quote-wrapper">
-                        <div class="quotes">
-                           MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                           should have to spend money on boot camp when you can get the MCSE study materials yourself at
-                           a fraction of the camp price. However, who has the willpower to actually sit through a
-                           self-imposed MCSE training.
-                        </div>
-                     </div>
-                     <p>
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                        should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                        fraction of the camp price. However, who has the willpower
-                     </p>
-                     <p>
-                        MCSE boot camps have its supporters and its detractors. Some people do not understand why you
-                        should have to spend money on boot camp when you can get the MCSE study materials yourself at a
-                        fraction of the camp price. However, who has the willpower to actually sit through a
-                        self-imposed MCSE training. who has the willpower to actually
-                     </p>
-                  </div>
-               </div>
-               <div class="navigation-top">
-                  <div class="d-sm-flex justify-content-between text-center">
-                     <p class="like-info"><span class="align-middle"><i class="far fa-heart"></i></span> Lily and 4
-                        people like this</p>
-                     <div class="col-sm-4 text-center my-2 my-sm-0">
-                        <!-- <p class="comment-count"><span class="align-middle"><i class="far fa-comment"></i></span> 06 Comments</p> -->
-                     </div>
-                     <ul class="social-icons">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                     </ul>
-                  </div>
-                  <div class="navigation-area">
-                     <div class="row">
-                        <div
-                           class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                           <div class="thumb">
-                              <a href="#">
-                                 <img class="img-fluid" src="resources/img/post/preview.png" alt="">
-                              </a>
-                           </div>
-                           <div class="arrow">
-                              <a href="#">
-                                 <span class="lnr text-white ti-arrow-left"></span>
-                              </a>
-                           </div>
-                           <div class="detials">
-                              <p>Prev Post</p>
-                              <a href="#">
-                                 <h4>Space The Final Frontier</h4>
-                              </a>
-                           </div>
-                        </div>
-                        <div
-                           class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-                           <div class="detials">
-                              <p>Next Post</p>
-                              <a href="#">
-                                 <h4>Telescopes 101</h4>
-                              </a>
-                           </div>
-                           <div class="arrow">
-                              <a href="#">
-                                 <span class="lnr text-white ti-arrow-right"></span>
-                              </a>
-                           </div>
-                           <div class="thumb">
-                              <a href="#">
-                                 <img class="img-fluid" src="resources/img/post/next.png" alt="">
-                              </a>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="blog-author">
-                  <div class="media align-items-center">
-                     <img src="resources/img/blog/author.png" alt="">
-                     <div class="media-body">
-                        <a href="#">
-                           <h4>Harvard milan</h4>
-                        </a>
-                        <p>Second divided from form fish beast made. Every of seas all gathered use saying you're, he
-                           our dominion twon Second divided from</p>
-                     </div>
-                  </div>
-               </div>
-               <div class="comments-area">
-                  <h4>05 Comments</h4>
-                  <div class="comment-list">
-                     <div class="single-comment justify-content-between d-flex">
-                        <div class="user justify-content-between d-flex">
-                           <div class="thumb">
-                              <img src="resources/img/comment/comment_1.png" alt="">
-                           </div>
-                           <div class="desc">
-                              <p class="comment">
-                                 Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                 Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                              </p>
-                              <div class="d-flex justify-content-between">
-                                 <div class="d-flex align-items-center">
-                                    <h5>
-                                       <a href="#">Emilly Blunt</a>
-                                    </h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                 </div>
-                                 <div class="reply-btn">
-                                    <a href="#" class="btn-reply text-uppercase">reply</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="comment-list">
-                     <div class="single-comment justify-content-between d-flex">
-                        <div class="user justify-content-between d-flex">
-                           <div class="thumb">
-                              <img src="resources/img/comment/comment_2.png" alt="">
-                           </div>
-                           <div class="desc">
-                              <p class="comment">
-                                 Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                 Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                              </p>
-                              <div class="d-flex justify-content-between">
-                                 <div class="d-flex align-items-center">
-                                    <h5>
-                                       <a href="#">Emilly Blunt</a>
-                                    </h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                 </div>
-                                 <div class="reply-btn">
-                                    <a href="#" class="btn-reply text-uppercase">reply</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="comment-list">
-                     <div class="single-comment justify-content-between d-flex">
-                        <div class="user justify-content-between d-flex">
-                           <div class="thumb">
-                              <img src="resources/img/comment/comment_3.png" alt="">
-                           </div>
-                           <div class="desc">
-                              <p class="comment">
-                                 Multiply sea night grass fourth day sea lesser rule open subdue female fill which them
-                                 Blessed, give fill lesser bearing multiply sea night grass fourth day sea lesser
-                              </p>
-                              <div class="d-flex justify-content-between">
-                                 <div class="d-flex align-items-center">
-                                    <h5>
-                                       <a href="#">Emilly Blunt</a>
-                                    </h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                 </div>
-                                 <div class="reply-btn">
-                                    <a href="#" class="btn-reply text-uppercase">reply</a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="comment-form">
-                  <h4>Leave a Reply</h4>
-                  <form class="form-contact comment_form" action="#" id="commentForm">
-                     <div class="row">
-                        <div class="col-12">
-                           <div class="form-group">
-                              <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
-                                 placeholder="Write Comment"></textarea>
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="form-group">
-                              <input class="form-control" name="name" id="name" type="text" placeholder="Name">
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="form-group">
-                              <input class="form-control" name="email" id="email" type="email" placeholder="Email">
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <div class="form-group">
-                              <input class="form-control" name="website" id="website" type="text" placeholder="Website">
-                           </div>
-                        </div>
-                     </div>
-                     <div class="form-group mt-3">
-                        <a href="#" class="btn_3 button-contactForm">Send Message</a>
-                     </div>
-                  </form>
-               </div>
-            </div>
-            <div class="col-lg-4">
-               <div class="blog_right_sidebar">
-                  <aside class="single_sidebar_widget search_widget">
-                     <form action="#">
-                        <div class="form-group">
-                           <div class="input-group mb-3">
-                              <input type="text" class="form-control" placeholder='Search Keyword'
-                                 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Keyword'">
-                              <div class="input-group-append">
-                                 <button class="btn" type="button"><i class="ti-search"></i></button>
-                              </div>
-                           </div>
-                        </div>
-                        <button class="button rounded-0 primary-bg text-white w-100 btn_1" type="submit">Search</button>
-                     </form>
-                  </aside>
-                  <aside class="single_sidebar_widget post_category_widget">
-                     <h4 class="widget_title">Category</h4>
-                     <ul class="list cat-list">
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Resaurant food</p>
-                              <p>(37)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Travel news</p>
-                              <p>(10)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Modern technology</p>
-                              <p>(03)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Product</p>
-                              <p>(11)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Inspiration</p>
-                              <p>(21)</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#" class="d-flex">
-                              <p>Health Care</p>
-                              <p>(21)</p>
-                           </a>
-                        </li>
-                     </ul>
-                  </aside>
-                  <aside class="single_sidebar_widget popular_post_widget">
-                     <h3 class="widget_title">Recent Post</h3>
-                     <div class="media post_item">
-                        <img src="resources/img/post/post_1.png" alt="post">
-                        <div class="media-body">
-                           <a href="single_blog.do">
-                              <h3>From life was you fish...</h3>
-                           </a>
-                           <p>January 12, 2019</p>
-                        </div>
-                     </div>
-                     <div class="media post_item">
-                        <img src="resources/img/post/post_2.png" alt="post">
-                        <div class="media-body">
-                           <a href="single_blog.do">
-                              <h3>The Amazing Hubble</h3>
-                           </a>
-                           <p>02 Hours ago</p>
-                        </div>
-                     </div>
-                     <div class="media post_item">
-                        <img src="resources/img/post/post_3.png" alt="post">
-                        <div class="media-body">
-                           <a href="single_blog.do">
-                              <h3>Astronomy Or Astrology</h3>
-                           </a>
-                           <p>03 Hours ago</p>
-                        </div>
-                     </div>
-                     <div class="media post_item">
-                        <img src="resources/img/post/post_4.png" alt="post">
-                        <div class="media-body">
-                           <a href="single_blog.do">
-                              <h3>Asteroids telescope</h3>
-                           </a>
-                           <p>01 Hours ago</p>
-                        </div>
-                     </div>
-                  </aside>
-                  <aside class="single_sidebar_widget tag_cloud_widget">
-                     <h4 class="widget_title">Tag Clouds</h4>
-                     <ul class="list">
-                        <li>
-                           <a href="#">project</a>
-                        </li>
-                        <li>
-                           <a href="#">love</a>
-                        </li>
-                        <li>
-                           <a href="#">technology</a>
-                        </li>
-                        <li>
-                           <a href="#">travel</a>
-                        </li>
-                        <li>
-                           <a href="#">restaurant</a>
-                        </li>
-                        <li>
-                           <a href="#">life style</a>
-                        </li>
-                        <li>
-                           <a href="#">design</a>
-                        </li>
-                        <li>
-                           <a href="#">illustration</a>
-                        </li>
-                     </ul>
-                  </aside>
-                  <aside class="single_sidebar_widget instagram_feeds">
-                     <h4 class="widget_title">Instagram Feeds</h4>
-                     <ul class="instagram_row flex-wrap">
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="resources/img/post/post_5.png" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="resources/img/post/post_6.png" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="resources/img/post/post_7.png" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="resources/img/post/post_8.png" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="resources/img/post/post_9.png" alt="">
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                              <img class="img-fluid" src="resources/img/post/post_10.png" alt="">
-                           </a>
-                        </li>
-                     </ul>
-                  </aside>
-                  <aside class="single_sidebar_widget newsletter_widget">
-                     <h4 class="widget_title">Newsletter</h4>
-                     <form action="#">
-                        <div class="form-group">
-                           <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                              onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
-                        </div>
-                        <button class="button rounded-0 primary-bg text-white w-100 btn_1"
-                           type="submit">Subscribe</button>
-                     </form>
-                  </aside>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   <!--================Blog Area end =================-->
+	<!-- breadcrumb part start-->
+	<section class="breadcrumb_part">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="breadcrumb_iner">
+						<h2>Gallery</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- breadcrumb part end-->
 
-   <!--::footer_part start::-->
-   <footer class="footer_part">
-     
-        
-        <div class="copyright_part">
-            <div class="container">
-                <div class="row ">
-                    <div class="col-lg-12">
-                        <div class="copyright_text">
-                            <P><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></P>
-                            <div class="copyright_link">
-                                <a href="#">Turms & Conditions</a>
-                                <a href="#">FAQ</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!--::footer_part end::-->
 
-    <!-- jquery plugins here-->
-    <script src="resources/js/jquery-1.12.1.min.js"></script>
-    <!-- popper js -->
-    <script src="resources/js/popper.min.js"></script>
-    <!-- bootstrap js -->
-    <script src="resources/js/bootstrap.min.js"></script>
-    <!-- easing js -->
-    <script src="resources/js/jquery.magnific-popup.js"></script>
-    <!-- swiper js -->
-    <script src="resources/js/swiper.min.js"></script>
-    <!-- swiper js -->
-    <script src="resources/js/mixitup.min.js"></script>
-    <!-- particles js -->
-    <script src="resources/js/owl.carousel.min.js"></script>
-    <script src="resources/js/jquery.nice-select.min.js"></script>
-    <!-- slick js -->
-    <script src="resources/js/slick.min.js"></script>
-    <script src="resources/js/jquery.counterup.min.js"></script>
-    <script src="resources/js/waypoints.min.js"></script>
-    <script src="resources/js/contact.js"></script>
-    <script src="resources/js/jquery.ajaxchimp.min.js"></script>
-    <script src="resources/js/jquery.form.js"></script>
-    <script src="resources/js/jquery.validate.min.js"></script>
-    <script src="resources/js/mail-script.js"></script>
-    <!-- custom js -->
-    <script src="resources/js/custom.js"></script>
+
+
+
+
+	<div class="container box_1170">
+		<div class="section-top-border">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-md-8">
+						<div class="product_sidebar">
+							<div class="single_sedebar">
+								<form action="#">
+									<input type="text" name="#" placeholder="Search keyword">
+									<i class="ti-search"></i>
+								</form>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="row justify-content-center">
+						<a href="#" class="genric-btn primary circle">이달의 네일</a> <a
+							href="#" class="genric-btn primary-border circle"
+							style="color: f9bebe">인기</a> <a href="#"
+							class="genric-btn primary-border circle" style="color: f9bebe">추천</a>
+					</div>
+					</br>
+				</div>
+				<div>
+					<div class="row justify-content-center">
+						<a href="#" class="genric-btn primary-border radius">#봄네일</a> <a
+							href="#" class="genric-btn primary-border radius">#보라색네일</a> <a
+							href="#" class="genric-btn primary-border radius">#시럽네일</a> <a
+							href="#" class="genric-btn primary-border radius">#프렌치네일</a>
+					</div>
+				</div>
+				</br>
+
+				<c:forEach var="j" begin="0" end="2">
+					<div class="container" style="margin-bottom: 20px">
+						<div class="row">
+							<!--  <h2>Card Image</h2> -->
+							<!-- <p>Image at the top (card-img-top):</p> -->
+
+							<c:forEach begin="0" end="2" var="i">
+								<div class="col-md-4" id="">
+									<div class="card" style="width: 350px; border-radius: 10px">
+										<img class="card-img-top"
+											src="resources/img/tranding_item/nail1.png"
+											style="width: 100%; border-top-right-radius: 8px; border-top-left-radius: 8px;">
+										<div class="card-body">
+											<h4 class="card-title">John Doe</h4>
+											<p class="card-text">Some example text some example text.
+												John Doe is an architect and engineer</p>
+											<div style="padding-top: 20px">
+												<button type="button"
+													style="background: none; border: none;">
+													<p class="like-info">
+														<span class="align-middle"><i class="far fa-heart"></i></span>
+														Like
+													</p>
+												</button>
+												<button type="button"
+													style="background: none; border: none;">
+													<p>
+														<i class="far fa-comments"></i> 03 Comments
+													</p>
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br>
+
+							</c:forEach>
+						</div>
+					</div>
+				</c:forEach>
+			</div>
+			<div class="load_more_btn text-center">
+				<a href="#" class="btn_3" style="padding: 10px 25px">더보기</a>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<!--::footer_part start::-->
+	<footer class="footer_part">
+
+		<div class="copyright_part">
+			<div class="container">
+				<div class="row ">
+					<div class="col-lg-12">
+						<div class="copyright_text">
+							<P>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;
+								<script>
+									document.write(new Date().getFullYear());
+								</script>
+								All rights reserved | This template is made with <i
+									class="ti-heart" aria-hidden="true"></i> by <a
+									href="https://colorlib.com" target="_blank">Colorlib</a>
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</P>
+							<div class="copyright_link">
+								<a href="#">Turms & Conditions</a> <a href="#">FAQ</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--::footer_part end::-->
+
+	<!--================ 모달창 =================-->
+	<!-- <div class="modal">
+		<div class="modal_body" style="max-width: 100%; max-height: 30%; width: auto; display: table;">
+		<h3>중복확인</h3>
+			
+			<p id="msg"></p>
+			
+			<button class="genric-btn primary radius" value="확인" 
+		        	   style="width: 37%;  height: 30%; padding:unset; font-size: auto;" id="close">확인</button>
+		</div>
+	</div>
+ -->
+	<div class=" modal">
+		<div class="container"
+			style="transform: translateX(24px) translateY(9%); background-color: white">
+			<div class="row">
+				<div class="col-lg-8 mb-5 mb-lg-0">
+					<div style="padding-left: 50px">
+						<div class="blog_item_img">
+							<img class="card-img rounded-0" src="resources/img/blog/1.jpg"
+								alt="" style="width: 45em" /> <a href="#"
+								class="blog_item_date">
+								<h3>15</h3>
+								<p>Jan</p>
+							</a>
+						</div>
+					</div>
+
+					<div class="blog_details">
+						<a class="d-inline-block" href="single-blog.do">
+							<h2>Google inks pact for new 35-storey office</h2>
+						</a>
+						<p>That dominion stars lights dominion divide years for fourth
+							have don't stars is that he earth it first without heaven in
+							place seed it second morning saying.</p>
+
+						<button type="button" style="background: none; border: none;">
+							<p class="like-info">
+								<span class="align-middle"><i class="far fa-heart"></i></span>
+								Like
+							</p>
+						</button>
+						<button type="button" style="background: none; border: none;">
+							<p>
+								<i class="far fa-comments"></i> 03 Comments
+							</p>
+						</button>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="single_sidebar_widget popular_post_widget">
+						<h3 class="widget_title">Comments</h3>
+						<div class="comments-area">
+
+							<div class="form-group">
+								<div class="container" style="padding-bottom: 11px">
+									<div class="row">
+										<input class="form-control col-md-9" name="" id="" type="text"
+											placeholder="">
+										<div style="padding-left: 12px">
+											<button type="button" class="genric-btn primary radius"
+												style="padding: 0px 17px; height: 38px;">확인</button>
+										</div>
+									</div>
+								</div>
+
+								<div class="comment-list">
+									<div class="single-comment justify-content-between d-flex">
+										<div class="user justify-content-between d-flex">
+											<div class="thumb">
+												<img src="resources/img/comment/comment_1.png" alt="">
+												<h5>
+													<a href="#">Emilly Blunt</a>
+												</h5>
+											</div>
+											<div class="desc">
+												<p class="comment">Multiply sea night grass fourth day
+													sea lesser rule open subdue female fill which them Blessed,
+													give fill lesser bearing multiply sea night grass fourth
+													day sea lesser</p>
+												<div class="d-flex justify-content-between">
+													<div class="d-flex align-items-center">
+
+														<p class="date">December 4, 2017 at 3:12 pm</p>
+													</div>
+													<div class="reply-btn">
+														<a href="#" class="btn-reply text-uppercase">reply</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comment-list">
+									<div class="single-comment justify-content-between d-flex">
+										<div class="user justify-content-between d-flex">
+											<div class="thumb">
+												<img src="resources/img/comment/comment_2.png" alt="">
+											</div>
+											<div class="desc">
+												<p class="comment">Multiply sea night grass fourth day
+													sea lesser rule open subdue female fill which them Blessed,
+													give fill lesser bearing multiply sea night grass fourth
+													day sea lesser</p>
+												<div class="d-flex justify-content-between">
+													<div class="d-flex align-items-center">
+														<h5>
+															<a href="#">Emilly Blunt</a>
+														</h5>
+														<p class="date">December 4, 2017 at 3:12 pm</p>
+													</div>
+													<div class="reply-btn">
+														<a href="#" class="btn-reply text-uppercase">reply</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="comment-list">
+									<div class="single-comment justify-content-between d-flex">
+										<div class="user justify-content-between d-flex">
+											<div class="thumb">
+												<img src="resources/img/comment/comment_3.png" alt="">
+											</div>
+											<div class="desc">
+												<p class="comment">Multiply sea night grass fourth day
+													sea lesser rule open subdue female fill which them Blessed,
+													give fill lesser bearing multiply sea night grass fourth
+													day sea lesser</p>
+												<div class="d-flex justify-content-between">
+													<div class="d-flex align-items-center">
+														<h5>
+															<a href="#">Emilly Blunt</a>
+														</h5>
+														<p class="date">December 4, 2017 at 3:12 pm</p>
+													</div>
+													<div class="reply-btn">
+														<a href="#" class="btn-reply text-uppercase">reply</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jquery plugins here-->
+		<script src="resources/js/jquery-1.12.1.min.js"></script>
+		<!-- popper js -->
+		<script src="resources/js/popper.min.js"></script>
+		<!-- bootstrap js -->
+		<script src="resources/js/bootstrap.min.js"></script>
+		<!-- easing js -->
+		<script src="resources/js/jquery.magnific-popup.js"></script>
+		<!-- swiper js -->
+		<script src="resources/js/swiper.min.js"></script>
+		<!-- swiper js -->
+		<script src="resources/js/mixitup.min.js"></script>
+		<!-- particles js -->
+		<script src="resources/js/owl.carousel.min.js"></script>
+		<script src="resources/js/jquery.nice-select.min.js"></script>
+		<!-- slick js -->
+		<script src="resources/js/slick.min.js"></script>
+		<script src="resources/js/jquery.counterup.min.js"></script>
+		<script src="resources/js/waypoints.min.js"></script>
+		<script src="resources/js/contact.js"></script>
+		<script src="resources/js/jquery.ajaxchimp.min.js"></script>
+		<script src="resources/js/jquery.form.js"></script>
+		<script src="resources/js/jquery.validate.min.js"></script>
+		<script src="resources/js/mail-script.js"></script>
+		<!-- custom js -->
+		<script src="resources/js/custom.js"></script>
+		
+	
 </body>
+
 </html>
