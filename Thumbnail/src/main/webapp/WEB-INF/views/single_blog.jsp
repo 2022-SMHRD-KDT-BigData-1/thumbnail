@@ -84,7 +84,8 @@
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
 							<a id="search_1" href="javascript:void(0)"><i
-								class="ti-search"></i></a> <a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
+								class="ti-search"></i></a> <a href="cart.do"> <i
+								class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -110,7 +111,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb_iner">
-						<h2>Gallery</h2>
+						<h2>손톱 영양제</h2>
 					</div>
 				</div>
 			</div>
@@ -126,7 +127,7 @@
 	<div class="container box_1170">
 		<div class="section-top-border">
 			<div class="container">
-				<div class="row justify-content-center">
+				<!-- <div class="row justify-content-center">
 					<div class="col-md-8">
 						<div class="product_sidebar">
 							<div class="single_sedebar">
@@ -157,38 +158,42 @@
 							href="#" class="genric-btn primary-border radius">#프렌치네일</a>
 					</div>
 				</div>
-				</br>
+				</br> -->
 
 				<c:forEach var="j" begin="0" end="2">
-					<div class="container" style="margin-bottom: 20px">
+					<div class="container" style="margin-bottom: 50px">
 						<div class="row">
 							<!--  <h2>Card Image</h2> -->
 							<!-- <p>Image at the top (card-img-top):</p> -->
 
-							<c:forEach begin="0" end="2" var="i">
-								<div class="col-md-4" id="">
-									<div class="card" style="width: 350px; border-radius: 10px">
+							<c:forEach begin="0" end="3" var="i">
+								<div class="col-md-3" id="">
+									<div style="border-radius: 10px">
 										<img class="card-img-top"
 											src="resources/img/tranding_item/nail1.png"
-											style="width: 100%; border-top-right-radius: 8px; border-top-left-radius: 8px;">
-										<div class="card-body">
-											<h4 class="card-title">John Doe</h4>
-											<p class="card-text">Some example text some example text.
-												John Doe is an architect and engineer</p>
-											<div style="padding-top: 20px">
-												<button type="button"
-													style="background: none; border: none;">
-													<p class="like-info">
-														<span class="align-middle"><i class="far fa-heart"></i></span>
-														Like
-													</p>
-												</button>
-												<button type="button"
-													style="background: none; border: none;">
-													<p>
-														<i class="far fa-comments"></i> 03 Comments
-													</p>
-												</button>
+											style="width: 100%; border-radius: 10px; height:215px;">
+										<div
+											style="margin-top: 20px; background-color: #f8f8f8; border-radius: 20px; height:215px">
+											<div class="card-body">
+												<h4 class="card-title">제품명</h4>
+												<p class="card-text">제품설명</p>
+												<p class="card-text"
+													style="text-align-last: end; font-size: 20px">가격</p>
+												<div style="padding-top: 60px">
+													<button type="button"
+														style="background: none; border: none;">
+														<p class="like-info">
+															<span class="align-middle"><i class="far fa-heart"></i></span>
+															리뷰갯수
+														</p>
+													</button>
+													<button type="button"
+														style="background: none; border: none;">
+														<p>
+															<i class="far fa-comments"></i>구매건수
+														</p>
+													</button>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -425,8 +430,6 @@
 		<script src="resources/js/mail-script.js"></script>
 		<!-- custom js -->
 		<script src="resources/js/custom.js"></script>
-		
-	
 </body>
 
 </html>
