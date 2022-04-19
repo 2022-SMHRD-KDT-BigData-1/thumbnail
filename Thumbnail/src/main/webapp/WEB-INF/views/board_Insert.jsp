@@ -167,7 +167,7 @@
 									</div>
 								</div>
 								<div class="container" style="text-align: end">
-									<button type="button" class="genric-btn default radius">목록</button>
+									<a class="genric-btn default radius" href="product_list2.do">목록</a>
 
 								</div>
 							</form>
