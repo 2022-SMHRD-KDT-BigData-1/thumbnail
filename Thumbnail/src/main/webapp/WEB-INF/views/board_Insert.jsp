@@ -26,11 +26,18 @@
 <link rel="stylesheet" href="resources/css/slick.css" />
 <!-- style CSS -->
 <link rel="stylesheet" href="resources/css/style.css" />
+
+<style>
+.ab {
+	margin: 0px 20px 20px;
+}
+</style>
+
 </head>
 
 <body>
 	<!--::header part start::-->
-<header class="main_menu home_menu">
+	<header class="main_menu home_menu">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
 				<div class="col-lg-12">
@@ -58,16 +65,16 @@
 
 
 
-								<li class="nav-item"><a class="nav-link" href="single_blog.do">손톱영양제</a>
-								</li>
+								<li class="nav-item"><a class="nav-link"
+									href="single_blog.do">손톱영양제</a></li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
-										
-										<li class="nav-item"><a class="nav-link" href="login.do">
+
+								<li class="nav-item"><a class="nav-link" href="login.do">
 										로그인</a></li>
 
-							<!-- 	<li class="nav-item dropdown"><a
+								<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
 									id="navbarDropdown_2" role="button" data-toggle="dropdown"
 									aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
@@ -76,12 +83,12 @@
 											class="dropdown-item" href="single_blog.do">블로그 </a>
 									</div></li> -->
 							</ul>
-							
+
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
-							<a
-								id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-							<a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
+							<a id="search_1" href="javascript:void(0)"><i
+								class="ti-search"></i></a> <a href="cart.do"> <i
+								class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -107,69 +114,70 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb_iner">
-						<h2>Login</h2>
+						<h2>Board</h2>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- breadcrumb part end-->
-
-	<!--================login_part Area =================-->
-	<section class="login_part section_padding">
-		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-lg-6 col-md-6">
-					<div class="login_part_text text-center">
-						<div class="login_part_text_iner">
-							<img src="resources/img/로그인대문.jpg" style="border-radius: 50%">
-
-							</br> </br>
-
-							<!--     <h3><a href="checkout.do" style="color:white">회원가입</a></h3>  -->
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6">
-					<div class="login_part_form">
-						<div class="login_part_form_iner">
-							<img src="resources/img/로고.png" style=" display: block; margin: auto;"> </br> </br>
-
-							<form class="row contact_form" action="loginSelect.do"
-								method="post" novalidate="novalidate">
-								<div class="col-md-12 form-group p_star">
-									<input type="text" class="form-control" id="email"
-										name="mb_email" value="" placeholder="이메일(아이디)" />
+	<div class="container box_1170" style="margin-bottom: 3%">
+		<div class="section-top-border">
+			<h3 class="mb-30">게시글 작성</h3>
+			<div class="row">
+				<div class="col-lg-12">
+					<blockquote class="generic-blockquote">
+						<div class="panel-body" style="padding-left: 40px;">
+							<form class="form-horizontal" action="boardInsert.do"
+								method="post">
+								<div class="container ab" style="padding-left: 51px">
+									<div class="row">
+										<label class="control-label" for="title">제목 : </label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" name="title"
+												id="title" placeholder="Enter title">
+										</div>
+									</div>
 								</div>
-								<div class="col-md-12 form-group p_star"
-									style="margin-bottom: 2px;">
-									<input type="password" class="form-control" id="pw"
-										name="mb_pw" value="" placeholder="비밀번호" />
+
+								<div class="container ab">
+									<div class="row">
+										<label class="control-label" for="title">사진업로드 : </label>
+										<div class="col-sm-10">
+											<input type="file" name="upload" id="upload">
+										</div>
+									</div>
 								</div>
-								<div class="col-md-12 form-group">
-									<!-- <div class="creat_account d-flex align-items-center">
-                      <input type="checkbox" id="f-option" name="selector" />
-                      <label for="f-option">Remember me</label>
-                    </div> -->
-									<a class="lost_pass" href="#" style="margin-bottom: 25px">forget
-										password?</a>
-									<button type="submit" value="submit" class="btn_3">
-										log in</button>
-									<a href="checkout.do" class="genric-btn primary radius"
-										style="border-radius: 5px; width: 100%; height: 63px; font-size: 16px; padding-top: 8px;">
-										JOIN</a>
+
+								<div class="container ab" style="padding-left: 51px">
+									<div class="row">
+										<label class="control-label" for="contents">내용 : </label>
+										<div class="col-sm-10">
+											<textarea class="form-control" rows="5" name="contents"
+												id="contents"></textarea>
+										</div>
+									</div>
+								</div>
 
 
+								<div class="col-sm-offset-2 col-sm-10">
+									<div class="text-center" style="padding-left:100px; padding-top:20px">
+										<button type="reset" class="btn btn-default btn-sm">취소</button>
+										<button type="submit" class="genric-btn primary radius">저장</button>
+									</div>
+								</div>
+								<div class="container" style="text-align: end">
+									<button type="button" class="genric-btn default radius">목록</button>
 
 								</div>
 							</form>
 						</div>
-					</div>
+
+					</blockquote>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!--================login_part end =================-->
+	</div>
 
 	<!--::footer_part start::-->
 	<footer class="footer_part">

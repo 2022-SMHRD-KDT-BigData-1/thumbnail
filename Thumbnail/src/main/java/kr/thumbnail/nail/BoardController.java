@@ -91,8 +91,12 @@ public class BoardController {
 	
 	@RequestMapping("/single_blog.do")
 	public void single_blog() {
-		System.out.println("템플릿 single_blog 페이지로 이동 - 아직 안쓰는 페이지");
+		System.out.println("손톱 영양제 페이지로 이동");
 	}
 	
+	@RequestMapping("/board_Insert.do")
+	public void board_Insert() {
+		System.out.println("게시판 작성 페이지로 이동");
+	}
 	
 }

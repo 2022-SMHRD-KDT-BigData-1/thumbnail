@@ -61,7 +61,7 @@
 									href="product_list2.do">갤러리</a></li>
 
 								
-								<li class="nav-item"><a class="nav-link" href="contact.do">손톱영양제</a>
+								<li class="nav-item"><a class="nav-link" href="single_blog.do">손톱영양제</a>
 								</li>
 
 								<li class="nav-item dropdown"><a
