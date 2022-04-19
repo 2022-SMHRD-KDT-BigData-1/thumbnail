@@ -58,30 +58,23 @@
 
 
 
-								<li class="nav-item"><a class="nav-link" href="single_blog.do">손톱영양제</a>
-								</li>
+								<li class="nav-item"><a class="nav-link"
+									href="single_blog.do">손톱영양제</a></li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
-										
-										<li class="nav-item"><a class="nav-link" href="login.do">
+
+								<li class="nav-item"><a class="nav-link" href="login.do">
 										로그인</a></li>
 
-							<!-- 	<li class="nav-item dropdown"><a
-									class="nav-link dropdown-toggle" href="blog.do"
-									id="navbarDropdown_2" role="button" data-toggle="dropdown"
-									aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-										<a class="dropdown-item" href="cart.do"> 찜목록</a> <a
-											class="dropdown-item" href="single_blog.do">블로그 </a>
-									</div></li> -->
+
 							</ul>
-							
+
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
-							<a
-								id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-							<a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
+							<a id="search_1" href="javascript:void(0)"><i
+								class="ti-search"></i></a> <a href="cart.do"> <i
+								class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -123,10 +116,10 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th scope="col">Product</th>
-								<th scope="col">Price</th>
-								<th scope="col">Quantity</th>
-								<th scope="col">Total</th>
+								<th scope="col">네일아트 디자인</th>
+								<th scope="col">선택</th>
+
+
 							</tr>
 						</thead>
 						<tbody>
@@ -137,33 +130,19 @@
 											<img src="resources/img/arrivel/arrivel_1.png" alt="" />
 										</div>
 										<div class="media-body">
-											<p>Minimalistic shop for multipurpose use</p>
+											<p>해시태그</p>
 										</div>
 									</div>
 								</td>
+
+
 								<td>
-									<h5>$360.00</h5>
-								</td>
-								<td>
-									<div class="product_count">
-										<!-- <input type="text" value="1" min="0" max="10" title="Quantity:"
-                      class="input-text qty input-number" />
-                    <button
-                      class="increase input-number-increment items-count" type="button">
-                      <i class="ti-angle-up"></i>
-                    </button>
-                    <button
-                      class="reduced input-number-decrement items-count" type="button">
-                      <i class="ti-angle-down"></i>
-                    </button> -->
-										<span class="input-number-decrement"> <i
-											class="ti-minus"></i></span> <input class="input-number" type="text"
-											value="1" min="0" max="10"> <span
-											class="input-number-increment"> <i class="ti-plus"></i></span>
+									<div class="switch-wrap d-flex justify-content-between">
+										<div class="primary-checkbox">
+											<input type="checkbox" id="default-checkbox"> <label
+												for="default-checkbox"></label>
+										</div>
 									</div>
-								</td>
-								<td>
-									<h5>$720.00</h5>
 								</td>
 							</tr>
 							<tr>
@@ -173,45 +152,32 @@
 											<img src="resources/img/arrivel/arrivel_2.png" alt="" />
 										</div>
 										<div class="media-body">
-											<p>Minimalistic shop for multipurpose use</p>
+											<p>해시태그</p>
 										</div>
 									</div>
 								</td>
+
+
 								<td>
-									<h5>$360.00</h5>
-								</td>
-								<td>
-									<div class="product_count">
-										<span class="input-number-decrement"> <i
-											class="ti-minus"></i></span> <input class="input-number" type="text"
-											value="1" min="0" max="10"> <span
-											class="input-number-increment"> <i class="ti-plus"></i></span>
-									</div>
-								</td>
-								<td>
-									<h5>$720.00</h5>
-								</td>
-							</tr>
-							<tr class="bottom_button">
-								<td><a class="btn_1" href="#">Update Cart</a></td>
-								<td></td>
-								<td></td>
-								<td>
-									<div class="cupon_text float-right">
-										<a class="btn_1" href="#">Close Coupon</a>
+									<div class="switch-wrap d-flex justify-content-between">
+										<div class="primary-checkbox">
+											<input type="checkbox" id="default-checkbox1"> <label
+												for="default-checkbox1"></label>
+										</div>
 									</div>
 								</td>
 							</tr>
+
 
 
 						</tbody>
 					</table>
 					<div class="checkout_btn_inner float-right">
-						<a class="btn_1" href="#">Continue Shopping</a> <a
-							class="btn_1 checkout_btn_1" href="#">Proceed to checkout</a>
+						<a class="btn_1 checkout_btn_1" href="#">삭제</a>
 					</div>
 				</div>
 			</div>
+		</div>
 	</section>
 	<!--================End Cart Area =================-->
 	<!--::footer_part start::-->

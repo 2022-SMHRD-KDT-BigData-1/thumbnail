@@ -2900,7 +2900,7 @@ ul {
 
 /* line 103, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_single_product.scss */
 .product_image_area {
-	margin-top: -360px;
+	margin-top: -300px;
 }
 
 @media ( max-width : 991px) {
@@ -3276,7 +3276,7 @@ input:focus {
 /**************** service_part css start ****************/
 /* line 4, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_feature_part.scss */
 .feature_part .feature_part_tittle h3 {
-	font-size: 40px;
+	font-size: 30px;
 	line-height: 1.5;
 	font-weight: 500;
 }
@@ -3333,7 +3333,7 @@ input:focus {
 
 /* line 36, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_feature_part.scss */
 .feature_part .single_feature_part img {
-	max-width: 42px;
+	max-width: 72px;
 	min-height: 40px;
 	margin-bottom: 20px;
 }
@@ -7652,7 +7652,7 @@ h1, h2, h3, h4, h5, h6 {
 	height: 100%;
 	border-radius: 3px;
 	cursor: pointer;
-	border: 1px solid #f1f1f1;
+	border: 1px solid #c1c1c1;
 }
 
 /* line 799, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_elements.scss */

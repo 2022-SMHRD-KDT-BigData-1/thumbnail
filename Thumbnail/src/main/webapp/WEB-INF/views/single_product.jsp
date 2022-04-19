@@ -72,8 +72,8 @@
 
 
 
-								<li class="nav-item"><a class="nav-link" href="single_blog.do">손톱영양제</a>
-								</li>
+								<li class="nav-item"><a class="nav-link"
+									href="single_blog.do">손톱영양제</a></li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
@@ -134,7 +134,7 @@
 				<div class="col-lg-12">
 					<div class="about_us_content">
 						<img src="resources/img/icon/camera.png" alt="#"
-							class="img-fluid pic" style="width: 42%; padding-top: 10%">
+							class="img-fluid pic" style="width: 20%; padding-top: 6%; visibility:hidden">
 
 					</div>
 				</div>
@@ -152,6 +152,7 @@
 				<div class="col-lg-6" style="margin: 15px">
 					<div class="feature_part_tittle" style="text-align: center">
 						<h3 class="explain">사용방법</h3>
+						<h4 class="sub" style="padding-top: 6px; text-align: center">(사진을 눌러주세요.)</h4>
 					</div>
 				</div>
 
@@ -159,14 +160,15 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-3 col-sm-6">
 					<div class="single_feature_part">
-						<div style="padding-top: 35px">
-							<img src="resources/img/icon/camera.png" alt="#" />
+						<div style="padding-top: 20px; padding-left: 30px">
+							<img src="resources/img/icon/woman.png" alt="#" />
 
 						</div>
 
 					</div>
 					<div style="border: 1px solid #e4d3df; border-top: none">
 						<h4 style="padding-top: 6px; text-align: center">사용방법</h4>
+						
 					</div>
 				</div>
 				<div class="col-lg-3 col-sm-6" id="first">
@@ -182,7 +184,7 @@
 
 				<div class="col-lg-3 col-sm-6" id="second">
 					<div class="nail">
-						<img src="resources/img/hand.png" style="height: 180px" alt="#" />
+						<img src="resources/img/hand.jpg" style="height: 180px" alt="#" />
 					</div>
 					<div style="border: 1px solid #e4d3df; border-top: none">
 						<h4 style="padding-top: 6px; text-align: center">02. 손 사진 업로드</h4>
@@ -200,12 +202,13 @@
 			</div>
 			<div style="text-align: center">
 				<form action="upload.do" method="post" enctype="multipart/form-data">
-				 
-					
-						<button type="button" id="file_upload"
-							class="genric-btn primary radius exp_button" onclick="onclick=document.all.file.click()">사진 업로드</button>
-					
-					<input id="file" type="file" name="file" style="display:none" />
+
+
+					<button type="button" id="file_upload"
+						class="genric-btn primary radius exp_button"
+						onclick="onclick=document.all.file.click()">사진 업로드</button>
+
+					<input id="file" type="file" name="file" style="display: none" />
 
 					<button type="submit" class="genric-btn primary radius exp_button">적용</button>
 				</form>
@@ -282,25 +285,34 @@
 	<script>
 		let pic = $('.pic');
 		let explain = $('.explain');
+		let sub = $('.sub');
 
 		$("#first").on("click", function() {
 			console.log("첫번째 클릭");
 			pic.attr('src', 'resources/img/tranding_item/nail1.png');
 			explain.text("01. 원하는 네일 디자인을 선택하세요.");
+			sub.css('display','none');
+			pic.css('visibility','visible')
+			pic.css('width','38%')
 		});
 
 		$("#second").on("click", function() {
 			console.log("두번째 클릭");
-			pic.attr('src', 'resources/img/hand.png');
-			explain.text("02. 손 경계가 잘 보이도록 어두운 배경에서 손을 펼쳐서 사진을 찍어주세요.");
+			pic.attr('src', 'resources/img/hand.jpg');
+			explain.text("02. 예시사진과 같은 모양으로 손 사진을 찍어주세요.");
+			sub.css('display','none');
+			pic.css('visibility','visible')
+			pic.css('width','38%')
 		});
 
 		$("#third").on("click", function() {
 			console.log("세번째 클릭");
 			pic.attr('src', 'resources/img/tranding_item/nail2.png');
 			explain.text("03. 적용된 결과를 확인하세요.");
+			sub.css('display','none');
+			pic.css('visibility','visible')
+			pic.css('width','38%')
 		});
-
 	</script>
 
 </body>
