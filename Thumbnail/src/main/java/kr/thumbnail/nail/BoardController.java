@@ -59,7 +59,12 @@ public class BoardController {
 	
 	@RequestMapping("/gallery_sub.do")
 	public void gallery_sub() {
-		System.out.println("더보기로 가져올 임시 페이지");
+		System.out.println("더보기로 가져올 서브 페이지");
+	}
+	
+	@RequestMapping("/comment_sub.do")
+	public void comment_sub() {
+		System.out.println("댓글 불러올 서브 페이지");
 	}
 	
 	

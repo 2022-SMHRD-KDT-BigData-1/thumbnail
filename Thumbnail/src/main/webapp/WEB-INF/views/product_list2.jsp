@@ -112,7 +112,8 @@
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
 							<a id="search_1" href="javascript:void(0)"><i
-								class="ti-search"></i></a> <a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
+								class="ti-search"></i></a> <a href="cart.do"> <i
+								class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -340,80 +341,81 @@
 										</div>
 									</div>
 								</div>
+								<div class="comment-box">
+									<div class="comment-list">
+										<div class="single-comment justify-content-between d-flex">
+											<div class="user justify-content-between d-flex">
+												<div class="thumb">
+													<img src="resources/img/comment/comment_1.png" alt="">
+													<h5>
+														<a href="#">Emilly Blunt</a>
+													</h5>
+												</div>
+												<div class="desc">
+													<p class="comment">Multiply sea night grass fourth day
+														sea lesser rule open subdue female fill which them
+														Blessed, give fill lesser bearing multiply sea night grass
+														fourth day sea lesser</p>
+													<div class="d-flex justify-content-between">
+														<div class="d-flex align-items-center">
 
-								<div class="comment-list">
-									<div class="single-comment justify-content-between d-flex">
-										<div class="user justify-content-between d-flex">
-											<div class="thumb">
-												<img src="resources/img/comment/comment_1.png" alt="">
-												<h5>
-													<a href="#">Emilly Blunt</a>
-												</h5>
-											</div>
-											<div class="desc">
-												<p class="comment">Multiply sea night grass fourth day
-													sea lesser rule open subdue female fill which them Blessed,
-													give fill lesser bearing multiply sea night grass fourth
-													day sea lesser</p>
-												<div class="d-flex justify-content-between">
-													<div class="d-flex align-items-center">
-
-														<p class="date">December 4, 2017 at 3:12 pm</p>
-													</div>
-													<div class="reply-btn">
-														<a href="#" class="btn-reply text-uppercase">reply</a>
+															<p class="date">December 4, 2017 at 3:12 pm</p>
+														</div>
+														<div class="reply-btn">
+															<a href="#" class="btn-reply text-uppercase">reply</a>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="comment-list">
-									<div class="single-comment justify-content-between d-flex">
-										<div class="user justify-content-between d-flex">
-											<div class="thumb">
-												<img src="resources/img/comment/comment_2.png" alt="">
-											</div>
-											<div class="desc">
-												<p class="comment">Multiply sea night grass fourth day
-													sea lesser rule open subdue female fill which them Blessed,
-													give fill lesser bearing multiply sea night grass fourth
-													day sea lesser</p>
-												<div class="d-flex justify-content-between">
-													<div class="d-flex align-items-center">
-														<h5>
-															<a href="#">Emilly Blunt</a>
-														</h5>
-														<p class="date">December 4, 2017 at 3:12 pm</p>
-													</div>
-													<div class="reply-btn">
-														<a href="#" class="btn-reply text-uppercase">reply</a>
+									<div class="comment-list">
+										<div class="single-comment justify-content-between d-flex">
+											<div class="user justify-content-between d-flex">
+												<div class="thumb">
+													<img src="resources/img/comment/comment_2.png" alt="">
+												</div>
+												<div class="desc">
+													<p class="comment">Multiply sea night grass fourth day
+														sea lesser rule open subdue female fill which them
+														Blessed, give fill lesser bearing multiply sea night grass
+														fourth day sea lesser</p>
+													<div class="d-flex justify-content-between">
+														<div class="d-flex align-items-center">
+															<h5>
+																<a href="#">Emilly Blunt</a>
+															</h5>
+															<p class="date">December 4, 2017 at 3:12 pm</p>
+														</div>
+														<div class="reply-btn">
+															<a href="#" class="btn-reply text-uppercase">reply</a>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="comment-list">
-									<div class="single-comment justify-content-between d-flex">
-										<div class="user justify-content-between d-flex">
-											<div class="thumb">
-												<img src="resources/img/comment/comment_3.png" alt="">
-											</div>
-											<div class="desc">
-												<p class="comment">Multiply sea night grass fourth day
-													sea lesser rule open subdue female fill which them Blessed,
-													give fill lesser bearing multiply sea night grass fourth
-													day sea lesser</p>
-												<div class="d-flex justify-content-between">
-													<div class="d-flex align-items-center">
-														<h5>
-															<a href="#">Emilly Blunt</a>
-														</h5>
-														<p class="date">December 4, 2017 at 3:12 pm</p>
-													</div>
-													<div class="reply-btn">
-														<a href="#" class="btn-reply text-uppercase">reply</a>
+									<div class="comment-list">
+										<div class="single-comment justify-content-between d-flex">
+											<div class="user justify-content-between d-flex">
+												<div class="thumb">
+													<img src="resources/img/comment/comment_3.png" alt="">
+												</div>
+												<div class="desc">
+													<p class="comment">Multiply sea night grass fourth day
+														sea lesser rule open subdue female fill which them
+														Blessed, give fill lesser bearing multiply sea night grass
+														fourth day sea lesser</p>
+													<div class="d-flex justify-content-between">
+														<div class="d-flex align-items-center">
+															<h5>
+																<a href="#">Emilly Blunt</a>
+															</h5>
+															<p class="date">December 4, 2017 at 3:12 pm</p>
+														</div>
+														<div class="reply-btn">
+															<a href="#" class="btn-reply text-uppercase">reply</a>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -426,35 +428,36 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<!-- jquery plugins here-->
-		<script src="resources/js/jquery-1.12.1.min.js"></script>
-		<!-- popper js -->
-		<script src="resources/js/popper.min.js"></script>
-		<!-- bootstrap js -->
-		<script src="resources/js/bootstrap.min.js"></script>
-		<!-- easing js -->
-		<script src="resources/js/jquery.magnific-popup.js"></script>
-		<!-- swiper js -->
-		<script src="resources/js/swiper.min.js"></script>
-		<!-- swiper js -->
-		<script src="resources/js/mixitup.min.js"></script>
-		<!-- particles js -->
-		<script src="resources/js/owl.carousel.min.js"></script>
-		<script src="resources/js/jquery.nice-select.min.js"></script>
-		<!-- slick js -->
-		<script src="resources/js/slick.min.js"></script>
-		<script src="resources/js/jquery.counterup.min.js"></script>
-		<script src="resources/js/waypoints.min.js"></script>
-		<script src="resources/js/contact.js"></script>
-		<script src="resources/js/jquery.ajaxchimp.min.js"></script>
-		<script src="resources/js/jquery.form.js"></script>
-		<script src="resources/js/jquery.validate.min.js"></script>
-		<script src="resources/js/mail-script.js"></script>
-		<!-- custom js -->
-		<script src="resources/js/custom.js"></script>
-		
-		<script>
+	<!-- jquery plugins here-->
+	<script src="resources/js/jquery-1.12.1.min.js"></script>
+	<!-- popper js -->
+	<script src="resources/js/popper.min.js"></script>
+	<!-- bootstrap js -->
+	<script src="resources/js/bootstrap.min.js"></script>
+	<!-- easing js -->
+	<script src="resources/js/jquery.magnific-popup.js"></script>
+	<!-- swiper js -->
+	<script src="resources/js/swiper.min.js"></script>
+	<!-- swiper js -->
+	<script src="resources/js/mixitup.min.js"></script>
+	<!-- particles js -->
+	<script src="resources/js/owl.carousel.min.js"></script>
+	<script src="resources/js/jquery.nice-select.min.js"></script>
+	<!-- slick js -->
+	<script src="resources/js/slick.min.js"></script>
+	<script src="resources/js/jquery.counterup.min.js"></script>
+	<script src="resources/js/waypoints.min.js"></script>
+	<script src="resources/js/contact.js"></script>
+	<script src="resources/js/jquery.ajaxchimp.min.js"></script>
+	<script src="resources/js/jquery.form.js"></script>
+	<script src="resources/js/jquery.validate.min.js"></script>
+	<script src="resources/js/mail-script.js"></script>
+	<!-- custom js -->
+	<script src="resources/js/custom.js"></script>
+
+	<script>
 
 	    const body = document.querySelector('body');
 	    const modal = document.querySelector('.modal');
@@ -468,6 +471,8 @@
 	    	if (modal.classList.contains('show')) {
 		        body.style.overflow = 'hidden';
 		        $('.main_menu.home_menu').css('position', 'static');
+		        // 모달창 열리면서 댓글도 같이 로드
+		        commentLoad(article_seq);
 	    	}
 	    });	
 	    
@@ -500,7 +505,7 @@
 					 if(data >= startNum){
 						 console.log(startNum);
 						 $("body").append("<div calss='containter' id = 'load" + startNum + "''></div>");
-						 $("#load" + startNum).load("gallery_sub.do #reload", {startNum:startNum});
+						 $("#load" + startNum).load("gallery_sub.y #reload", {startNum:startNum});
 					 }
 					 
 				 },
@@ -512,6 +517,58 @@
 			 
 		 }
 	  });
+	  
+	  // 댓글영역 새로고침
+	  function commentLoad(article_seq){
+		  $(".comment-box").load("comment_sub.do #tempComment", {article_seq:article_seq})
+	  }
+	  
+	  // 댓글 작성
+	  function commentCreate(article_seq, ){
+		  
+	  }
+	  
+	  // 댓글 삭제
+	  function commentDelete(article_seq, cmt_seq?){
+		  
+	  }
+
+		
+		// 댓글 작성 - 예시
+		function feedComCreate(feedNo,nick,id1,id2,id3,id4) {
+			var text = $(id1).val();
+			$.ajax({
+				url: "FeedCommentCreateCon.do",
+				type: "post",
+				data: {feedNo: feedNo, text: text},
+				dataType: 'json',
+				success: function(result) {
+					feedComCount(feedNo,id2);
+					feedComLoad(feedNo,nick,id3,id4);
+				},
+				error : function(){
+					console.log('err');
+				}
+			});
+		};
+		
+		// 댓글 삭제 - 예시
+		function feedComDelete(feedNo,fcNo,nick,id,id2,id3) {
+			$.ajax({
+				url: "FeedCommentDeleteCon.do",
+				type: "post",
+				data: {fcNo: fcNo},
+				dataType: 'json',
+				success: function(result) {
+					feedComCount(feedNo,id);
+					feedComLoad(feedNo,nick,id2,id3);
+				},
+				error : function(){
+					console.log('err');
+				}
+			});
+		};
+	  
 	    
   
 	</script>
