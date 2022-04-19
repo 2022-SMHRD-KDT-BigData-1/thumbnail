@@ -1,5 +1,7 @@
 package kr.thumbnail.nail;
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
@@ -9,12 +11,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.thumbnail.model.CommunityMapper;
 import kr.thumbnail.model.CommunityVO;
+import kr.thumbnail.model.DesignMapper;
+import kr.thumbnail.model.DesignVO;
 
 @Controller
 public class BoardController {
 	
 	@Inject
 	CommunityMapper mapper;
+	@Inject
+	DesignMapper dMapper;
 	
 	@RequestMapping("/index.do")
 	public void index(HttpSession session) {	
@@ -27,8 +33,13 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/product_list.do")
-	public void product_list() {
+	public void product_list(HttpSession session) {
 		System.out.println("디자인 선택 페이지로 이동");
+		
+		List<DesignVO> productList = dMapper.productList();
+		
+		session.setAttribute("productList", productList);
+		System.out.println(productList);
 	}
 	
 	@RequestMapping("/product_list2.do")

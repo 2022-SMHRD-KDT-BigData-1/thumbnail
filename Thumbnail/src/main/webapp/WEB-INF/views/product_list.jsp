@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="zxx">
 
@@ -154,9 +155,11 @@
                 <div class="col-md-8">
                     <div class="product_list">
                         <div class="row">
-                            <div class="col-lg-6 col-sm-6">
+                        <c:forEach var="i" items="${sessionScope.productList }">
+                        
+                        	<div class="col-lg-6 col-sm-6" >
                                 <div class="single_product_item">
-                                    <img src="resources/img/tranding_item/nail2.png" alt="#" class="img-fluid">
+                                    <img src="resources/design/${i.d_num}.jpg" alt="#" class="img-fluid" width="200" height="200">
                                     <h3> <a href="single_product.do">#네일아트 #노란색 #체크네일</a> </h3>
                                   	<div style="padding-top: ">
 												<button type="button"
@@ -176,70 +179,7 @@
 											</div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_item">
-                                    <img src="resources/img/product/product_list_2.png" alt="#" class="img-fluid">
-                                    <h3> <a href="single_product.do">Geometric striped flower home classy decor</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_item">
-                                    <img src="resources/img/product/product_list_3.png" alt="#" class="img-fluid">
-                                    <h3> <a href="single_product.do">Foam filling cotton slow rebound pillows</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_item">
-                                    <img src="resources/img/product/product_list_4.png" alt="#" class="img-fluid">
-                                    <h3> <a href="single_product.do">Memory foam filling cotton Slow rebound pillows</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_item">
-                                    <img src="resources/img/product/product_list_5.png" alt="#" class="img-fluid">
-                                    <h3> <a href="single_product.do">Memory foam filling cotton Slow rebound pillows</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_item">
-                                    <img src="resources/img/product/product_list_6.png" alt="#" class="img-fluid">
-                                    <h3> <a href="single_product.do">Sleeping orthopedic sciatica Back Hip Joint Pain relief</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_item">
-                                    <img src="resources/img/product/product_list_7.png" alt="#" class="img-fluid">
-                                    <h3> <a href="single_product.do">Memory foam filling cotton Slow rebound pillows</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_item">
-                                    <img src="resources/img/product/product_list_8.png" alt="#" class="img-fluid">
-                                    <h3> <a href="single_product.do">Sleeping orthopedic sciatica Back Hip Joint Pain relief</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_item">
-                                    <img src="resources/img/product/product_list_9.png" alt="#" class="img-fluid">
-                                    <h3> <a href="single_product.do">Geometric striped flower home classy decor</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-6">
-                                <div class="single_product_item">
-                                    <img src="resources/img/product/product_list_10.png" alt="#" class="img-fluid">
-                                    <h3> <a href="single_product.do">Geometric striped flower home classy decor</a> </h3>
-                                    <p>From $5</p>
-                                </div>
-                            </div>
-                        </div>
+                        </c:forEach>
                         <div class="load_more_btn text-center">
                             <a href="#" class="btn_3">더보기</a>
                         </div>
@@ -300,6 +240,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="resources/js/mail-script.js"></script>
     <!-- custom js -->
     <script src="resources/js/custom.js"></script>
+    
+    <script type="text/javascript">
+    
+	  // 스크롤이 끝까지 내려오면 더보기 진행
+	
+    
+    </script>
 </body>
 
 </html>
