@@ -1,6 +1,7 @@
 package kr.thumbnail.nail;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -20,12 +21,16 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import kr.thumbnail.model.MemberMapper;
 import kr.thumbnail.model.MemberVO;
+import kr.thumbnail.model.WishListMapper;
+import kr.thumbnail.model.WishListVO;
 
 @Controller
 public class MemberController {
 	
 	@Inject
 	MemberMapper mapper;
+	@Inject
+	WishListMapper wMapper;
 	
 	@RequestMapping("/cart.do")
 	public void cart() {
@@ -55,6 +60,8 @@ public class MemberController {
 		MemberVO info = mapper.loginSelect(vo);
 		if (info != null) {
 			session.setAttribute("info", info);
+			List<WishListVO> wishList = wMapper.wishSelect(vo.getMb_email());
+			session.setAttribute("wishList", wishList);
 		}
 		System.out.println(info);
 		return "redirect:/index.do";

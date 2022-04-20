@@ -160,37 +160,36 @@
 				</div>
 				</br> -->
 
-				<c:forEach var="j" begin="0" end="2">
 					<div class="container" style="margin-bottom: 50px">
 						<div class="row">
 							<!--  <h2>Card Image</h2> -->
 							<!-- <p>Image at the top (card-img-top):</p> -->
 
-							<c:forEach begin="0" end="3" var="i">
+							<c:forEach var="i" items="${sessionScope.nutrition }">
 								<div class="col-md-3" id="">
 									<div style="border-radius: 10px">
 										<img class="card-img-top"
-											src="resources/img/tranding_item/nail1.png"
+											src="resources/nutrition/${i.n_num }.jpg"
 											style="width: 100%; border-radius: 10px; height:215px;">
 										<div
 											style="margin-top: 20px; background-color: #f8f8f8; border-radius: 20px; height:215px">
 											<div class="card-body">
-												<h4 class="card-title">제품명</h4>
-												<p class="card-text">제품설명</p>
+												<h4 class="card-title">${i.n_content }</h4>
+												<p class="card-text">${i.n_type }</p>
 												<p class="card-text"
-													style="text-align-last: end; font-size: 20px">가격</p>
+													style="text-align-last: end; font-size: 20px">${i.n_price }</p>
 												<div style="padding-top: 60px">
 													<button type="button"
 														style="background: none; border: none;">
 														<p class="like-info">
 															<span class="align-middle"><i class="far fa-heart"></i></span>
-															리뷰갯수
+															${i.n_reviewcount }
 														</p>
 													</button>
 													<button type="button"
 														style="background: none; border: none;">
 														<p>
-															<i class="far fa-comments"></i>구매건수
+															<i class="far fa-comments"></i>${i.n_pricecount}
 														</p>
 													</button>
 												</div>
@@ -203,7 +202,6 @@
 							</c:forEach>
 						</div>
 					</div>
-				</c:forEach>
 			</div>
 			<div class="load_more_btn text-center">
 				<a href="#" class="btn_3" style="padding: 10px 25px">더보기</a>

@@ -13,6 +13,10 @@ import kr.thumbnail.model.CommunityMapper;
 import kr.thumbnail.model.CommunityVO;
 import kr.thumbnail.model.DesignMapper;
 import kr.thumbnail.model.DesignVO;
+import kr.thumbnail.model.NutrionMapper;
+import kr.thumbnail.model.NutritionVO;
+import kr.thumbnail.model.WishListMapper;
+import kr.thumbnail.model.WishListVO;
 
 @Controller
 public class BoardController {
@@ -21,6 +25,10 @@ public class BoardController {
 	CommunityMapper mapper;
 	@Inject
 	DesignMapper dMapper;
+	@Inject
+	NutrionMapper nMapper;
+	@Inject
+	WishListMapper wMapper;
 	
 	@RequestMapping("/index.do")
 	public void index(HttpSession session) {	
@@ -81,6 +89,7 @@ public class BoardController {
 	@RequestMapping("/gallery_sub.do")
 	public void gallery_sub() {
 		System.out.println("더보기로 가져올 서브 페이지");
+		
 	}
 	
 	@RequestMapping("/comment_sub.do")
@@ -89,8 +98,12 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/single_blog.do")
-	public void single_blog() {
+	public void single_blog(HttpSession session) {
 		System.out.println("손톱 영양제 페이지로 이동");
+		
+		List<NutritionVO> vo =  nMapper.singleBlog();
+		
+		session.setAttribute("nutrition", vo);
 	}
 	
 	@RequestMapping("/board_Insert.do")
@@ -99,13 +112,34 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/galleryDetail.do")
-	public @ResponseBody String galleryDetail(int article_seq, HttpSession session) {
+	public @ResponseBody CommunityVO galleryDetail(int article_seq, HttpSession session) {
 		System.out.println("갤러리 상세보기");
 		
 		CommunityVO community_vo = mapper.galleryDetail(article_seq);
 		session.setAttribute("community_vo", community_vo);
 		
-		return "success";
+		return community_vo;
+	}
+	
+	@RequestMapping("/wishListUp.do")
+	public @ResponseBody List<WishListVO> wishListUp(WishListVO vo, HttpSession session) {
+		
+		System.out.println(vo.getD_seq() +" "+ vo.getMb_email());
+		wMapper.wishListUp(vo);
+		List<WishListVO> wishList = wMapper.wishSelect(vo.getMb_email());
+		session.setAttribute("wishList", wishList);
+		
+		return wishList;
+	}
+	@RequestMapping("/wishListDelete.do")
+	public @ResponseBody List<WishListVO> wishListDelete(WishListVO vo, HttpSession session) {
+		
+		System.out.println(vo.getD_seq() + " "+ vo.getMb_email());
+		wMapper.wishListDelete(vo);
+		List<WishListVO> wishList = wMapper.wishSelect(vo.getMb_email());
+		session.setAttribute("wishList", wishList);
+		
+		return wishList;
 	}
 	
 	

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.thumbnail.model.NutrionMapper">
+    <select id="singleBlog" resultType="kr.thumbnail.model.NutritionVO">
+         select * from (select row_number() over(order by n_num) as num, n_num, n_seq, n_type ,n_price ,n_img 
+                  ,n_content, n_reviewcount, n_pricecount from t_nutrition) as d where num between 1 and 12;
+    </select>
+    
+</mapper>

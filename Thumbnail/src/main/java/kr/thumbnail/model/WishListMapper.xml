@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.thumbnail.model.WishListMapper">
+    <!-- 위시리스트 선택 -->
+    <select id="wishSelect" resultType="kr.thumbnail.model.WishListVO">
+        select * from t_wishlist where mb_email = #{mb_email}
+    </select>
+    
+    <!-- 위시리스트 등록 -->
+    <insert id="wishListUp" parameterType="kr.thumbnail.model.WishListVO">
+        insert into t_wishlist(d_seq, mb_email) values(#{d_seq},#{mb_email})
+    </insert>
+    
+    <!-- 위시리스트 삭제 -->
+    <delete id="wishListDelete">
+        delete from t_wishlist where mb_email = #{mb_email} and d_seq = #{d_seq}
+    </delete>
+</mapper>
