@@ -3,7 +3,7 @@
 <mapper namespace="kr.thumbnail.model.NutrionMapper">
     <select id="singleBlog" resultType="kr.thumbnail.model.NutritionVO">
          select * from (select row_number() over(order by n_num) as num, n_num, n_seq, n_type ,n_price ,n_img 
-                  ,n_content, n_reviewcount, n_pricecount from t_nutrition) as d where num between 1 and 10;
+                  ,n_content, n_reviewcount, n_pricecount from t_nutrition) as d where num between 1 and 12;
     </select>
     
 </mapper>

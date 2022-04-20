@@ -174,22 +174,22 @@
 										<div
 											style="margin-top: 20px; background-color: #f8f8f8; border-radius: 20px; height:215px">
 											<div class="card-body">
-												<h4 class="card-title">제품명</h4>
-												<p class="card-text">제품설명</p>
+												<h4 class="card-title">${i.n_content }</h4>
+												<p class="card-text">${i.n_type }</p>
 												<p class="card-text"
-													style="text-align-last: end; font-size: 20px">가격</p>
+													style="text-align-last: end; font-size: 20px">${i.n_price }</p>
 												<div style="padding-top: 60px">
 													<button type="button"
 														style="background: none; border: none;">
 														<p class="like-info">
 															<span class="align-middle"><i class="far fa-heart"></i></span>
-															리뷰갯수
+															${i.n_reviewcount }
 														</p>
 													</button>
 													<button type="button"
 														style="background: none; border: none;">
 														<p>
-															<i class="far fa-comments"></i>구매건수
+															<i class="far fa-comments"></i>${i.n_pricecount}
 														</p>
 													</button>
 												</div>

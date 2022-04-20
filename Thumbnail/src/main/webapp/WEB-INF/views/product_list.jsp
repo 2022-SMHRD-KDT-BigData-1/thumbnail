@@ -1,3 +1,4 @@
+<%@page import="kr.thumbnail.model.MemberVO"%>
 <%@page import="kr.thumbnail.model.DesignVO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -73,14 +74,14 @@
 								<li class="nav-item"><a class="nav-link" href="login.do">
 										로그인</a></li>
 
-								<!-- 	<li class="nav-item dropdown"><a
-									class="nav-link dropdown-toggle" href="blog.do"
-									id="navbarDropdown_2" role="button" data-toggle="dropdown"
-									aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-										<a class="dropdown-item" href="cart.do"> 찜목록</a> <a
-											class="dropdown-item" href="single_blog.do">블로그 </a>
-									</div></li> -->
+								<!--    <li class="nav-item dropdown"><a
+                           class="nav-link dropdown-toggle" href="blog.do"
+                           id="navbarDropdown_2" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
+                           <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                              <a class="dropdown-item" href="cart.do"> 찜목록</a> <a
+                                 class="dropdown-item" href="single_blog.do">블로그 </a>
+                           </div></li> -->
 							</ul>
 
 						</div>
@@ -180,6 +181,7 @@
 				<div class="col-md-8">
 					<div class="product_list">
 						<div class="row">
+							<input type="hidden" value="${info.mb_email }" id="email">
 							<c:forEach var="i" items="${sessionScope.productList }">
 
 								<div class="col-lg-6 col-sm-6">
@@ -219,11 +221,49 @@
 														class="fas fa-solid fa-check"></i> Select </a>
 												</p>
 											</button>
-											<button type="button" style="background: none; border: none;">
-												<p>
-													<i class="far fa-regular fa-bookmark"></i> Wish list
-												</p>
-											</button>
+											<c:choose>
+												<c:when test="${empty wishList }">
+													<button type="button"
+														style="background: none; border: none;"
+														onclick="wishListUp(${i.d_seq})">
+														<p>
+															<i class="far fa-regular fa-bookmark"></i> Wish list
+														</p>
+													</button>
+												</c:when>
+												<c:otherwise>
+												<c:set value="0" var="q"/>
+													<c:forEach var="k" items="${sessionScope.wishList }"
+														varStatus="status">
+														<c:choose>
+															<c:when test="${i.d_seq == k.d_seq }">
+																<button type="button"
+																	style="background: none; border: none;"
+																	onclick="wishListDelete(${i.d_seq})">
+																	<p>
+																		<i class="fas fa-solid fa-bookmark"></i> Wish list
+																	</p>
+																</button>
+															</c:when>
+															<c:otherwise>
+															<c:set value="${q+1 }" var="q"/>
+																<c:choose>
+																	<c:when test="${fn:length(wishList) == q }">
+																		<button type="button"
+																			style="background: none; border: none;"
+																			onclick="wishListUp(${i.d_seq})">
+																			<p>
+																				<i class="far fa-regular fa-bookmark"></i> Wish list
+																			</p>
+																		</button>
+																	</c:when>
+																</c:choose>
+
+															</c:otherwise>
+														</c:choose>
+													</c:forEach>
+												</c:otherwise>
+											</c:choose>
 										</div>
 									</div>
 								</div>
@@ -297,8 +337,48 @@
 	<script src="resources/js/custom.js"></script>
 
 	<script type="text/javascript">
-		// 스크롤이 끝까지 내려오면 더보기 진행
+		
+	
+	var mb_email = $("#email").val();
+	console.log(mb_email);
+	
+	function wishListUp(d_seq) {
+		
+		 $.ajax({
+			 url: "wishListUp.do",
+			 type: "post",
+			 data: {"d_seq" : d_seq, "mb_email" : mb_email},
+			 dataType: "json",
+			 success: function(data){
+				 console.log(d_seq);
+				 location.reload();
+			 },
+			 error : function(){
+				console.log('err');
+			 }
+			 
+		 });
+		
+	};
+	
+	function wishListDelete(d_seq) {
+		
+		 $.ajax({
+			 url: "wishListDelete.do",
+			 type: "post",
+			 data: {"d_seq" : d_seq, "mb_email" : mb_email},
+			 dataType: "json",
+			 success: function(data){
+				 console.log(d_seq);
+				 location.reload();
+			 },
+			 error : function(){
+				console.log('err');
+			 }
+			 
+		 });
+	};
+	
 	</script>
 </body>
-
 </html>

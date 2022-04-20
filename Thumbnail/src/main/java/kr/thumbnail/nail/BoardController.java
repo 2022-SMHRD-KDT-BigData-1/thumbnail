@@ -15,6 +15,8 @@ import kr.thumbnail.model.DesignMapper;
 import kr.thumbnail.model.DesignVO;
 import kr.thumbnail.model.NutrionMapper;
 import kr.thumbnail.model.NutritionVO;
+import kr.thumbnail.model.WishListMapper;
+import kr.thumbnail.model.WishListVO;
 
 @Controller
 public class BoardController {
@@ -25,6 +27,8 @@ public class BoardController {
 	DesignMapper dMapper;
 	@Inject
 	NutrionMapper nMapper;
+	@Inject
+	WishListMapper wMapper;
 	
 	@RequestMapping("/index.do")
 	public void index(HttpSession session) {	
@@ -114,6 +118,27 @@ public class BoardController {
 		session.setAttribute("community_vo", community_vo);
 		
 		return "success";
+	}
+	
+	@RequestMapping("/wishListUp.do")
+	public @ResponseBody List<WishListVO> wishListUp(WishListVO vo, HttpSession session) {
+		
+		System.out.println(vo.getD_seq() +" "+ vo.getMb_email());
+		wMapper.wishListUp(vo);
+		List<WishListVO> wishList = wMapper.wishSelect(vo.getMb_email());
+		session.setAttribute("wishList", wishList);
+		
+		return wishList;
+	}
+	@RequestMapping("/wishListDelete.do")
+	public @ResponseBody List<WishListVO> wishListDelete(WishListVO vo, HttpSession session) {
+		
+		System.out.println(vo.getD_seq() + " "+ vo.getMb_email());
+		wMapper.wishListDelete(vo);
+		List<WishListVO> wishList = wMapper.wishSelect(vo.getMb_email());
+		session.setAttribute("wishList", wishList);
+		
+		return wishList;
 	}
 	
 	
