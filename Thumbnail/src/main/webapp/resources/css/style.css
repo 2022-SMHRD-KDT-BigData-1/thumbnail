@@ -1976,7 +1976,7 @@ ul {
 
 /* line 1365, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_blog.scss */
 .comments-area .thumb img {
-	width: 70px;
+	width: 40px;
 	border-radius: 50%;
 }
 
@@ -1985,7 +1985,6 @@ ul {
 	font-size: 14px;
 	color: #999999;
 	margin-bottom: 0;
-	margin-left: 20px;
 }
 
 /* line 1378, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_blog.scss */
@@ -3110,7 +3109,7 @@ input:focus {
 
 /* line 25, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_trending_items.scss */
 .single_product_item h3 {
-	font-size: 24px;
+	font-size: 21px;
 	font-weight: 400;
 	margin-top: 22px;
 	line-height: 1.5;

@@ -29,7 +29,11 @@
 <!-- style CSS -->
 <link rel="stylesheet" href="resources/css/style.css">
 
-
+<style>
+.like-info {
+	font-size: 12.5px;
+}
+</style>
 </head>
 
 <body>
@@ -55,21 +59,29 @@
 
 
 								<li class="nav-item"><a class="nav-link"
-									href="product_list.do"> 가상네일체험</a></li>
+									href="product_list.do"> 네일아트체험</a></li>
 
 								<li class="nav-item"><a class="nav-link"
 									href="product_list2.do">갤러리</a></li>
 
+								<li class="nav-item"><a class="nav-link"
+									href="single_blog.do">손톱영양제</a></li>
 
-
-								<li class="nav-item"><a class="nav-link" href="single_blog.do">손톱영양제</a>
-								</li>
+								<li class="nav-item"><a class="nav-link" href="#">퍼스널핸드</a></li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
+								<c:choose>
+									<c:when test="${empty info }">
+										<li class="nav-item"><a class="nav-link" href="login.do">
+												로그인</a></li>
+									</c:when>
+									<c:otherwise>
+										<li class="nav-item"><a class="nav-link" href="#">
+												${info.mb_nick }님</a></li>
+									</c:otherwise>
+								</c:choose>
 
-								<li class="nav-item"><a class="nav-link" href="login.do">
-										로그인</a></li>
 
 								<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
@@ -111,7 +123,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb_iner">
-						<h2>손톱 영양제</h2>
+						<h2>Nutrition</h2>
 					</div>
 				</div>
 			</div>
@@ -160,25 +172,26 @@
 				</div>
 				</br> -->
 
-					<div class="container" style="margin-bottom: 50px">
-						<div class="row">
-							<!--  <h2>Card Image</h2> -->
-							<!-- <p>Image at the top (card-img-top):</p> -->
+				<div class="container" style="margin-bottom: 50px">
+					<div class="row">
+						<!--  <h2>Card Image</h2> -->
+						<!-- <p>Image at the top (card-img-top):</p> -->
 
-							<c:forEach var="i" items="${sessionScope.nutrition }">
-								<div class="col-md-3" id="">
-									<div style="border-radius: 10px">
-										<img class="card-img-top"
-											src="resources/nutrition/${i.n_num }.jpg"
-											style="width: 100%; border-radius: 10px; height:215px;">
-										<div
-											style="margin-top: 20px; background-color: #f8f8f8; border-radius: 20px; height:215px">
-											<div class="card-body">
-												<h4 class="card-title">${i.n_content }</h4>
-												<p class="card-text">${i.n_type }</p>
+						<c:forEach var="i" items="${sessionScope.nutrition }">
+							<div class="col-md-3" id="">
+								<div style="border-radius: 10px; padding-bottom: 20px">
+									<img class="card-img-top"
+										src="resources/nutrition/${i.n_num }.jpg"
+										style="width: 100%; border-radius: 10px; height: 215px;">
+									<div
+										style="margin-top: 20px; background-color: #f8f8f8; border-radius: 20px; height: 215px">
+										<div class="card-body">
+											<h4 class="card-title" style="font-size: 15px">${i.n_content }</h4>
+											<p class="card-text" style="font-size: 12.5px">${i.n_type }</p>
+											<div style="position: absolute; bottom: 34px;">
 												<p class="card-text"
-													style="text-align-last: end; font-size: 20px">${i.n_price }</p>
-												<div style="padding-top: 60px">
+													style="text-align-last: end; font-size: 17px">${i.n_price }</p>
+												<div>
 													<button type="button"
 														style="background: none; border: none;">
 														<p class="like-info">
@@ -188,7 +201,7 @@
 													</button>
 													<button type="button"
 														style="background: none; border: none;">
-														<p>
+														<p class="like-info">
 															<i class="far fa-comments"></i>${i.n_pricecount}
 														</p>
 													</button>
@@ -197,11 +210,12 @@
 										</div>
 									</div>
 								</div>
-								<br>
+							</div>
+							<br>
 
-							</c:forEach>
-						</div>
+						</c:forEach>
 					</div>
+				</div>
 			</div>
 			<div class="load_more_btn text-center">
 				<a href="#" class="btn_3" style="padding: 10px 25px">더보기</a>

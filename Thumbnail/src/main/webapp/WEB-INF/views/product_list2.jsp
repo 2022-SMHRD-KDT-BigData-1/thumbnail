@@ -40,9 +40,14 @@
 	background-color: rgba(0, 0, 0, 0.4);
 }
 
+
+
 .modal.show {
 	display: block;
+
 }
+
+
 
 .modal_body {
 	position: absolute;
@@ -61,7 +66,7 @@
 </head>
 
 <body>
-	<!--::header part start::-->
+		<!--::header part start::-->
 	<header class="main_menu home_menu">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
@@ -83,29 +88,30 @@
 
 
 								<li class="nav-item"><a class="nav-link"
-									href="product_list.do"> 가상네일체험</a></li>
+									href="product_list.do"> 네일아트체험</a></li>
 
 								<li class="nav-item"><a class="nav-link"
 									href="product_list2.do">갤러리</a></li>
 
-
-
 								<li class="nav-item"><a class="nav-link"
 									href="single_blog.do">손톱영양제</a></li>
+									
+								<li class="nav-item"><a class="nav-link"
+									href="#">퍼스널핸드</a></li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
-
 								<c:choose>
-									<c:when test = "${empty info }">
+									<c:when test="${empty info }">
 										<li class="nav-item"><a class="nav-link" href="login.do">
-											로그인</a></li>
+												로그인</a></li>
 									</c:when>
-									<c:otherwise>
+									<c:otherwise> 
 										<li class="nav-item"><a class="nav-link" href="#">
-											${info.mb_nick }님</a></li>
+												${info.mb_nick }님</a></li>
 									</c:otherwise>
-								</c:choose>		
+								</c:choose>
+
 
 								<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
@@ -198,7 +204,7 @@
 					</br>
 
 					
-						<div class="container" style="margin-bottom: 20px">
+						<div class="container more" style="margin-bottom: 20px">
 						<div class="row">
 							<c:forEach var="i" items="${sessionScope.galleryList }">
 							
@@ -207,11 +213,11 @@
 
 								
 									<div class="col-md-4" id="">
-										<div class="card" style="width: 350px; border-radius: 10px">
+										<div class="card" style="width: 350px; border-radius: 10px; margin-bottom:20px">
 											<img class="card-img-top${i.article_seq }"
 												src="${i.article_file }"
 												onclick = "modal_open(${i.article_seq})"
-												style="width: 100%; border-top-right-radius: 8px; border-top-left-radius: 8px;">
+												style="width: 350px; height:220px; object-fit:cover; border-top-right-radius: 8px; border-top-left-radius: 8px;">
 											<div class="card-body">
 												<h4 class="card-title">${i.article_subject }</h4>
 												<p class="card-text">${i.article_content }</p>
@@ -241,9 +247,7 @@
 						</div>
 					
 				</div>
-				<div class="load_more_btn text-center">
-					<a href="#" class="btn_3" style="padding: 10px 25px">더보기</a>
-				</div>
+				
 			</div>
 
 		</div>
@@ -299,7 +303,7 @@
 		</div>
 	</div>
  -->
-		<div class=" modal">
+		<div class="modal">
 			<div class="container"
 				style="transform: translateX(24px) translateY(9%); background-color: white">
 				<div class="row">
@@ -585,7 +589,7 @@
 				 
 				 if(data >= startNum){
 					 console.log(startNum);
-					 $("body").append("<div class='container' id = 'load" + startNum + "''></div>");
+					 $(".more").append("<div id = 'load" + startNum + "''></div>");
 					 $("#load" + startNum).load("gallery_sub.do #reload", {startNum:startNum});
 				 }
 				 startNum += 3;

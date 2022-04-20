@@ -43,7 +43,7 @@
 </head>
 
 <body>
-	<!--::header part start::-->
+		<!--::header part start::-->
 	<header class="main_menu home_menu">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
@@ -65,21 +65,30 @@
 
 
 								<li class="nav-item"><a class="nav-link"
-									href="product_list.do"> 가상네일체험</a></li>
+									href="product_list.do"> 네일아트체험</a></li>
 
 								<li class="nav-item"><a class="nav-link"
 									href="product_list2.do">갤러리</a></li>
 
-
-
 								<li class="nav-item"><a class="nav-link"
 									href="single_blog.do">손톱영양제</a></li>
+									
+								<li class="nav-item"><a class="nav-link"
+									href="#">퍼스널핸드</a></li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
+								<c:choose>
+									<c:when test="${empty info }">
+										<li class="nav-item"><a class="nav-link" href="login.do">
+												로그인</a></li>
+									</c:when>
+									<c:otherwise> 
+										<li class="nav-item"><a class="nav-link" href="#">
+												${info.mb_nick }님</a></li>
+									</c:otherwise>
+								</c:choose>
 
-								<li class="nav-item"><a class="nav-link" href="login.do">
-										로그인</a></li>
 
 								<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
@@ -149,7 +158,7 @@
 		style="padding: 0; padding-bottom: 70px">
 		<div class="container">
 			<div class="row justify-content-center txt" style="padding-top: 1%;">
-				<div class="col-lg-6" style="margin: 15px">
+				<div class="col-lg-6 howto" style="margin: 15px">
 				<div style="padding-top: 20px; padding-left: 30px; text-align: center">
 				<img src="resources/img/icon/woman.png" alt="#" style="width:22%" class="sub"/></div>
 					<div class="feature_part_tittle" style="text-align: center">
@@ -160,15 +169,15 @@
 
 			</div>
 			<div class="row justify-content-center txt" style="padding-top: 8%">
-				<div class="col-lg-3 col-sm-6">
+				<div class="col-lg-3 col-sm-6" id="zero">
 					<div class="single_feature_part">
 						<div style="padding-top: 20px; padding-left: 30px">
-							<img src="resources/img/icon/woman.png" alt="#" />
+							<img src="resources/img/icon/woman1.png" alt="#" />
 
 						</div>
 
 					</div>
-					<div style="border: 1px solid #e4d3df; border-top: none">
+					<div  style="border: 1px solid #e4d3df; border-top: none">
 						<h4 style="padding-top: 6px; text-align: center">사용방법</h4>
 						
 					</div>
@@ -289,7 +298,8 @@
 		let explain = $('.explain');
 		let sub = $('.sub');
 		let txt = $('.txt');
-
+	
+		
 		$("#first").on("click", function() {
 			console.log("첫번째 클릭");
 			pic.attr('src', 'resources/img/tranding_item/nail1.png');

@@ -58,30 +58,38 @@
 
 
 								<li class="nav-item"><a class="nav-link"
-									href="product_list.do"> 가상네일체험</a></li>
+									href="product_list.do"> 네일아트체험</a></li>
 
 								<li class="nav-item"><a class="nav-link"
 									href="product_list2.do">갤러리</a></li>
 
-
-
 								<li class="nav-item"><a class="nav-link"
 									href="single_blog.do">손톱영양제</a></li>
 
+								<li class="nav-item"><a class="nav-link" href="#">퍼스널핸드</a></li>
+
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
+								<c:choose>
+									<c:when test="${empty info }">
+										<li class="nav-item"><a class="nav-link" href="login.do">
+												로그인</a></li>
+									</c:when>
+									<c:otherwise>
+										<li class="nav-item"><a class="nav-link" href="#">
+												${info.mb_nick }님</a></li>
+									</c:otherwise>
+								</c:choose>
 
-								<li class="nav-item"><a class="nav-link" href="login.do">
-										로그인</a></li>
 
-								<!--    <li class="nav-item dropdown"><a
-                           class="nav-link dropdown-toggle" href="blog.do"
-                           id="navbarDropdown_2" role="button" data-toggle="dropdown"
-                           aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
-                           <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                              <a class="dropdown-item" href="cart.do"> 찜목록</a> <a
-                                 class="dropdown-item" href="single_blog.do">블로그 </a>
-                           </div></li> -->
+								<!-- 	<li class="nav-item dropdown"><a
+									class="nav-link dropdown-toggle" href="blog.do"
+									id="navbarDropdown_2" role="button" data-toggle="dropdown"
+									aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+										<a class="dropdown-item" href="cart.do"> 찜목록</a> <a
+											class="dropdown-item" href="single_blog.do">블로그 </a>
+									</div></li> -->
 							</ul>
 
 						</div>
@@ -114,7 +122,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb_iner">
-						<h2>product list</h2>
+						<h2>Design list</h2>
 					</div>
 				</div>
 			</div>
@@ -187,7 +195,8 @@
 								<div class="col-lg-6 col-sm-6">
 									<div class="single_product_item">
 										<img src="resources/design/${i.d_num}.jpg" alt="#"
-											class="img-fluid" width="200" height="200">
+											class="img-fluid"
+											style="width: 355px; height: 340px; object-fit: cover;">
 										<c:choose>
 											<c:when test="${!empty i.d_hashtag }">
 												<h3>
@@ -232,7 +241,7 @@
 													</button>
 												</c:when>
 												<c:otherwise>
-												<c:set value="0" var="q"/>
+													<c:set value="0" var="q" />
 													<c:forEach var="k" items="${sessionScope.wishList }"
 														varStatus="status">
 														<c:choose>
@@ -246,7 +255,7 @@
 																</button>
 															</c:when>
 															<c:otherwise>
-															<c:set value="${q+1 }" var="q"/>
+																<c:set value="${q+1 }" var="q" />
 																<c:choose>
 																	<c:when test="${fn:length(wishList) == q }">
 																		<button type="button"

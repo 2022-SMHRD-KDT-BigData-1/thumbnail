@@ -43,7 +43,7 @@
 </head>
 
 <body>
-	<!--::header part start::-->
+		<!--::header part start::-->
 	<header class="main_menu home_menu">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
@@ -65,21 +65,30 @@
 
 
 								<li class="nav-item"><a class="nav-link"
-									href="product_list.do"> 가상네일체험</a></li>
+									href="product_list.do"> 네일아트체험</a></li>
 
 								<li class="nav-item"><a class="nav-link"
 									href="product_list2.do">갤러리</a></li>
 
-
-
-								<li class="nav-item"><a class="nav-link" href="single_blog.do">손톱영양제</a>
-								</li>
+								<li class="nav-item"><a class="nav-link"
+									href="single_blog.do">손톱영양제</a></li>
+									
+								<li class="nav-item"><a class="nav-link"
+									href="#">퍼스널핸드</a></li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
+								<c:choose>
+									<c:when test="${empty info }">
+										<li class="nav-item"><a class="nav-link" href="login.do">
+												로그인</a></li>
+									</c:when>
+									<c:otherwise> 
+										<li class="nav-item"><a class="nav-link" href="#">
+												${info.mb_nick }님</a></li>
+									</c:otherwise>
+								</c:choose>
 
-								<li class="nav-item"><a class="nav-link" href="login.do">
-										로그인</a></li>
 
 								<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"

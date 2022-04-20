@@ -52,7 +52,7 @@
 
 
 								<li class="nav-item"><a class="nav-link"
-									href="product_list.do"> 가상네일체험</a></li>
+									href="product_list.do"> 네일아트체험</a></li>
 
 								<li class="nav-item"><a class="nav-link"
 									href="product_list2.do">갤러리</a></li>
@@ -70,7 +70,7 @@
 										<li class="nav-item"><a class="nav-link" href="login.do">
 												로그인</a></li>
 									</c:when>
-									<c:otherwise>
+									<c:otherwise> 
 										<li class="nav-item"><a class="nav-link" href="#">
 												${info.mb_nick }님</a></li>
 									</c:otherwise>
@@ -121,7 +121,7 @@
 							<h1>Best quality nail</h1>
 							<p>Seamlessly empower fully researched growth strategies and
 								interoperable internal</p>
-							<a href="product_list.do" class="btn_1">가상 네일아트 체험</a>
+							<a href="product_list.do" class="btn_1">네일아트 체험하기</a>
 						</div>
 					</div>
 				</div>
