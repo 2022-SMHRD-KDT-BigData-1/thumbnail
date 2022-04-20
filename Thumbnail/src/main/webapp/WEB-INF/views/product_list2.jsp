@@ -481,8 +481,11 @@
 	    	}
 	    });	
 	    */
+	    
 	    function modal_open(article_seq){
-			  
+			
+	    	
+	    	
 			  modal.classList.toggle('show');
 			  if (modal.classList.contains('show')) {
 			        body.style.overflow = 'hidden';
@@ -492,17 +495,20 @@
 			        	url : "galleryDetail.do",
 			        	type : "post",
 			        	data : {article_seq : article_seq},
-			        	dataType : 'json',
+			        	dataType : 'text',
+			        	async: false,
 			        	success : function(data){
 			        		console.log(data);
-			        		$('.modal').load("gallery_sub.do #modal", {article_seq : article_seq});
-			        	}
-			        	
-			        });
+			        		$('.modal.show').load("gallery_sub.do #modal", {article_seq : article_seq});
+			        	},
+			        	 error : function(){
+								console.log('err');
+							 }
+			    	});
 			       
 		    	}
 			  
-		  }
+		  };
 	    
 	    
 	    modal.addEventListener('click', (event) => {
