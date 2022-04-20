@@ -108,7 +108,7 @@
 					<div class="col-lg-8 mb-5 mb-lg-0">
 						<div style="padding-left: 50px">
 							<div class="blog_item_img">
-								<img class="card-img rounded-0" onclick = "modal_open(${sessionScope.moreGalleryList.article_seq})" src="${sessionScope.community_vo.article_file }"
+								<img class="card-img rounded-0" onclick = "modal_open(${sessionScope.community_vo.article_seq})" src="${sessionScope.community_vo.article_file }"
 									alt="" style="width: 45em" /> <a href="#"
 									class="blog_item_date">
 									<h3>15</h3>

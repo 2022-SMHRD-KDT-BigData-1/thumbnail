@@ -501,12 +501,13 @@
 			        	url : "galleryDetail.do",
 			        	type : "post",
 			        	data : {article_seq : article_seq},
-			        	dataType : 'json',
+			        	dataType : 'text',
 			        	async: false,
 			        	success : function(data){
 			        		console.log(data);
 			        		cmtSelect(article_seq);
-			        		$('.modal.show').load("gallery_sub.do #modal", {article_seq : article_seq});
+			        		$('.modal.show').load("gallery_sub.do #modal");
+			        		rocation.reload();
 			        		
 			        	},
 			        	 error : function(){

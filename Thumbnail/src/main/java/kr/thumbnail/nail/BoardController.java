@@ -89,6 +89,7 @@ public class BoardController {
 	@RequestMapping("/gallery_sub.do")
 	public void gallery_sub() {
 		System.out.println("더보기로 가져올 서브 페이지");
+		
 	}
 	
 	@RequestMapping("/comment_sub.do")
@@ -111,13 +112,13 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/galleryDetail.do")
-	public @ResponseBody String galleryDetail(int article_seq, HttpSession session) {
+	public @ResponseBody CommunityVO galleryDetail(int article_seq, HttpSession session) {
 		System.out.println("갤러리 상세보기");
 		
 		CommunityVO community_vo = mapper.galleryDetail(article_seq);
 		session.setAttribute("community_vo", community_vo);
 		
-		return "success";
+		return community_vo;
 	}
 	
 	@RequestMapping("/wishListUp.do")

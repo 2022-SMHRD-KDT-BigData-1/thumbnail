@@ -26,11 +26,11 @@ public class CommentController {
 	}
 	
 	@RequestMapping("/cmtSelect.do")
-	public @ResponseBody String cmtSelect(int article_seq, HttpSession session) {
+	public @ResponseBody List<CommentVO> cmtSelect(int article_seq, HttpSession session) {
 		System.out.println("댓글 보여주기");
 		List<CommentVO> commentList = mapper.cmtSelect(article_seq);
 		session.setAttribute("commentList", commentList);
 		System.out.println(commentList.size());
-		return "success";
+		return commentList;
 	}
 }
