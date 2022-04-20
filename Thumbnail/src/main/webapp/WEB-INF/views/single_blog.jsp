@@ -160,17 +160,16 @@
 				</div>
 				</br> -->
 
-				<c:forEach var="j" begin="0" end="2">
 					<div class="container" style="margin-bottom: 50px">
 						<div class="row">
 							<!--  <h2>Card Image</h2> -->
 							<!-- <p>Image at the top (card-img-top):</p> -->
 
-							<c:forEach begin="0" end="3" var="i">
+							<c:forEach var="i" items="${sessionScope.nutrition }">
 								<div class="col-md-3" id="">
 									<div style="border-radius: 10px">
 										<img class="card-img-top"
-											src="resources/img/tranding_item/nail1.png"
+											src="resources/nutrition/${i.n_num }.jpg"
 											style="width: 100%; border-radius: 10px; height:215px;">
 										<div
 											style="margin-top: 20px; background-color: #f8f8f8; border-radius: 20px; height:215px">
@@ -203,7 +202,6 @@
 							</c:forEach>
 						</div>
 					</div>
-				</c:forEach>
 			</div>
 			<div class="load_more_btn text-center">
 				<a href="#" class="btn_3" style="padding: 10px 25px">더보기</a>

@@ -191,7 +191,9 @@
 												<h3>
 													<a href="single_product.do">#${fn:split(i.d_hashtag,'#')[0]}
 														#${fn:split(i.d_hashtag,'#')[1]}
-														#${fn:split(i.d_hashtag,'#')[2]}</a>
+														#${fn:split(i.d_hashtag,'#')[2]}
+														#${fn:split(i.d_hashtag,'#')[3]}
+														#${fn:split(i.d_hashtag,'#')[4]}</a>
 												</h3>
 											</c:when>
 											<c:otherwise>
@@ -200,7 +202,9 @@
 														<h3>
 															<a href="single_product.do">#${fn:split(i.d_hashtag2,'#')[0]}
 																#${fn:split(i.d_hashtag2,'#')[1]}
-																#${fn:split(i.d_hashtag2,'#')[2]}</a>
+																#${fn:split(i.d_hashtag2,'#')[2]}
+																#${fn:split(i.d_hashtag2,'#')[3]}
+																#${fn:split(i.d_hashtag2,'#')[4]}</a>
 														</h3>
 													</c:when>
 												</c:choose>
