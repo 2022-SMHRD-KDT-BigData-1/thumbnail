@@ -189,22 +189,24 @@
 
 					</br>
 
-					<c:forEach var="j" begin="0" end="2">
+					
 						<div class="container" style="margin-bottom: 20px">
-							<div class="row">
+						<div class="row">
+							<c:forEach var="i" items="${sessionScope.galleryList }">
+							
 								<!--  <h2>Card Image</h2> -->
 								<!-- <p>Image at the top (card-img-top):</p> -->
 
-								<c:forEach begin="0" end="2" var="i">
+								
 									<div class="col-md-4" id="">
 										<div class="card" style="width: 350px; border-radius: 10px">
-											<img class="card-img-top"
-												src="resources/img/tranding_item/nail1.png"
+											<img class="card-img-top${i.article_seq }"
+												src="${i.article_file }"
+												onclick = "modal_open(${i.article_seq})"
 												style="width: 100%; border-top-right-radius: 8px; border-top-left-radius: 8px;">
 											<div class="card-body">
-												<h4 class="card-title">John Doe</h4>
-												<p class="card-text">Some example text some example
-													text. John Doe is an architect and engineer</p>
+												<h4 class="card-title">${i.article_subject }</h4>
+												<p class="card-text">${i.article_content }</p>
 												<div style="padding-top: 20px">
 													<button type="button"
 														style="background: none; border: none;">
@@ -224,11 +226,12 @@
 										</div>
 									</div>
 									<br>
-
+									
 								</c:forEach>
+								</div>
 							</div>
 						</div>
-					</c:forEach>
+					
 				</div>
 				<div class="load_more_btn text-center">
 					<a href="#" class="btn_3" style="padding: 10px 25px">더보기</a>
@@ -465,6 +468,7 @@
 	    const card_img = document.querySelector('.card-img-top');
 	    const header = document.querySelector('.main_menu.home_menu');
 	    
+	    /*
 	    card_img.addEventListener("click", () =>{
 	    	
 	    	modal.classList.toggle('show');
@@ -476,6 +480,30 @@
 		        commentLoad(article_seq);
 	    	}
 	    });	
+	    */
+	    function modal_open(article_seq){
+			  
+			  modal.classList.toggle('show');
+			  if (modal.classList.contains('show')) {
+			        body.style.overflow = 'hidden';
+			        $('.main_menu.home_menu').css('position', 'static');
+			        
+			        $.ajax({
+			        	url : "galleryDetail.do",
+			        	type : "post",
+			        	data : {article_seq : article_seq},
+			        	dataType : 'json',
+			        	success : function(data){
+			        		console.log(data);
+			        		$('.modal').load("gallery_sub.do #modal", {article_seq : article_seq});
+			        	}
+			        	
+			        });
+			       
+		    	}
+			  
+		  }
+	    
 	    
 	    modal.addEventListener('click', (event) => {
        		if (event.target === modal) {
@@ -487,9 +515,12 @@
           }
         }
       });
+	  
+	  
+	  
 	    
 	  // 스크롤이 끝까지 내려오면 더보기 진행
-	  var startNum = 1;
+	  var startNum = 7;
 	  
 	  $(window).scroll(function(){
 		 if(Math.round( $(window).scrollTop() ) == $(document).height() - $(window).height()) {
@@ -500,14 +531,15 @@
 				 data: {startNum : startNum},
 				 dataType: 'json',
 				 success: function(data){
-					 startNum += 3;
 					 console.log(data);
+					 console.log(startNum);
 					 
 					 if(data >= startNum){
 						 console.log(startNum);
-						 $("body").append("<div calss='containter' id = 'load" + startNum + "''></div>");
-						 $("#load" + startNum).load("gallery_sub.y #reload", {startNum:startNum});
+						 $("body").append("<div class='container' id = 'load" + startNum + "''></div>");
+						 $("#load" + startNum).load("gallery_sub.do #reload", {startNum:startNum});
 					 }
+					 startNum += 3;
 					 
 				 },
 				 error : function(){
@@ -519,6 +551,8 @@
 		 }
 	  });
 	  
+	  
+	  /*
 	  // 댓글영역 새로고침
 	  function commentLoad(article_seq){
 		  $(".comment-box").load("comment_sub.do #tempComment", {article_seq:article_seq})
@@ -569,6 +603,7 @@
 				}
 			});
 		};
+		*/
 	  
 	    
   

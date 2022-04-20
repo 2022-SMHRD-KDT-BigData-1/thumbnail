@@ -1,3 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="kr.thumbnail.model.CommunityMapper"></mapper>
+<mapper namespace="kr.thumbnail.model.CommunityMapper">
+    
+    <!-- 갤러리 게시글 작성 -->
+    <insert id="galleryCreate" parameterType="kr.thumbnail.model.CommunityVO">
+        INSERT INTO t_community
+	    (article_subject, article_content, article_file, mb_email, article_cnt)
+		VALUES(#{article_subject}, #{article_content}, #{article_file}, #{mb_email}, 1);
+    </insert>
+    
+    <!-- 갤러리 게시글 불러오기 -->
+    <select id="gallerySelect" resultType="kr.thumbnail.model.CommunityVO">
+        select * from (select row_number() over(order by article_date desc) as num, article_seq, 
+		article_subject, article_content, article_date, article_file, mb_email, article_cnt from t_community )
+		as e where num between 1 and 6;
+    </select>
+    
+    <!-- 갤러리 게시글 더보기 -->
+    <select id="moreGallerySelect" parameterType="int" resultType="kr.thumbnail.model.CommunityVO">
+        select * from (select row_number() over(order by article_date desc) as num, article_seq, 
+		article_subject, article_content, article_date, article_file, mb_email, article_cnt from t_community )
+		as e where num between #{arg0} and #{arg1};
+    </select>
+    
+    <!-- 갤러리 게시글 총 갯수 세기 -->
+    <select id="galleryCount" resultType="int">
+        select count(*) from t_community
+    </select>
+    
+    <!-- 갤러리 상세보기 -->
+    <select id="galleryDetail" parameterType="int" resultType="kr.thumbnail.model.CommunityVO">
+        select * from t_community where article_seq = #{article_seq}
+    </select>
+</mapper>

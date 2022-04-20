@@ -13,4 +13,4 @@ alter table t_wishlist modify wish_date DATETIME default NOW()
 alter table t_review modify r_date DATETIME default NOW()
 alter table t_comment modify cmt_date DATETIME default NOW()
 
-select * from t_design
+select * from t_community

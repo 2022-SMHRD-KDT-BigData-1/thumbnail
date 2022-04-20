@@ -43,8 +43,12 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/product_list2.do")
-	public void product_list2() {
+	public void product_list2(HttpSession session) {
 		System.out.println("갤러리 페이지로 이동");
+		
+		List<CommunityVO> galleryList = mapper.gallerySelect();
+		session.setAttribute("galleryList", galleryList);
+	
 	}
 	
 	@RequestMapping("/single_product.do")
@@ -58,13 +62,19 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/see_more.do")
-	public @ResponseBody int see_more(String startNum) {
+	public @ResponseBody int see_more(String startNum, HttpSession session) {
 		System.out.println("더보기 : " + startNum);
+		int arg0 = Integer.parseInt(startNum);
+		int arg1 = arg0 + 2;
+		String endNum = String.valueOf(arg1);
 		
-		// 갤러리의 게시물 총 갯수
-		int length = 50;
+		List<CommunityVO> moreGalleryList = mapper.moreGallerySelect(arg0, arg1);
+		session.setAttribute("moreGalleryList", moreGalleryList);
 		
-		
+		// 총 게시물의 갯수
+		int length = mapper.galleryCount();
+		System.out.println(length);
+
 		return length;
 	}
 	
@@ -77,6 +87,30 @@ public class BoardController {
 	public void comment_sub() {
 		System.out.println("댓글 불러올 서브 페이지");
 	}
+	
+	@RequestMapping("/single_blog.do")
+	public void single_blog() {
+		System.out.println("손톱 영양제 페이지로 이동");
+	}
+	
+	@RequestMapping("/board_Insert.do")
+	public void board_Insert() {
+		System.out.println("게시판 작성 페이지로 이동");
+	}
+	
+	@RequestMapping("/galleryDetail.do")
+	public @ResponseBody String galleryDetail(int article_seq, HttpSession session) {
+		System.out.println("갤러리 상세보기");
+		
+		CommunityVO community_vo = mapper.galleryDetail(article_seq);
+		session.setAttribute("community_vo", community_vo);
+		
+		return "success";
+	}
+	
+	
+	
+	
 	
 	
 	// 템플릿에서 제공하는 페이지, 안씀
@@ -100,14 +134,6 @@ public class BoardController {
 		System.out.println("템플릿 요소 페이지로 이동");
 	}
 	
-	@RequestMapping("/single_blog.do")
-	public void single_blog() {
-		System.out.println("손톱 영양제 페이지로 이동");
-	}
 	
-	@RequestMapping("/board_Insert.do")
-	public void board_Insert() {
-		System.out.println("게시판 작성 페이지로 이동");
-	}
 	
 }
