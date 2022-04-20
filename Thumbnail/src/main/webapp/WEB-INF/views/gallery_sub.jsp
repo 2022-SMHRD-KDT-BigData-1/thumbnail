@@ -45,7 +45,7 @@
 							<c:forEach var="i" items="${sessionScope.moreGalleryList }">
 								<div class="col-md-4" id="">
 									<div class="card" style="width: 350px; border-radius: 10px">
-										<img class="card-img-top"
+										<img class="card-img-top${i.article_file }"
 											src="${i.article_file }"
 											style="width: 100%; border-top-right-radius: 8px; border-top-left-radius: 8px;">
 										<div class="card-body">
@@ -108,7 +108,7 @@
 					<div class="col-lg-8 mb-5 mb-lg-0">
 						<div style="padding-left: 50px">
 							<div class="blog_item_img">
-								<img class="card-img rounded-0" src="${sessionScope.community_vo.article_file }"
+								<img class="card-img rounded-0" onclick = "modal_open(${sessionScope.moreGalleryList.article_seq})" src="${sessionScope.community_vo.article_file }"
 									alt="" style="width: 45em" /> <a href="#"
 									class="blog_item_date">
 									<h3>15</h3>
@@ -145,33 +145,32 @@
 								<div class="form-group">
 									<div class="container" style="padding-bottom: 11px">
 										<div class="row">
-											<input class="form-control col-md-9" name="" id=""
-												type="text" placeholder="">
+											<input class="form-control col-md-9" name="cmt_content"
+												type="text" id="cmtText${sessionScope.community_vo.article_seq}">
 											<div style="padding-left: 12px">
 												<button type="button" class="genric-btn primary radius"
+													onclick = "cmtCreate(${sessionScope.community_vo.article_seq}, '${sessionScope.info.mb_email}', '#cmtText${sessionScope.community_vo.article_seq}')"
 													style="padding: 0px 17px; height: 38px;">확인</button>
 											</div>
 										</div>
 									</div>
 									<div class="comment-box">
+									<c:forEach var="i" items="${sessionScope.commentList }">
 										<div class="comment-list">
 											<div class="single-comment justify-content-between d-flex">
 												<div class="user justify-content-between d-flex">
 													<div class="thumb">
 														<img src="resources/img/comment/comment_1.png" alt="">
 														<h5>
-															<a href="#">Emilly Blunt</a>
+															<a href="#">${i.mb_email }</a>
 														</h5>
 													</div>
 													<div class="desc">
-														<p class="comment">Multiply sea night grass fourth day
-															sea lesser rule open subdue female fill which them
-															Blessed, give fill lesser bearing multiply sea night
-															grass fourth day sea lesser</p>
+														<p class="comment">${i.cmt_content }</p>
 														<div class="d-flex justify-content-between">
 															<div class="d-flex align-items-center">
 
-																<p class="date">December 4, 2017 at 3:12 pm</p>
+																<p class="date">${i.cmt_date }</p>
 															</div>
 															<div class="reply-btn">
 																<a href="#" class="btn-reply text-uppercase">reply</a>
@@ -181,58 +180,7 @@
 												</div>
 											</div>
 										</div>
-										<div class="comment-list">
-											<div class="single-comment justify-content-between d-flex">
-												<div class="user justify-content-between d-flex">
-													<div class="thumb">
-														<img src="resources/img/comment/comment_2.png" alt="">
-													</div>
-													<div class="desc">
-														<p class="comment">Multiply sea night grass fourth day
-															sea lesser rule open subdue female fill which them
-															Blessed, give fill lesser bearing multiply sea night
-															grass fourth day sea lesser</p>
-														<div class="d-flex justify-content-between">
-															<div class="d-flex align-items-center">
-																<h5>
-																	<a href="#">Emilly Blunt</a>
-																</h5>
-																<p class="date">December 4, 2017 at 3:12 pm</p>
-															</div>
-															<div class="reply-btn">
-																<a href="#" class="btn-reply text-uppercase">reply</a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="comment-list">
-											<div class="single-comment justify-content-between d-flex">
-												<div class="user justify-content-between d-flex">
-													<div class="thumb">
-														<img src="resources/img/comment/comment_3.png" alt="">
-													</div>
-													<div class="desc">
-														<p class="comment">Multiply sea night grass fourth day
-															sea lesser rule open subdue female fill which them
-															Blessed, give fill lesser bearing multiply sea night
-															grass fourth day sea lesser</p>
-														<div class="d-flex justify-content-between">
-															<div class="d-flex align-items-center">
-																<h5>
-																	<a href="#">Emilly Blunt</a>
-																</h5>
-																<p class="date">December 4, 2017 at 3:12 pm</p>
-															</div>
-															<div class="reply-btn">
-																<a href="#" class="btn-reply text-uppercase">reply</a>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
+									</c:forEach>
 									</div>
 								</div>
 							</div>
@@ -241,9 +189,6 @@
 				</div>
 			</div>
 		</div>
-	    
-  
-	</script>
 
 
 		<!-- jquery plugins here-->

@@ -96,8 +96,16 @@
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
 
-								<li class="nav-item"><a class="nav-link" href="login.do">
-										로그인</a></li>
+								<c:choose>
+									<c:when test = "${empty info }">
+										<li class="nav-item"><a class="nav-link" href="login.do">
+											로그인</a></li>
+									</c:when>
+									<c:otherwise>
+										<li class="nav-item"><a class="nav-link" href="#">
+											${info.mb_nick }님</a></li>
+									</c:otherwise>
+								</c:choose>		
 
 								<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
@@ -482,10 +490,8 @@
 	    });	
 	    */
 	    
+	    /*
 	    function modal_open(article_seq){
-			
-	    	
-	    	
 			  modal.classList.toggle('show');
 			  if (modal.classList.contains('show')) {
 			        body.style.overflow = 'hidden';
@@ -495,11 +501,13 @@
 			        	url : "galleryDetail.do",
 			        	type : "post",
 			        	data : {article_seq : article_seq},
-			        	dataType : 'text',
+			        	dataType : 'json',
 			        	async: false,
 			        	success : function(data){
 			        		console.log(data);
+			        		// cmtSelect(article_seq);
 			        		$('.modal.show').load("gallery_sub.do #modal", {article_seq : article_seq});
+			        		
 			        	},
 			        	 error : function(){
 								console.log('err');
@@ -511,106 +519,85 @@
 		  };
 	    
 	    
-	    modal.addEventListener('click', (event) => {
-       		if (event.target === modal) {
-          		modal.classList.toggle('show');
-
-      		if (!modal.classList.contains('show')) {
-           		body.style.overflow = 'auto';
-           		$( '.main_menu.home_menu' ).removeAttr( 'style' );
-          }
-        }
-      });
-	  
-	  
-	  
+		modal.addEventListener('click', (event) => {
+	    	if (event.target === modal) {
+	        	modal.classList.toggle('show');
+	
+	      		if (!modal.classList.contains('show')) {
+	           		body.style.overflow = 'auto';
+	           		$( '.main_menu.home_menu' ).removeAttr( 'style' );
+	    		}
+	    	}
+	    });
 	    
-	  // 스크롤이 끝까지 내려오면 더보기 진행
-	  var startNum = 7;
-	  
-	  $(window).scroll(function(){
-		 if(Math.round( $(window).scrollTop() ) == $(document).height() - $(window).height()) {
-			 
-			 $.ajax({
-				 url: "see_more.do",
-				 type: "post",
-				 data: {startNum : startNum},
-				 dataType: 'json',
-				 success: function(data){
-					 console.log(data);
-					 console.log(startNum);
-					 
-					 if(data >= startNum){
-						 console.log(startNum);
-						 $("body").append("<div class='container' id = 'load" + startNum + "''></div>");
-						 $("#load" + startNum).load("gallery_sub.do #reload", {startNum:startNum});
-					 }
-					 startNum += 3;
-					 
-				 },
-				 error : function(){
-					console.log('err');
-				 }
+	    
+	  	// 댓글 작성
+	  	function cmtCreate(article_seq, mb_email, id_cmtText){
+	  		var cmt_content = $(id_cmtText).val();
+	  		$.ajax({
+	  			url: "cmtCreate.do",
+	  			type: "post",
+	  			data: {article_seq:article_seq, cmt_content:cmt_content, mb_email:mb_email},
+	  			dataType: 'json',
+	  			success: function(data){
+	  				console.log(data)
+	  				$(id_cmtText).val('');
+	  			},
+	  			error: function(){
+	  				console.log('err');
+	  			}
+	  		});
+	  	}
+	    
+	  	// 댓글 보여주기
+	  	function cmtSelect(article_seq){
+	  		$.ajax({
+	  			url: "cmtSelect.do",
+	  			type: "post",
+	  			data: {article_seq:article_seq},
+	  			dataType : 'json',
+	  			success: function(data){
+	  				console.log(data)
+	  				
+	  			},
+	  			error : function(){
+	  				console.log('err');
+	  			}
+	  		});
+	  	}
+		*/  
+	    
+		// 스크롤이 끝까지 내려오면 더보기 진행
+		var startNum = 7;
+		
+		$(window).scroll(function(){
+		if(Math.round( $(window).scrollTop() ) == $(document).height() - $(window).height()) {
+		 
+		$.ajax({
+			 url: "see_more.do",
+			 type: "post",
+			 data: {startNum : startNum},
+			 dataType: 'json',
+			 success: function(data){
+				 console.log(data);
+				 console.log(startNum);
 				 
-			 });
+				 if(data >= startNum){
+					 console.log(startNum);
+					 $("body").append("<div class='container' id = 'load" + startNum + "''></div>");
+					 $("#load" + startNum).load("gallery_sub.do #reload", {startNum:startNum});
+				 }
+				 startNum += 3;
+				 
+			 },
+			 error : function(){
+				console.log('err');
+			 }
 			 
-		 }
-	  });
-	  
-	  
-	  /*
-	  // 댓글영역 새로고침
-	  function commentLoad(article_seq){
-		  $(".comment-box").load("comment_sub.do #tempComment", {article_seq:article_seq})
-	  }
-	  
-	  // 댓글 작성
-	  function commentCreate(article_seq, ){
-		  
-	  }
-	  
-	  // 댓글 삭제
-	  function commentDelete(article_seq, cmt_seq?){
-		  
-	  }
-
-		
-		// 댓글 작성 - 예시
-		function feedComCreate(feedNo,nick,id1,id2,id3,id4) {
-			var text = $(id1).val();
-			$.ajax({
-				url: "FeedCommentCreateCon.do",
-				type: "post",
-				data: {feedNo: feedNo, text: text},
-				dataType: 'json',
-				success: function(result) {
-					feedComCount(feedNo,id2);
-					feedComLoad(feedNo,nick,id3,id4);
-				},
-				error : function(){
-					console.log('err');
-				}
-			});
-		};
-		
-		// 댓글 삭제 - 예시
-		function feedComDelete(feedNo,fcNo,nick,id,id2,id3) {
-			$.ajax({
-				url: "FeedCommentDeleteCon.do",
-				type: "post",
-				data: {fcNo: fcNo},
-				dataType: 'json',
-				success: function(result) {
-					feedComCount(feedNo,id);
-					feedComLoad(feedNo,nick,id2,id3);
-				},
-				error : function(){
-					console.log('err');
-				}
-			});
-		};
-		*/
-	  
+		 });
+		 
+		}
+		});
 	    
   
 	</script>

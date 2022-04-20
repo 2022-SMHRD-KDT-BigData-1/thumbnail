@@ -14,3 +14,8 @@ alter table t_review modify r_date DATETIME default NOW()
 alter table t_comment modify cmt_date DATETIME default NOW()
 
 select * from t_community
+select * from t_comment
+delete from t_comment where cmt_seq = 3
+
+INSERT INTO t_comment (article_seq, cmt_content, mb_email)
+        VALUES (21,'호피가 짱이야', 'bamtol@bamtol.com');
