@@ -13,6 +13,8 @@ import kr.thumbnail.model.CommunityMapper;
 import kr.thumbnail.model.CommunityVO;
 import kr.thumbnail.model.DesignMapper;
 import kr.thumbnail.model.DesignVO;
+import kr.thumbnail.model.NutrionMapper;
+import kr.thumbnail.model.NutritionVO;
 
 @Controller
 public class BoardController {
@@ -21,6 +23,8 @@ public class BoardController {
 	CommunityMapper mapper;
 	@Inject
 	DesignMapper dMapper;
+	@Inject
+	NutrionMapper nMapper;
 	
 	@RequestMapping("/index.do")
 	public void index(HttpSession session) {	
@@ -89,8 +93,12 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/single_blog.do")
-	public void single_blog() {
+	public void single_blog(HttpSession session) {
 		System.out.println("손톱 영양제 페이지로 이동");
+		
+		List<NutritionVO> vo =  nMapper.singleBlog();
+		
+		session.setAttribute("nutrition", vo);
 	}
 	
 	@RequestMapping("/board_Insert.do")
@@ -103,7 +111,6 @@ public class BoardController {
 		System.out.println("갤러리 상세보기");
 		
 		CommunityVO community_vo = mapper.galleryDetail(article_seq);
-		System.out.println(community_vo);
 		session.setAttribute("community_vo", community_vo);
 		
 		return "success";
