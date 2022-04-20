@@ -143,7 +143,10 @@ public class BoardController {
 	}
 	
 	
-	
+	@RequestMapping("/personal_hand.do")
+	public void personal_hand() {
+		System.out.println("퍼스널 핸드 페이지");
+	}
 	
 	
 	
