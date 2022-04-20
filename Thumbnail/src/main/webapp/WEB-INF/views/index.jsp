@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE do>
 <html lang="zxx">
 <head>
@@ -57,26 +57,27 @@
 								<li class="nav-item"><a class="nav-link"
 									href="product_list2.do">갤러리</a></li>
 
-
-
-								<li class="nav-item"><a class="nav-link" href="single_blog.do">손톱영양제</a>
-								</li>
+								<li class="nav-item"><a class="nav-link"
+									href="single_blog.do">손톱영양제</a></li>
+									
+								<li class="nav-item"><a class="nav-link"
+									href="#">퍼스널핸드</a></li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
 								<c:choose>
-									<c:when test = "${empty info }">
+									<c:when test="${empty info }">
 										<li class="nav-item"><a class="nav-link" href="login.do">
-											로그인</a></li>
+												로그인</a></li>
 									</c:when>
 									<c:otherwise>
 										<li class="nav-item"><a class="nav-link" href="#">
-											${info.mb_nick }님</a></li>
+												${info.mb_nick }님</a></li>
 									</c:otherwise>
-								</c:choose>		
-								
+								</c:choose>
 
-							<!-- 	<li class="nav-item dropdown"><a
+
+								<!-- 	<li class="nav-item dropdown"><a
 									class="nav-link dropdown-toggle" href="blog.do"
 									id="navbarDropdown_2" role="button" data-toggle="dropdown"
 									aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
@@ -85,12 +86,12 @@
 											class="dropdown-item" href="single_blog.do">블로그 </a>
 									</div></li> -->
 							</ul>
-							
+
 						</div>
 						<div class="hearer_icon d-flex align-items-center">
-							<a
-								id="search_1" href="javascript:void(0)"><i class="ti-search"></i></a>
-							<a href="cart.do"> <i class="fas fa-solid fa-bookmark"></i>
+							<a id="search_1" href="javascript:void(0)"><i
+								class="ti-search"></i></a> <a href="cart.do"> <i
+								class="fas fa-solid fa-bookmark"></i>
 							</a>
 						</div>
 					</nav>
@@ -346,7 +347,7 @@
 	</section>
 	<!-- client review part end -->
 
-	
+
 
 	<!--::footer_part start::-->
 	<footer class="footer_part">

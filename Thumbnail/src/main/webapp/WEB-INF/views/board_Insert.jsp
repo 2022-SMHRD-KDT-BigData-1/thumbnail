@@ -171,7 +171,7 @@
 
 								<div class="col-sm-offset-2 col-sm-10">
 									<div class="text-center" style="padding-left:100px; padding-top:20px">
-										<button type="reset" class="btn btn-default btn-sm">취소</button>
+										<button type="reset" class="genric-btn primary-border radius">취소</button>
 										<button type="submit" class="genric-btn primary radius">저장</button>
 									</div>
 								</div>

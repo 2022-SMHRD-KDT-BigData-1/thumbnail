@@ -134,7 +134,7 @@
 				<div class="col-lg-12">
 					<div class="about_us_content">
 						<img src="resources/img/icon/camera.png" alt="#"
-							class="img-fluid pic" style="width: 20%; padding-top: 6%; visibility:hidden">
+							class="img-fluid pic" style="width: 20%; padding-top: 6%; display:none">
 
 					</div>
 				</div>
@@ -148,16 +148,18 @@
 	<section class="feature_part section_padding"
 		style="padding: 0; padding-bottom: 70px">
 		<div class="container">
-			<div class="row justify-content-center">
+			<div class="row justify-content-center txt" style="padding-top: 1%;">
 				<div class="col-lg-6" style="margin: 15px">
+				<div style="padding-top: 20px; padding-left: 30px; text-align: center">
+				<img src="resources/img/icon/woman.png" alt="#" style="width:22%" class="sub"/></div>
 					<div class="feature_part_tittle" style="text-align: center">
-						<h3 class="explain">사용방법</h3>
-						<h4 class="sub" style="padding-top: 6px; text-align: center">(사진을 눌러주세요.)</h4>
+						<h3 class="explain" style="color:white; font-size:50px">사용방법</h3>
+						<h4 class="sub" style="padding-top: 6px; text-align: center; color:white">(사진을 눌러주세요.)</h4>
 					</div>
 				</div>
 
 			</div>
-			<div class="row justify-content-center">
+			<div class="row justify-content-center txt" style="padding-top: 8%">
 				<div class="col-lg-3 col-sm-6">
 					<div class="single_feature_part">
 						<div style="padding-top: 20px; padding-left: 30px">
@@ -286,32 +288,42 @@
 		let pic = $('.pic');
 		let explain = $('.explain');
 		let sub = $('.sub');
+		let txt = $('.txt');
 
 		$("#first").on("click", function() {
 			console.log("첫번째 클릭");
 			pic.attr('src', 'resources/img/tranding_item/nail1.png');
-			explain.text("01. 원하는 네일 디자인을 선택하세요.");
-			sub.css('display','none');
-			pic.css('visibility','visible')
+			pic.css('display','block')
 			pic.css('width','38%')
+			explain.text("01. 원하는 네일 디자인을 선택하세요.");
+			explain.css('color','#4b3049')
+			explain.css('font-size','33px')
+			sub.css('display','none');
+			txt.css('padding-top','')
 		});
 
 		$("#second").on("click", function() {
 			console.log("두번째 클릭");
 			pic.attr('src', 'resources/img/hand.jpg');
-			explain.text("02. 예시사진과 같은 모양으로 손 사진을 찍어주세요.");
-			sub.css('display','none');
-			pic.css('visibility','visible')
+			pic.css('display','block')
 			pic.css('width','38%')
+			explain.text("02. 예시사진과 같은 모양으로 손 사진을 찍어주세요.");
+			explain.css('color','#4b3049')
+			explain.css('font-size','33px')
+			sub.css('display','none');
+			txt.css('padding-top','')
 		});
 
 		$("#third").on("click", function() {
 			console.log("세번째 클릭");
 			pic.attr('src', 'resources/img/tranding_item/nail2.png');
-			explain.text("03. 적용된 결과를 확인하세요.");
-			sub.css('display','none');
-			pic.css('visibility','visible')
+			pic.css('display','block')
 			pic.css('width','38%')
+			explain.text("03. 적용된 결과를 확인하세요.");
+			explain.css('color','#4b3049')
+			explain.css('font-size','33px')
+			sub.css('display','none');
+			txt.css('padding-top','')
 		});
 	</script>
 

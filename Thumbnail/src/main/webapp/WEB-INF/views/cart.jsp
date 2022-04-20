@@ -18,12 +18,13 @@
 <link rel="stylesheet" href="resources/css/owl.carousel.min.css">
 <!-- font awesome CSS -->
 <link rel="stylesheet" href="resources/css/all.css">
-<!-- icon CSS -->
+<!-- flaticon CSS -->
 <link rel="stylesheet" href="resources/css/flaticon.css">
 <link rel="stylesheet" href="resources/css/themify-icons.css">
-<!-- magnific popup CSS -->
+<!-- font awesome CSS -->
 <link rel="stylesheet" href="resources/css/magnific-popup.css">
-<link rel="stylesheet" href="resources/css/nice-select.css">
+<!-- swiper CSS -->
+<link rel="stylesheet" href="resources/css/slick.css">
 <!-- style CSS -->
 <link rel="stylesheet" href="resources/css/style.css">
 </head>
@@ -67,7 +68,14 @@
 								<li class="nav-item"><a class="nav-link" href="login.do">
 										로그인</a></li>
 
-
+								<!--    <li class="nav-item dropdown"><a
+                           class="nav-link dropdown-toggle" href="blog.do"
+                           id="navbarDropdown_2" role="button" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false"> 마이페이지 </a>
+                           <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
+                              <a class="dropdown-item" href="cart.do"> 찜목록</a> <a
+                                 class="dropdown-item" href="single_blog.do">블로그 </a>
+                           </div></li> -->
 							</ul>
 
 						</div>
@@ -100,7 +108,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb_iner">
-						<h2>찜목록</h2>
+						<h2>product list</h2>
 					</div>
 				</div>
 			</div>
@@ -108,80 +116,195 @@
 	</section>
 	<!-- breadcrumb part end-->
 
-	<!--================Cart Area =================-->
-	<section class="cart_area section_padding">
+	<!-- product list part start-->
+	<section class="product_list section_padding">
 		<div class="container">
-			<div class="cart_inner">
-				<div class="table-responsive">
-					<table class="table">
-						<thead>
-							<tr>
-								<th scope="col">네일아트 디자인</th>
-								<th scope="col">선택</th>
-
-
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>
-									<div class="media">
-										<div class="d-flex">
-											<img src="resources/img/arrivel/arrivel_1.png" alt="" />
-										</div>
-										<div class="media-body">
-											<p>해시태그</p>
-										</div>
+			<div class="row">
+				<div class="col-md-8">
+					<div class="product_list">
+						<div class="row">
+							<div class="col-lg-6 col-sm-6">
+								<div class="single_product_item">
+									<img src="resources/img/tranding_item/nail2.png" alt="#"
+										class="img-fluid">
+									<h3>
+										<a href="single_product.do">#네일아트 #노란색 #체크네일</a>
+									</h3>
+									<div style="padding-top:">
+										<button type="button" style="background: none; border: none;">
+											<p class="like-info">
+												<a class="align-middle" href="single_product.do"><i
+													class="fas fa-solid fa-check"></i> Select </a>
+											</p>
+										</button>
+										<button type="button" style="background: none; border: none;">
+											<p>
+												<i class="far fa-regular fa-bookmark"></i> Wish list
+											</p>
+										</button>
 									</div>
-								</td>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-6">
+								<div class="single_product_item">
+									<img src="resources/img/product/product_list_2.png" alt="#"
+										class="img-fluid">
+									<h3>
+										<a href="single_product.do">Geometric striped flower home
+											classy decor</a>
+									</h3>
+									<p>From $5</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-6">
+								<div class="single_product_item">
+									<img src="resources/img/product/product_list_3.png" alt="#"
+										class="img-fluid">
+									<h3>
+										<a href="single_product.do">Foam filling cotton slow
+											rebound pillows</a>
+									</h3>
+									<p>From $5</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-6">
+								<div class="single_product_item">
+									<img src="resources/img/product/product_list_4.png" alt="#"
+										class="img-fluid">
+									<h3>
+										<a href="single_product.do">Memory foam filling cotton
+											Slow rebound pillows</a>
+									</h3>
+									<p>From $5</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-6">
+								<div class="single_product_item">
+									<img src="resources/img/product/product_list_5.png" alt="#"
+										class="img-fluid">
+									<h3>
+										<a href="single_product.do">Memory foam filling cotton
+											Slow rebound pillows</a>
+									</h3>
+									<p>From $5</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-6">
+								<div class="single_product_item">
+									<img src="resources/img/product/product_list_6.png" alt="#"
+										class="img-fluid">
+									<h3>
+										<a href="single_product.do">Sleeping orthopedic sciatica
+											Back Hip Joint Pain relief</a>
+									</h3>
+									<p>From $5</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-6">
+								<div class="single_product_item">
+									<img src="resources/img/product/product_list_7.png" alt="#"
+										class="img-fluid">
+									<h3>
+										<a href="single_product.do">Memory foam filling cotton
+											Slow rebound pillows</a>
+									</h3>
+									<p>From $5</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-6">
+								<div class="single_product_item">
+									<img src="resources/img/product/product_list_8.png" alt="#"
+										class="img-fluid">
+									<h3>
+										<a href="single_product.do">Sleeping orthopedic sciatica
+											Back Hip Joint Pain relief</a>
+									</h3>
+									<p>From $5</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-6">
+								<div class="single_product_item">
+									<img src="resources/img/product/product_list_9.png" alt="#"
+										class="img-fluid">
+									<h3>
+										<a href="single_product.do">Geometric striped flower home
+											classy decor</a>
+									</h3>
+									<p>From $5</p>
+								</div>
+							</div>
+							<div class="col-lg-6 col-sm-6">
+								<div class="single_product_item">
+									<img src="resources/img/product/product_list_10.png" alt="#"
+										class="img-fluid">
+									<h3>
+										<a href="single_product.do">Geometric striped flower home
+											classy decor</a>
+									</h3>
+									<p>From $5</p>
+								</div>
+							</div>
+						</div>
+						<div class="load_more_btn text-center">
+							<a href="#" class="btn_3">더보기</a>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4">
+					<div class="blog_right_sidebar">
 
-
-								<td>
-									<div class="switch-wrap d-flex justify-content-between">
-										<div class="primary-checkbox">
-											<input type="checkbox" id="default-checkbox"> <label
-												for="default-checkbox"></label>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<div class="media">
-										<div class="d-flex">
-											<img src="resources/img/arrivel/arrivel_2.png" alt="" />
-										</div>
-										<div class="media-body">
-											<p>해시태그</p>
-										</div>
-									</div>
-								</td>
-
-
-								<td>
-									<div class="switch-wrap d-flex justify-content-between">
-										<div class="primary-checkbox">
-											<input type="checkbox" id="default-checkbox1"> <label
-												for="default-checkbox1"></label>
-										</div>
-									</div>
-								</td>
-							</tr>
-
-
-
-						</tbody>
-					</table>
-					<div class="checkout_btn_inner float-right">
-						<a class="btn_1 checkout_btn_1" href="#">삭제</a>
+						<aside class="single_sidebar_widget post_category_widget">
+							<h4 class="widget_title">Category</h4>
+							<ul class="list cat-list">
+								<li><a href="#" class="d-flex">
+										<p>Resaurant food</p>
+										<p>(37)</p>
+								</a></li>
+								<li><a href="#" class="d-flex">
+										<p>Travel news</p>
+										<p>(10)</p>
+								</a></li>
+								<li><a href="#" class="d-flex">
+										<p>Modern technology</p>
+										<p>(03)</p>
+								</a></li>
+								<li><a href="#" class="d-flex">
+										<p>Product</p>
+										<p>(11)</p>
+								</a></li>
+								<li><a href="#" class="d-flex">
+										<p>Inspiration</p>
+										<p>(21)</p>
+								</a></li>
+								<li><a href="#" class="d-flex">
+										<p>Health Care</p>
+										<p>(21)</p>
+								</a></li>
+							</ul>
+						</aside>
+						    <aside class="single_sidebar_widget tag_cloud_widget">
+                           <h4 class="widget_title">Tag Clouds</h4>
+                           <ul class="list">
+                              <li><a href="#">project</a></li>
+                              <li><a href="#">love</a></li>
+                              <li><a href="#">technology</a></li>
+                              <li><a href="#">travel</a></li>
+                              <li><a href="#">restaurant</a></li>
+                              <li><a href="#">life style</a></li>
+                              <li><a href="#">design</a></li>
+                              <li><a href="#">illustration</a></li>
+                           </ul>
+                        </aside>
+						
 					</div>
 				</div>
 			</div>
-		</div>
 	</section>
-	<!--================End Cart Area =================-->
+
+
 	<!--::footer_part start::-->
 	<footer class="footer_part">
+
 
 		<div class="copyright_part">
 			<div class="container">

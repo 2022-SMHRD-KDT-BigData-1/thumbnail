@@ -6890,14 +6890,14 @@ h1, h2, h3, h4, h5, h6 {
 /* line 200, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_elements.scss */
 .genric-btn.default {
 	color: #212529;
-	/* background: #f9f9ff; */
+	 background: #dfdfdf; 
 	border: 1px solid transparent;
 }
 
 /* line 204, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_elements.scss */
 .genric-btn.default:hover {
 	border: 1px solid #f9f9ff;
-	background: #fff;
+	background: #c1c1c1;
 }
 
 /* line 209, /Applications/MAMP/htdocs/old/palash/cl/shop_html/sass/_elements.scss */
