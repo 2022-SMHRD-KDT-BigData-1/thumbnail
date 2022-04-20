@@ -101,7 +101,7 @@
 		</div>
 	</div>
  -->
-	<div id=" modal">
+	<div id="modal">
 			<div class="container"
 				style="transform: translateX(24px) translateY(9%); background-color: white">
 				<div class="row">

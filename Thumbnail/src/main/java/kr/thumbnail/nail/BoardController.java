@@ -103,6 +103,7 @@ public class BoardController {
 		System.out.println("갤러리 상세보기");
 		
 		CommunityVO community_vo = mapper.galleryDetail(article_seq);
+		System.out.println(community_vo);
 		session.setAttribute("community_vo", community_vo);
 		
 		return "success";

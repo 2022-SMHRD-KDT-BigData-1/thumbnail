@@ -25,11 +25,11 @@
     
     <!-- 갤러리 게시글 총 갯수 세기 -->
     <select id="galleryCount" resultType="int">
-        select count(*) from t_community
+        select count(*) from t_community;
     </select>
     
     <!-- 갤러리 상세보기 -->
     <select id="galleryDetail" parameterType="int" resultType="kr.thumbnail.model.CommunityVO">
-        select * from t_community where article_seq = #{article_seq}
+        select * from t_community where article_seq = #{article_seq};
     </select>
 </mapper>
