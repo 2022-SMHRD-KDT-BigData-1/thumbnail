@@ -45,7 +45,7 @@
 							<c:forEach var="i" items="${sessionScope.moreGalleryList }">
 								<div class="col-md-4" id="">
 									<div class="card" style="width: 350px; border-radius: 10px">
-										<img class="card-img-top${i.article_file }"
+										<img class="card-img-top${i.article_seq }"
 											src="${i.article_file }"
 											style="width: 100%; border-top-right-radius: 8px; border-top-left-radius: 8px;">
 										<div class="card-body">

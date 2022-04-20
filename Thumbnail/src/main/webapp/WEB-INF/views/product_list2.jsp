@@ -490,7 +490,7 @@
 	    });	
 	    */
 	    
-	    /*
+	    
 	    function modal_open(article_seq){
 			  modal.classList.toggle('show');
 			  if (modal.classList.contains('show')) {
@@ -505,7 +505,7 @@
 			        	async: false,
 			        	success : function(data){
 			        		console.log(data);
-			        		// cmtSelect(article_seq);
+			        		cmtSelect(article_seq);
 			        		$('.modal.show').load("gallery_sub.do #modal", {article_seq : article_seq});
 			        		
 			        	},
@@ -565,7 +565,7 @@
 	  			}
 	  		});
 	  	}
-		*/  
+		 
 	    
 		// 스크롤이 끝까지 내려오면 더보기 진행
 		var startNum = 7;
