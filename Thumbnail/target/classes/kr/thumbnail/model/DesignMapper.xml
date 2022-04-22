@@ -6,4 +6,10 @@
         select * from (select row_number() over(order by d_num) as num, d_num, d_date, d_hashtag ,d_hashtag2 ,d_image 
 						,d_seq from t_design) as d where num between 1 and 10;
     </select>
+    
+    <!-- 디자인 선택 -->
+    <select id="select" resultType="kr.thumbnail.model.DesignVO">
+        select * from t_design where d_num = #{d_num}
+        
+    </select>
 </mapper>

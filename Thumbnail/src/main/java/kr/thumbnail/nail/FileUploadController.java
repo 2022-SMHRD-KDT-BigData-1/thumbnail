@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import kr.thumbnail.model.MemberVO;
+
 @Controller
 public class FileUploadController {
 
@@ -49,8 +51,10 @@ public class FileUploadController {
         System.out.println(stored_file);
         session.setAttribute("stored_file", stored_file);
         
+        MemberVO vo = (MemberVO)session.getAttribute("info");
+        String user_id = vo.getMb_email();
         
-        return "redirect:/single_product2.do";
+        return "redirect:/http://127.0.0.1:5000/predict?user_id="+user_id+"&user_nail="+storedFileName;
     }
 	
 }
