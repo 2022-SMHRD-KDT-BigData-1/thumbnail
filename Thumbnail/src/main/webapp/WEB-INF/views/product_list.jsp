@@ -226,7 +226,7 @@
 										<div style="padding-top:">
 											<button type="button" style="background: none; border: none;">
 												<p class="like-info">
-													<a class="align-middle" href="single_product.do"><i
+													<a class="align-middle" href="single_product.do?d_num=${i.d_num }"><i
 														class="fas fa-solid fa-check"></i> Select </a>
 												</p>
 											</button>

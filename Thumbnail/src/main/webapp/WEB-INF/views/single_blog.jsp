@@ -67,7 +67,7 @@
 								<li class="nav-item"><a class="nav-link"
 									href="single_blog.do">손톱영양제</a></li>
 
-								<li class="nav-item"><a class="nav-link" href="#">퍼스널핸드</a></li>
+								<li class="nav-item"><a class="nav-link" href="personal_hand.do">퍼스널핸드</a></li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
