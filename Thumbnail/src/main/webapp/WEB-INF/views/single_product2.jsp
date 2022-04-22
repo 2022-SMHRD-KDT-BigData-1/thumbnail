@@ -322,12 +322,12 @@
 
 		$("#second").on("click", function() {
 			console.log("두번째 클릭");
-			pic.attr('src', 'resources/img/hand.png');
+			pic.attr('src', 'resources/image/19.png');
 		});
 
 		$("#third").on("click", function() {
 			console.log("세번째 클릭");
-			pic.attr('src', 'resources/img/tranding_item/nail2.png');
+			pic.attr('src', 'resources/result_img/result_19.png');
 		});
 	</script>
 
