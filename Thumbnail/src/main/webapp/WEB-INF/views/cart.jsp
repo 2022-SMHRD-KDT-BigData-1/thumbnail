@@ -64,8 +64,6 @@
 								<li class="nav-item"><a class="nav-link"
 									href="personal_hand.do">퍼스널핸드</a></li>
 
-								<li class="nav-item"><a class="nav-link" href="contact.do">주변
-										네일샵</a></li>
 								<c:choose>
 									<c:when test="${empty info }">
 										<li class="nav-item"><a class="nav-link" href="login.do">
