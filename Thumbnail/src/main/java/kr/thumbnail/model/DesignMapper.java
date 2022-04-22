@@ -9,4 +9,6 @@ public interface DesignMapper {
 
 	List<DesignVO> productList();
 
+	DesignVO select(int d_num);
+
 }

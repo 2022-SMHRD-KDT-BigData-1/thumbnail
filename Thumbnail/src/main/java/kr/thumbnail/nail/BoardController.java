@@ -60,8 +60,12 @@ public class BoardController {
 	}
 	
 	@RequestMapping("/single_product.do")
-	public void single_product() {
+	public void single_product(int d_num, HttpSession session) {
 		System.out.println("가상네일체험 사용방법 페이지로 이동");
+		
+		DesignVO vo = dMapper.select(d_num);
+		session.setAttribute("selectDesign", vo);
+		
 	}
 	
 	@RequestMapping("/single_product2.do")

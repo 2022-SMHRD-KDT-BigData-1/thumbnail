@@ -39,6 +39,12 @@
 	height: 180px;
 	border: 1px solid #e4d3df;
 }
+
+.nimg {
+	width: 261px;
+	height: 180px;
+	object-fit: cover;
+}
 </style>
 </head>
 
@@ -184,7 +190,7 @@
 				</div>
 				<div class="col-lg-3 col-sm-6" id="first">
 					<div class="nail">
-						<img src="resources/img/tranding_item/nail1.png" alt="#" />
+						<img src="resources/design/${sessionScope.selectDesign.d_num}.jpg" alt="#" class="nimg" />
 
 					</div>
 					<div style="border: 1px solid #e4d3df; border-top: none">
@@ -195,7 +201,7 @@
 
 				<div class="col-lg-3 col-sm-6" id="second">
 					<div class="nail">
-						<img src="resources/img/hand.jpg" style="height: 180px" alt="#" />
+						<img src="resources/img/hand.jpg" style="height: 180px" alt="#" class="nimg"/>
 					</div>
 					<div style="border: 1px solid #e4d3df; border-top: none">
 						<h4 style="padding-top: 6px; text-align: center">02. 손 사진 업로드</h4>
@@ -203,7 +209,7 @@
 				</div>
 				<div class="col-lg-3 col-sm-6" id="third">
 					<div class="nail">
-						<img src="resources/img/tranding_item/nail2.png" alt="#" />
+						<img src="resources/img/tranding_item/nail2.png" alt="#" class="nimg"/>
 					</div>
 					<div style="border: 1px solid #e4d3df; border-top: none">
 						<h4 style="padding-top: 6px; text-align: center">03. 결과</h4>
@@ -212,14 +218,15 @@
 
 			</div>
 			<div style="text-align: center">
-				<form action="upload.do" method="post" enctype="multipart/form-data">
+				<form action="http://127.0.0.1:5000/predict" method="post" enctype="multipart/form-data">
 
 
 					<button type="button" id="file_upload"
 						class="genric-btn primary radius exp_button"
 						onclick="onclick=document.all.file.click()">사진 업로드</button>
 
-					<input id="file" type="file" name="file" style="display: none" />
+					<input id="file" type="file" name="user_nail" style="display: none" />
+					<input type="hidden" name="user_id" value="${info.mb_email }">
 
 					<button type="submit" class="genric-btn primary radius exp_button">적용</button>
 				</form>
@@ -298,11 +305,14 @@
 		let explain = $('.explain');
 		let sub = $('.sub');
 		let txt = $('.txt');
-	
+		let src1 = window.location.search;
+		let d_num = src1.split('=')[1];
+		console.log(d_num);
+		
 		
 		$("#first").on("click", function() {
 			console.log("첫번째 클릭");
-			pic.attr('src', 'resources/img/tranding_item/nail1.png');
+			pic.attr('src', 'resources/design/'+d_num+'.jpg');
 			pic.css('display','block')
 			pic.css('width','38%')
 			explain.text("01. 원하는 네일 디자인을 선택하세요.");

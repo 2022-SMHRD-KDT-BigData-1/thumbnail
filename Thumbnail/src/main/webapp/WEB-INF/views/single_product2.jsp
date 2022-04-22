@@ -39,11 +39,17 @@
 	height: 180px;
 	border: 1px solid #e4d3df;
 }
+
+.nimg {
+	width: 261px;
+	height: 180px;
+	object-fit: cover;
+}
 </style>
 </head>
 
 <body>
-		<!--::header part start::-->
+	<!--::header part start::-->
 	<header class="main_menu home_menu">
 		<div class="container">
 			<div class="row align-items-center justify-content-center">
@@ -72,9 +78,8 @@
 
 								<li class="nav-item"><a class="nav-link"
 									href="single_blog.do">손톱영양제</a></li>
-									
-								<li class="nav-item"><a class="nav-link"
-									href="#">퍼스널핸드</a></li>
+
+								<li class="nav-item"><a class="nav-link" href="#">퍼스널핸드</a></li>
 
 								<li class="nav-item"><a class="nav-link" href="contact.do">주변
 										네일샵</a></li>
@@ -83,7 +88,7 @@
 										<li class="nav-item"><a class="nav-link" href="login.do">
 												로그인</a></li>
 									</c:when>
-									<c:otherwise> 
+									<c:otherwise>
 										<li class="nav-item"><a class="nav-link" href="#">
 												${info.mb_nick }님</a></li>
 									</c:otherwise>
@@ -180,7 +185,8 @@
 				</div>
 				<div class="col-lg-3 col-sm-6" id="first">
 					<div class="nail">
-						<img src="resources/img/tranding_item/nail1.png" alt="#" />
+						<img src="resources/design/${sessionScope.selectDesign.d_num}.jpg"
+							alt="#" class="nimg" />
 
 					</div>
 					<div style="border: 1px solid #e4d3df; border-top: none">
@@ -188,10 +194,20 @@
 							선택</h4>
 					</div>
 				</div>
-
+				<%
+					String save_source = request.getParameter("save_source");
+				String result_source = request.getParameter("result_source");
+				System.out.println(save_source);
+				System.out.println(result_source);
+				String save_source_cut = save_source.substring(55);
+				String result_source_cut = result_source.substring(55);
+				System.out.println(save_source_cut);
+				System.out.println(result_source_cut);
+				%>
 				<div class="col-lg-3 col-sm-6" id="second">
 					<div class="nail">
-						<img src="${stored_file}" style="height: 180px" alt="#" />
+						<img src="<%=save_source_cut%>" style="height: 180px" alt="#"
+							class="nimg" />
 					</div>
 					<div style="border: 1px solid #e4d3df; border-top: none">
 						<h4 style="padding-top: 6px; text-align: center">02. 손 사진 업로드</h4>
@@ -199,7 +215,7 @@
 				</div>
 				<div class="col-lg-3 col-sm-6" id="third">
 					<div class="nail">
-						<img src="resources/img/tranding_item/nail2.png" alt="#" />
+						<img src="<%=result_source_cut%>" alt="#" class="nimg" />
 					</div>
 					<div style="border: 1px solid #e4d3df; border-top: none">
 						<h4 style="padding-top: 6px; text-align: center">03. 결과</h4>
@@ -209,12 +225,13 @@
 			</div>
 			<div style="text-align: center">
 				<form action="upload.do" method="post" enctype="multipart/form-data">
-				 
-					
-						<button type="button" id="file_upload"
-							class="genric-btn primary radius exp_button" onclick="onclick=document.all.file.click()">사진 업로드</button>
-					
-					<input id="file" type="file" name="file" style="display:none" />
+
+
+					<button type="button" id="file_upload"
+						class="genric-btn primary radius exp_button"
+						onclick="onclick=document.all.file.click()">사진 업로드</button>
+
+					<input id="file" type="file" name="file" style="display: none" />
 
 					<button type="submit" class="genric-btn primary radius exp_button">적용</button>
 				</form>
@@ -291,25 +308,27 @@
 	<script>
 		let pic = $('.pic');
 		let explain = $('.explain');
+		let src1 = window.location.search;
+		let d_num = src1.split('=')[1];
+		let save_source = src1.split('=')[3];
+		let result_source = src1.split('=')[5];
+		
+		console.log(d_num);
 
 		$("#first").on("click", function() {
 			console.log("첫번째 클릭");
-			pic.attr('src', 'resources/img/tranding_item/nail1.png');
-			explain.text("01. 원하는 네일 디자인을 선택하세요.");
+			pic.attr('src', 'resources/design/'+d_num+'.jpg');
 		});
 
 		$("#second").on("click", function() {
 			console.log("두번째 클릭");
 			pic.attr('src', 'resources/img/hand.png');
-			explain.text("02. 손 경계가 잘 보이도록 어두운 배경에서 손을 펼쳐서 사진을 찍어주세요.");
 		});
 
 		$("#third").on("click", function() {
 			console.log("세번째 클릭");
 			pic.attr('src', 'resources/img/tranding_item/nail2.png');
-			explain.text("03. 적용된 결과를 확인하세요.");
 		});
-
 	</script>
 
 </body>
