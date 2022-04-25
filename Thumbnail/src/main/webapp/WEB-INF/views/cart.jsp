@@ -60,7 +60,7 @@
 
 								<li class="nav-item"><a class="nav-link"
 									href="single_blog.do">손톱영양제</a></li>
-									
+
 								<li class="nav-item"><a class="nav-link"
 									href="personal_hand.do">퍼스널핸드</a></li>
 
@@ -69,7 +69,7 @@
 										<li class="nav-item"><a class="nav-link" href="login.do">
 												로그인</a></li>
 									</c:when>
-									<c:otherwise> 
+									<c:otherwise>
 										<li class="nav-item"><a class="nav-link" href="#">
 												${info.mb_nick }님</a></li>
 									</c:otherwise>
@@ -131,12 +131,11 @@
 				<div class="col-md-8">
 					<div class="product_list">
 						<div class="row">
-						
-						
+
+
 							<div class="col-lg-6 col-sm-6">
 								<div class="single_product_item">
-									<img src="resources/design/102.jpg" alt="#"
-										class="img-fluid" >
+									<img src="resources/design/102.jpg" alt="#" class="img-fluid">
 									<h3>
 										<a href="single_product.do">#모드니네일, #시럽네일</a>
 									</h3>
@@ -155,11 +154,11 @@
 									</div>
 								</div>
 							</div>
-							
+
 							<div class="col-lg-6 col-sm-6">
 								<div class="single_product_item">
-									<img src="resources/design/120.jpg" alt="#"
-										class="img-fluid">
+									<img src="resources/design/120.jpg" alt="#" class="img-fluid"
+										style="height: 360px; width: 360px">
 									<h3>
 										<a href="single_product.do">#유지력좋은네일샵,#네일피플,#민락동네일,#의정부네일,#민락2지구네일</a>
 									</h3>
@@ -178,11 +177,10 @@
 									</div>
 								</div>
 							</div>
-							
+
 							<div class="col-lg-6 col-sm-6">
 								<div class="single_product_item">
-									<img src="resources/design/144.jpg" alt="#"
-										class="img-fluid">
+									<img src="resources/design/144.jpg" alt="#" class="img-fluid">
 									<h3>
 										<a href="single_product.do">#젤네일,#네일아트,#네일,,#네일스타그램,#일상</a>
 									</h3>
@@ -201,9 +199,9 @@
 									</div>
 								</div>
 							</div>
-							
-							
-							
+
+
+
 						</div>
 						<div class="load_more_btn text-center">
 							<a href="#" class="btn_3">더보기</a>
@@ -213,49 +211,18 @@
 				<div class="col-lg-4">
 					<div class="blog_right_sidebar">
 
-						<aside class="single_sidebar_widget post_category_widget">
-							<h4 class="widget_title">Category</h4>
-							<ul class="list cat-list">
-								<li><a href="#" class="d-flex">
-										<p>Resaurant food</p>
-										<p>(37)</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Travel news</p>
-										<p>(10)</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Modern technology</p>
-										<p>(03)</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Product</p>
-										<p>(11)</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Inspiration</p>
-										<p>(21)</p>
-								</a></li>
-								<li><a href="#" class="d-flex">
-										<p>Health Care</p>
-										<p>(21)</p>
-								</a></li>
+
+						<aside class="single_sidebar_widget tag_cloud_widget">
+							<h4 class="widget_title">Tag Clouds</h4>
+							<ul class="list">
+								<li><a href="#">시럽네일</a></li>
+								<li><a href="#">마블네일</a></li>
+								<li><a href="#">젤네일</a></li>
+								<li><a href="#">네일아트</a></li>
+
 							</ul>
 						</aside>
-						    <aside class="single_sidebar_widget tag_cloud_widget">
-                           <h4 class="widget_title">Tag Clouds</h4>
-                           <ul class="list">
-                              <li><a href="#">project</a></li>
-                              <li><a href="#">love</a></li>
-                              <li><a href="#">technology</a></li>
-                              <li><a href="#">travel</a></li>
-                              <li><a href="#">restaurant</a></li>
-                              <li><a href="#">life style</a></li>
-                              <li><a href="#">design</a></li>
-                              <li><a href="#">illustration</a></li>
-                           </ul>
-                        </aside>
-						
+
 					</div>
 				</div>
 			</div>
